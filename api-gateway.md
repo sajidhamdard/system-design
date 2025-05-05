@@ -518,9 +518,7 @@ curl http://localhost:8000/products # Routed to ProductService
 * Install via **Helm chart**
 * Expose via **Kubernetes LoadBalancer**
 * Manage routes via **KongIngress CRDs**
-
-I can show **Kong on Kubernetes (Helm + YAML)** **if you want** 👇
-
+* 
 ---
 
 # ✅ **Summary**
