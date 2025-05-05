@@ -1,7 +1,3 @@
-Great question — these two terms often get mixed up because they overlap in function, but they serve distinct primary purposes. Let’s break it down clearly:
-
----
-
 ### **Load Balancer**
 
 **Main job:** Distribute incoming traffic across multiple servers (to spread the load).
