@@ -20,10 +20,6 @@ Either one can be longer, but you want actual recovery time to be **less than or
 
 ---
 
-Sure — let’s break down **RPO (Recovery Point Objective)** clearly:
-
----
-
 ### **Recovery Point Objective (RPO)**
 
 It defines **how much data loss is acceptable** in terms of **time**.
