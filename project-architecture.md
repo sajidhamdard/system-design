@@ -1,9 +1,3 @@
-Excellent — you gave **very clear and structured info**, so I can easily stitch this into a clean, **interview-ready architecture flow** for you.
-
-Let’s nail it.
-
----
-
 # **Your Project Architecture — Clean End-to-End Flow**
 
 ## **1. Frontend (Angular + Web Components)**
@@ -108,20 +102,6 @@ Databases / Other services
 
 ---
 
-If you want, I can also give:
-
-* **Sample interview diagram** (very clean)
-* **What happens during a deployment? (step-by-step)**
-
-Want that next? (optional)
-
-
-Yes — most likely **those kinds of errors are coming from Apigee** (your API Gateway).
-
-Let me explain why very clearly.
-
----
-
 # **Why you get errors like "Only X characters allowed" / "Max 10 MB data allowed"**
 
 These types of errors are **API Gateway policy enforcement errors** — not directly from your backend service.
@@ -200,17 +180,6 @@ Or directly with a **built-in policy**:
 
 **Short answer:**
 Yes, **those limits are coming from Apigee**, not from your backend Spring Boot service.
-
----
-
-If you want, I can also show **how Spring Boot itself can enforce similar limits** (in case it’s backend sometimes).
-Would you like that?
-
-
-
-Perfect — now you’ve introduced another **API management component**: **Axway**.
-
-Let me explain very clearly what’s going on here — and how **Axway** fits into your architecture along with **Apigee**.
 
 ---
 
@@ -295,11 +264,6 @@ And **Axway** is used as a **central API management / governance platform** to:
 
 ---
 
-If you want — I can show you **exact example structure of that Axway folder**
-and **what files typically go there** so you can confidently talk about it.
-
-Would you like that?
-
 
 Axway is **not specific to your project**; it’s actually a well-known, **enterprise-grade** API management platform used by many organizations for managing, securing, and governing APIs.
 
@@ -346,14 +310,6 @@ In your specific project, it seems that **Axway** is playing the role of **API G
 ---
 
 So, **Axway** is a product used for API management and **is not something unique to your project**. It’s widely used in the industry for complex API ecosystems.
-
-
-
-Good — you are thinking about **Micro Frontends** architecture now.
-
-Let’s explain your setup **in simple words**:
-
----
 
 # **Your Frontend Setup: Micro Frontends Using Web Components**
 
@@ -439,17 +395,6 @@ In the **main Angular app**:
 # **Small Interview-Ready Summary**
 
 > *“In our project, we use a micro frontend architecture where each web component is a separately developed and deployed application. The main Angular app dynamically loads these web components based on user navigation. It treats them like standard HTML elements, allowing independent deployment and scaling of different parts of the application.”*
-
----
-
-Would you also like me to draw a small **architecture diagram** showing this micro frontend setup clearly?
-It will help you **explain confidently in interviews** too.
-(very simple, clean one).
-Should I?
-
-
-Good — now we’re moving to the **build and deployment part** of your architecture.
-Let me explain **Docker** and **Artifactory** very clearly, step by step.
 
 ---
 
@@ -552,5 +497,15 @@ Because:
 
 ---
 
-If you want, next I can **map this clearly with your existing flow (frontend + backend)** so you get **complete clarity**.
-Shall I?
+[End Users (Browser)]  
+        ↓  
+   [Frontend (Angular)]  
+        ↓ REST API calls  
+  [Apigee Gateway (API Proxy)]  
+        ↓ Routes to  
+   [Kubernetes Cluster]  
+        ↓  
+[Spring Boot Backend (Deployed as Pod)]  
+        ↓  
+[PostgreSQL DB (K8s Service)]  
+
