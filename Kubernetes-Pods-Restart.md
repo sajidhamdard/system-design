@@ -1,7 +1,3 @@
-Yes — exactly right — let’s make it **precise and clean** so you understand what *exactly* happens under the hood.
-
----
-
 ## **If a Pod (service instance) goes down — what does Kubernetes do?**
 
 1. **Kubernetes notices the failure**
