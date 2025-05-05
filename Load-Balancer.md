@@ -38,19 +38,6 @@ You have a website with heavy traffic:
 
 ---
 
-If you're asking from a **developer/system design/interview** perspective, I can also explain:
-
-* Load balancer in **system design diagrams**
-* **Sticky sessions**, **health checks**, **auto-scaling** relation
-* How it helps in **high availability** and **fault tolerance**
-
-Would you like to go deeper into a particular area (e.g., system design, interview prep, or practical setup)? 🚀
-
-
-Good — sharp question. Let’s get clear about **Apigee** and load balancing.
-
----
-
 ### First: **Does Apigee use a load balancer?**
 
 **Yes** — but it depends on **which Apigee deployment model** you’re using:
@@ -85,15 +72,6 @@ Good — sharp question. Let’s get clear about **Apigee** and load balancing.
 
 > Apigee does **not provide a full standalone load balancer product** like NGINX/F5.
 > It **internally distributes load** between components but for **exposing APIs to clients**, an **external load balancer** is used — either **managed by Google** (SaaS) or **managed by you** (Hybrid).
-
----
-
-If you tell me **which Apigee version you’re using (SaaS, Hybrid, Private Cloud)** — I can give you an even **more exact answer** for your scenario.
-Which one are you on?
-
-
-Excellent — you’re asking exactly the kind of **deep understanding** that impresses interviewers.
-Let’s be **very precise**.
 
 ---
 
@@ -170,16 +148,6 @@ Sometimes, companies even **combine** them:
 
 ---
 
-Would you like a **simple diagram** you can remember for interviews?
-I can make one for you — want it?
-
-**Exactly — you’re catching the subtle point here.**
-Let’s slow down and break it **very cleanly**.
-
----
-
-### **You're right:**
-
 > **API Gateway** decides *which service to call* (it does API-level routing).
 
 So then…
@@ -246,14 +214,6 @@ Backend services   Backend services
 
 > The **external load balancer** helps **scale and protect** the API Gateway itself.
 > The **API Gateway** helps **route and secure** the backend APIs.
-
----
-
-If you want, I can show you **how Apigee (in Google Cloud) actually sets this up** as a real example — want that?
-
-
-Yes — **you’ve got 90% of the flow exactly right.**
-Let’s make it **precise and crystal clear** so there’s no confusion (and you can confidently explain it in interviews).
 
 ---
 
@@ -342,19 +302,6 @@ Client
 
 ---
 
-If you want, I can give **2 real-world example architectures**:
-
-* 1 with Kubernetes
-* 1 without Kubernetes
-
-Shall I?
-
-
-Excellent — this will cement your understanding and you’ll be ready for **any interview question** on this.
-Here are **both architectures**, clean and production-realistic.
-
----
-
 ## **1. Apigee + Kubernetes (Modern Cloud Native Architecture)**
 
 ```
@@ -435,15 +382,7 @@ Client
 
 ---
 
-If you want, I can also give you a **1-slide visual diagram** of both — want that? I can make it.
-
-
-Great — **now you’re diving deep into the internals**, and understanding this will make you really confident.
-
-Let’s break it **step-by-step and crystal clear** —
 → *“How does Kubernetes Service distribute requests to backend Pods? Is it equal? Round robin? Random?”*
-
----
 
 ## **Short answer**
 
@@ -522,18 +461,6 @@ spec:
 
 > Yes — **K8s Service distributes load roughly equally (randomized round robin)** to healthy Pods **automatically**.
 > You **don’t have to configure an explicit load balancer** — it’s built into kube-proxy.
-
----
-
-If you want, I can show:
-
-* The **iptables rules** kube-proxy creates
-* OR a **live traffic flow example**
-
-Do you want one of those? (optional, only if you're interested)
-
-
-Perfect follow-up — let’s make this **sharp and clear** so you can compare Kubernetes vs NGINX confidently.
 
 ---
 
@@ -648,20 +575,6 @@ upstream backend_servers {
 
 ---
 
-If you want, I can give you:
-
-* **Sample NGINX config for health checks + weighted balancing**
-  OR
-* **Nginx + Apigee hybrid architecture**
-
-Would you like one? (optional)
-
-
-Excellent — now you’re stitching **everything together** beautifully.
-Let’s clean up this entire landscape in your mind, once and for all.
-
----
-
 ## **First — What is Service Discovery?** *(Why do we even need it?)*
 
 When you build **microservices**, the number of services and their instances (replicas) can dynamically change:
@@ -752,10 +665,6 @@ So:
 
 ---
 
-You’re connecting **architecture layers** perfectly now.
-If you want, I can show **"before/after migration" diagrams** to visualize it — want that?
-
-
 **Short answer:**
 → **Kubernetes + API Gateway (like Apigee / NGINX / Kong / Istio Gateway)** is what **modern** systems use today.
 **Zuul + Eureka** is **legacy** now (only in old Spring Boot apps without K8s).
@@ -790,14 +699,3 @@ If you want, I can show **"before/after migration" diagrams** to visualize it �
 ## **If you’re preparing for product-based companies**
 
 **→ Focus on K8s + API Gateway knowledge** (not Zuul/Eureka)
-
----
-
-If you want, I can give:
-
-* **Modern system design diagram (K8s + Apigee)** (interview ready)
-* **Sample interview answer if they ask — Why not Eureka now?**
-
-Want me to show one? (optional)
-
-
