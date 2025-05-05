@@ -53,20 +53,6 @@ and **when to stop sending traffic** to Pods that are not ready
 
 ---
 
-If you want — I can show you:
-
-* How to configure **liveness probe** (interview ready example)
-* Or **what happens if entire node fails** (slightly different)
-
-Want one of these next?
-
-
-Perfect — this is **core Kubernetes interview stuff**, and if you explain this well, you’ll sound very solid.
-
-Let’s nail it.
-
----
-
 # **Liveness Probe vs Readiness Probe**
 
 | Probe Type          | What does it check?                            | Action if fails                                              |
@@ -167,12 +153,3 @@ You can configure probes in 3 ways:
 | ------------- | ---------------------- | ------------------------------------- |
 | **Liveness**  | “Am I alive?”          | Kill Pod                              |
 | **Readiness** | “Am I ready to serve?” | Remove Pod from traffic               |
-
----
-
-If you want —
-I can show a **real Spring Boot health check** config that works well with probes (interview ready)
-
-Want that?
-
-
