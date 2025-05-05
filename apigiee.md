@@ -1,9 +1,3 @@
-Yes — **Apigee** (by Google) essentially **acts as a reverse proxy**, but with **API management** capabilities layered on top.
-
-Here’s how to think about it:
-
----
-
 ### **What is Apigee?**
 
 Apigee is an **API management platform**. It helps companies expose their backend services (APIs) to external developers, partners, or internal teams — in a secure, scalable, and manageable way.
@@ -41,8 +35,6 @@ Here’s why:
 
 Apigee = **Reverse proxy + API Gateway + API Management tools**
 → It mediates and manages API traffic, not just forwards it.
-
-Perfect — let’s break **Apigee’s request forwarding flow** down step by step, nice and clear.
 
 ---
 
