@@ -115,3 +115,127 @@ So in real system design interviews, you know **exactly where to apply each** �
 
 **Quick tip (interview)**
 If unsure → **LRU is almost always a safe answer for general purpose caches**
+
+
+## **"Under the hood, how does a cache implement LRU/LFU etc.?"**
+
+---
+
+## 🚀 **First — High level**
+
+> **Eviction policy** (LRU, LFU etc.) = **Strategy**
+>
+> **Algorithm + Data structures** = **How to efficiently implement it**
+
+---
+
+## **LRU (Least Recently Used)** — Common algorithm
+
+### 🎯 **Goal**: Quickly find and evict least recently accessed item
+
+### ⚙️ **Typical algorithm**:
+
+➡️ Use **HashMap + Doubly Linked List**
+
+| Data structure           | Purpose                 |
+| ------------------------ | ----------------------- |
+| **HashMap** (key → node) | Fast O(1) lookup        |
+| **Doubly linked list**   | Maintains recency order |
+
+🛠️ **How it works**
+
+* On **get() / put()** → move item to **head (most recent)**
+* Evict from **tail (least recent)**
+
+### **Time complexity**
+
+✅ get() → O(1)
+✅ put() → O(1)
+
+### 📌 **Example** (Java-ish)
+
+```java
+class LRUCache {
+  Map<Key, Node> map;
+  DoublyLinkedList list;
+}
+```
+
+---
+
+## **LFU (Least Frequently Used)** — Common algorithm
+
+### 🎯 **Goal**: Evict least frequently accessed item
+
+### ⚙️ **Typical algorithm**:
+
+➡️ Use **HashMap + Frequency List**
+
+| Data structure                           | Purpose            |
+| ---------------------------------------- | ------------------ |
+| **HashMap (key → node)**                 | O(1) lookup        |
+| **FreqMap (freq → linked list of keys)** | Group keys by freq |
+| Track **minFreq**                        | Find LFU key fast  |
+
+🛠️ **How it works**
+
+* On get/put → increment freq
+* Move node to **next freq list**
+* Evict node from **minFreq list** when full
+
+### **Time complexity**
+
+✅ get() → O(1)
+✅ put() → O(1)
+
+---
+
+## 🟥 **Redis — What algorithm does Redis use?**
+
+Redis supports **multiple eviction policies** — here’s how **Redis implements them**:
+
+| **Redis Policy**                   | **Redis Algorithm**                                 |
+| ---------------------------------- | --------------------------------------------------- |
+| **allkeys-lru** / **volatile-lru** | **Approximate LRU** using **LRU clock + sampling**  |
+| **allkeys-lfu**                    | **Approximate LFU** with **8-bit counters + decay** |
+| **volatile-ttl**                   | Evict keys expiring soonest (based on TTL)          |
+| **noeviction**                     | Just error on memory full                           |
+
+---
+
+## 🔍 **Why Redis uses Approximate LRU/LFU (not exact)?**
+
+* **Exact LRU/LFU (O(1))** → more metadata + complex
+* Redis uses **simple counters + random sampling** (fast & good enough)
+
+### 📌 **Approx LRU example**
+
+* Each key stores a **last access timestamp (LRU clock)**
+* Redis samples **5 random keys**
+* Evicts key with **oldest timestamp** among sampled ones
+
+→ **Fast & scalable**, especially for millions of keys
+
+---
+
+## **Redis LFU — How does it work?**
+
+* Each key has **8-bit counter** (max 255)
+* On access → increment counter (with probability)
+* Counter **decays** over time (so stale keys drop freq)
+
+---
+
+## **In short (interview ready)**
+
+> **Cache design = eviction policy + fast data structure**
+
+* **LRU** → HashMap + Doubly Linked List
+* **LFU** → HashMap + Freq Lists + minFreq
+* **Redis** uses **Approximate LRU/LFU** via **sampling + counters** (for speed)
+
+---
+
+## **Pro tip (interview)**
+
+> ✨ *“Redis trades perfect LRU/LFU accuracy for speed and simplicity — using sampling and approximate counters.”*
