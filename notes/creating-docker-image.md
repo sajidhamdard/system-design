@@ -157,7 +157,7 @@ docker run -e DB_URL=jdbc:mysql://host:3306/dbname \
 
 ---
 
-## 🔍 What the Interviewer Expected You to Say
+## 🔍 What the Interviewer Expectes You to Say
 
 Here’s a strong answer:
 
@@ -190,7 +190,7 @@ services:
 
 ## ✅ Clarifying the Confusion: Docker Image vs Docker Compose
 
-### 🔸 What you said:
+### 🔸 What you should say:
 
 **in `docker-compose.yml`**, you can define both the **application** and the **database** as separate services. ✅
 
