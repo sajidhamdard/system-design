@@ -335,3 +335,76 @@ docker-compose up
 Docker Compose lets you spin up your entire app environment (Java service + DB) in **one command**, managing networking and dependencies, making local development and testing simple and consistent.
 
 ---
+
+## What Does Docker Compose Do?
+
+### 🔹 Docker Compose is a tool to **define and manage multi-container Docker applications**.
+
+Instead of running each container manually one by one, Compose lets you describe all your services (app, database, cache, etc.) in **a single YAML file** (`docker-compose.yml`), and then:
+
+* Start them all together with one command.
+* Handle networking between containers automatically.
+* Manage dependencies (e.g., start DB before your app).
+* Make configuration reusable and easy to share.
+
+---
+
+### In the example we discussed:
+
+```yaml
+services:
+  app:
+    image: my-java-service
+    ports:
+      - "8080:8080"
+    environment:
+      - DB_URL=jdbc:mysql://db:3306/mydb
+      - DB_USER=root
+      - DB_PASS=secret
+    depends_on:
+      - db
+
+  db:
+    image: mysql:8
+    environment:
+      MYSQL_ROOT_PASSWORD: secret
+      MYSQL_DATABASE: mydb
+    ports:
+      - "3306:3306"
+```
+
+* **`app`**: This is your Java microservice container.
+* **`db`**: This is the MySQL database container.
+
+---
+
+### What happens when you run:
+
+```bash
+docker-compose up
+```
+
+1. Docker Compose creates a **network** where both containers live.
+2. It starts the **`db` container first** (because `app` depends on `db`).
+3. It starts the **`app` container** next.
+4. Inside the `app` container, your microservice uses the environment variable `DB_URL=jdbc:mysql://db:3306/mydb` to connect to the `db` container by its **service name `db`** (Docker Compose automatically sets up DNS for that).
+5. Both containers run simultaneously and can talk to each other via the Docker network.
+6. Ports like `8080` and `3306` are exposed to your host machine, so you can access your microservice and database outside Docker if needed.
+
+---
+
+### Benefits of Docker Compose:
+
+* **Easy multi-container setup** — no need to manually run each container.
+* **Consistent environment** for development, testing, CI/CD pipelines.
+* **Service dependency management** with `depends_on`.
+* **Port mapping** and environment variable injection.
+* **Reusable configuration** — share your `docker-compose.yml` with teammates.
+
+---
+
+### TL;DR
+
+Docker Compose lets you spin up your entire app environment (Java service + DB) in **one command**, managing networking and dependencies, making local development and testing simple and consistent.
+
+---
