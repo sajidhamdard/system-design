@@ -1,3 +1,4 @@
+```java
 package com.example.restclient;
 
 import javax.enterprise.context.ApplicationScoped;
