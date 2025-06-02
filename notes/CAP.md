@@ -28,9 +28,9 @@ Now you have to choose:
 
 | **Pick 2** | **Means**                                       | **Example DB**                             |
 | ---------- | ----------------------------------------------- | ------------------------------------------ |
-| **C + A**  | No Partition tolerance (fails on network split) | **SQL (single-node)**                      |
-| **C + P**  | Sacrifice Availability (system blocks ops)      | **HBase, Mongo (strong consistency mode)** |
-| **A + P**  | Sacrifice Consistency (eventual consistency)    | **Cassandra, DynamoDB, Couchbase**         |
+| **C + A**  | No Partition Tolerance → works only if there's no network split → typically non-distributed SQL systems | **SQL (single-node)**                      |
+| **C + P**  | Sacrifices availability during partition → ensures strong consistency by failing some requests      | **HBase, Mongo (strong consistency mode)** |
+| **A + P**  | Sacrifices consistency (eventual consistency) → system remains available but may return stale data   | **Cassandra, DynamoDB, Couchbase**         |
 
 ---
 
