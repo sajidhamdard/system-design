@@ -263,3 +263,47 @@ Perfect! Here's **Part 4 (Low-Level Design)** covering OOP, Design Patterns, Con
   * How would you manage cache consistency and invalidation?
 
 ---
+
+
+# Machine Coding Interview Questions
+
+## ➔ Commonly Asked Machine Design Interview Questions (Divided into Levels)
+
+### 𝗕𝗮𝘀𝗶𝗰 𝗟𝗲𝘃𝗲𝗹 𝗤𝘂𝗲𝘀𝘁𝗶𝗼𝗻𝘀:
+
+1. What is system design and why is it important?
+2. What are scalability, availability, and reliability?
+3. What is load balancing, and why do we use it?
+4. Explain caching and how it improves system performance.
+5. What is a database index, and how does it help in queries?
+6. What is the difference between vertical scaling and horizontal scaling?
+7. What are the differences between SQL and NoSQL databases?
+8. What is sharding and why is it useful?
+9. Explain eventual consistency vs strong consistency.
+10. What are the CAP theorem and its implications?
+
+### 𝗠𝗼𝗱𝗲𝗿𝗮𝘁𝗲 𝗟𝗲𝘃𝗲𝗹 𝗤𝘂𝗲𝘀𝘁𝗶𝗼𝗻𝘀:
+
+11. How would you design a URL shortening service like bitly?
+12. How would you design a messaging/chat system?
+13. How would you design a web crawler?
+14. How do you design a rate limiter?
+15. What is a queue and how do message queues work?
+16. How would you design a news feed system like Facebook’s?
+17. How do you design a notification system?
+18. How do you handle database replication?
+19. How would you design a system for uploading and serving large files?
+20. How would you design an API rate limiting strategy?
+
+### 𝗔𝗱𝘃𝗮𝗻𝗰𝗲𝗱 𝗟𝗲𝘃𝗲𝗹 𝗤𝘂𝗲𝘀𝘁𝗶𝗼𝗻𝘀:
+
+21. How would you design a distributed cache system?
+22. How would you design a global CDN (Content Delivery Network)?
+23. How do you design an online collaborative document editor (like Google Docs)?
+24. How do you design a fault-tolerant system?
+25. How do you design a distributed transaction system?
+26. How would you design a scalable search engine?
+27. Explain the design of a real-time bidding system for ads.
+28. How would you design a large-scale analytics platform?
+29. How would you handle consistency in distributed systems?
+30. How would you design a system to handle billions of user requests daily?
