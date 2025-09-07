@@ -170,5 +170,3 @@ When asked a system design problem → answer in this format:
 > “In a ticket booking system, the core challenge is avoiding double booking of seats under concurrency. We solve it using DB locking (pessimistic/optimistic) or distributed locks like Redis with TTL.”
 
 ---
-
-Would you like me to expand this cheat sheet with **1–2 common trade-offs** per system (like fan-out on write vs read in social media, strong vs eventual consistency in bookings)? That way you’ll have both the **main issue + interview-worthy follow-ups**.
