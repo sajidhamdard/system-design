@@ -140,3 +140,70 @@ Just like ZooKeeper, both support **distributed locking**:
 * **Consul** = adds **service discovery + service mesh** on top of KV store & locking.
 
 ---
+
+## 1. Redis Locking (Redlock, SETNX, etc.)
+
+Redis can implement distributed locks using:
+
+* `SETNX` (set if not exists) → to grab a lock.
+* `EXPIRE` (set TTL) → so lock is automatically released if client crashes.
+* Redlock algorithm (by Redis creator, Salvatore Sanfilippo) → uses **multiple Redis nodes** to ensure fault tolerance.
+
+So yes — you *can* use Redis for ride-driver locking (e.g., "only one driver accepts ride").
+
+---
+
+## 2. Problems with Redis for locks
+
+The community debates a lot here. Redis is **fast**, but **not strongly consistent** like ZooKeeper/etcd/Consul.
+
+* **Single point of failure**
+  If Redis master dies, depending on replication mode, a lock may be lost or duplicated.
+
+* **Eventual consistency** in Redis clusters
+  Replication is asynchronous → two clients may both think they hold the lock if they talk to different Redis nodes during a failover.
+
+* **Clock drift issues**
+  Redlock assumes clock accuracy between nodes. In distributed systems, clocks can drift → causing locks to expire earlier/later than expected.
+
+* **No built-in consensus**
+  Redis does not use a consensus algorithm like Raft or Zab. That means it can’t **guarantee** global correctness in all failure scenarios.
+
+---
+
+## 3. Redis vs Zookeeper/etcd/Consul
+
+| Feature             | **Redis** (Redlock/SETNX)                                                | **ZooKeeper / etcd / Consul**                             |
+| ------------------- | ------------------------------------------------------------------------ | --------------------------------------------------------- |
+| **Primary Role**    | Cache / data store                                                       | Coordination / consensus                                  |
+| **Lock Guarantees** | Best-effort (can fail on crash, partition)                               | Strong consistency & correctness                          |
+| **Speed**           | Very fast (in-memory)                                                    | Slower but consistent                                     |
+| **Failure Safety**  | Weak (failover may cause duplicates)                                     | Strong (consensus ensures correctness)                    |
+| **Use Case Fit**    | Short-lived, low-risk locks (e.g. leader election in cache invalidation) | Critical locks (payments, ride allocation, DB migrations) |
+
+---
+
+## 4. When to Use Redis for Locks?
+
+✅ **Good for:**
+
+* Non-critical locks (e.g., "only one worker clears cache").
+* Performance-sensitive but not business-critical tasks.
+* Temporary coordination where slight inconsistency is acceptable.
+
+❌ **Not good for:**
+
+* Financial transactions.
+* Ride allocation (where correctness is more important than speed).
+* Anything requiring **strong correctness under network failures**.
+
+---
+
+## 🔑 Final Takeaway
+
+* **Redis locks** → fast, easy, but weaker guarantees.
+* **ZooKeeper/etcd/Consul locks** → slower, harder to operate, but provide **safety, strong consistency, and reliability**.
+
+That’s why for ride-hailing (driver/ride matching) → you’d prefer ZooKeeper/etcd/Consul, not Redis.
+
+---
