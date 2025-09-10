@@ -53,3 +53,45 @@ Imagine you have a list of users sorted by `created_at`:
 **Cursor = bookmark to continue fetching results from where you left off.**
 
 ---
+
+### 🔹 Traditional Pagination (pageNumber + pageSize)
+
+* Suppose you load messages with `page=2&size=20`.
+* If **new messages arrive**, page boundaries shift.
+
+  * Example: You loaded page 2 (messages 21–40).
+  * But while you’re scrolling, 5 new messages arrive.
+  * Now page 2 is **different** (messages 26–45), so you might see duplicates or miss some messages.
+
+This is why offset/page-based pagination is **not reliable for real-time data**.
+
+---
+
+### 🔹 Cursor Pagination (used in WhatsApp/Chats)
+
+* Instead of `pageNumber`, WhatsApp uses a **cursor (timestamp or messageId)**.
+* Example:
+
+  * You fetch the latest 20 messages.
+  * Server returns them **sorted by timestamp** and gives you a **cursor = oldestMessageTimestamp**.
+  * Next request → `GET /messages?before=2024-09-01T10:05:00&limit=20`
+  * This fetches the 20 older messages (before that timestamp).
+
+👉 Even if **new messages arrive while you’re scrolling**, they don’t disturb your "older messages" loading, because you’re going **back in time using a cursor**, not using a page number.
+
+---
+
+### 🔹 Why This Works for Chats/Feeds
+
+* Messages are naturally ordered by **time** (newest → oldest).
+* Cursor = "last seen timestamp/messageId".
+* Always consistent, regardless of new inserts.
+
+---
+
+✅ So yes —
+
+* **Feeds/chats** (WhatsApp, Instagram, Twitter) → **cursor-based pagination**.
+* **Static data (reports, admin dashboards)** → **pageNumber + pageSize** is usually fine.
+
+---
