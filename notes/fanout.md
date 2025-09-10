@@ -96,3 +96,87 @@ In a pull model:
 * **Pull model:** When downstream services are **slow, busy, or unreliable**, or you want **controlled consumption**. Example: Queue-based processing.
 
 ---
+
+# 🔹 Fanout in News Feed Systems
+
+“Fanout” = distributing posts from one user to many followers.
+When **User A posts**, that post needs to be delivered to **all followers’ feeds**.
+
+There are **two approaches**: **Push-based fanout** and **Pull-based fanout**.
+
+---
+
+## 1️⃣ **Push-based Fanout**
+
+👉 *As soon as a user creates a post, push it to all their followers’ feed timelines.*
+
+### Flow:
+
+1. User A creates a post.
+2. System **writes that post into every follower’s feed storage** (denormalization).
+3. When followers open their feed → posts are already there.
+
+### ✅ Advantages
+
+* **Fast read**: Feeds load instantly because posts are pre-written.
+* Good for **users with moderate followers** (most common case).
+
+### ❌ Disadvantages
+
+* **Write amplification**: If a user has 10M followers (celebrity), one post = 10M writes.
+* Wasted storage/writes if many followers never check the feed.
+
+---
+
+## 2️⃣ **Pull-based Fanout**
+
+👉 *Store posts only in the author’s “outbox” and fetch them on-demand when a follower opens their feed.*
+
+### Flow:
+
+1. User A creates a post.
+2. Post stored in **User A’s timeline storage (outbox)**.
+3. When User B (follower) opens their feed → system fetches posts from all people they follow, merges, sorts, and shows.
+
+### ✅ Advantages
+
+* **Efficient writes**: Only one write per post (to author’s storage).
+* Avoids write explosion for celebrities.
+
+### ❌ Disadvantages
+
+* **Slow reads**: Fetching + merging feeds at read time is expensive.
+* Not scalable if a user follows thousands of people (expensive to query all timelines).
+
+---
+
+## 3️⃣ **Hybrid (Real Systems Use This)**
+
+Most large systems (Facebook, Twitter, LinkedIn) use a **hybrid of push + pull**:
+
+* **For normal users**: Push fanout → precompute feeds.
+* **For celebrities (millions of followers)**: Use pull fanout → followers fetch their posts on demand.
+
+👉 This balances **read performance** and **write scalability**.
+
+---
+
+## 🔹 Example in News Feed
+
+Imagine **Virat Kohli posts**:
+
+* If we push to 100M followers → system crashes.
+* Instead, system **stores Virat’s post in his timeline (outbox)**.
+* For most followers → when they open feed, system **pulls Virat’s posts** dynamically.
+
+But if **you post to your 200 friends**, it’s fine to push it directly into their feeds.
+
+---
+
+✅ In short:
+
+* **Push = precompute feeds → fast read, expensive writes.**
+* **Pull = compute feeds on demand → cheap writes, expensive reads.**
+* **Hybrid = best of both worlds**.
+
+---
