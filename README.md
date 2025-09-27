@@ -1,79 +1,101 @@
 # 🏗️ System Design & Architecture Notes Index
 
-Click any topic below to open the note 👇
+> A guided path to learning system design, from fundamentals to advanced patterns.
 
 ---
 
-## 📚 Fundamentals & Design Principles
+## 1️⃣ Start with Fundamentals & Design Principles
 
-* [ACID](notes/ACID.md)
-* [CAP](notes/CAP.md)
-* [Normalization Vs Denormalization](notes/Normalization-Vs-Denormalization.md)
-* [Partition Tolerence](notes/Partition-Tolerence.md)
-* [Partition vs Sharding](notes/partition-vs-sharding.md)
-* [SOLID](notes/SOLID.md)
-* [Strategy Design Pattern](notes/StrategyDesignPattern.md)
-* [12-Factor App Principle](notes/12-factor-app-priniciple.md)
-* [NFR](notes/NFR.md)
-* [Idempotency](notes/idempotency.md)
+Before building systems, understand **core principles that govern design**:
 
----
+* [ACID](notes/ACID.md) – Database transaction guarantees
+* [CAP](notes/CAP.md) – Trade-offs in distributed systems
+* [Normalization Vs Denormalization](notes/Normalization-Vs-Denormalization.md) – Data modeling approaches
+* [Partition Tolerance](notes/Partition-Tolerence.md) – Handling distributed failures
+* [Partition vs Sharding](notes/partition-vs-sharding.md) – Scaling databases horizontally
+* [SOLID](notes/SOLID.md) – Object-oriented design principles
+* [Strategy Design Pattern](notes/StrategyDesignPattern.md) – Flexible design patterns
+* [12-Factor App Principle](notes/12-factor-app-priniciple.md) – Building cloud-native apps
+* [NFR](notes/NFR.md) – Non-functional requirements like scalability, latency, availability
+* [Idempotency](notes/idempotency.md) – Designing reliable operations
 
-## ⚙️ Databases & Data Storage
-
-* [Cassandra](notes/Cassandra.md)
-* [Sharding](notes/Sharding.md)
-* [Primary Replica Setup](notes/primary-replica-setup.md)
-* [Data Lakes](notes/Data-Lakes.md)
-* [HDFS](notes/HDFS.md)
-* [SQL vs NoSQL](notes/sql-vs-nosql.md)
-* [Document DB vs Columnar DB](notes/document-vs-columnar-db.md)
-* [Outbox Pattern and Ops Dashboard](notes/Outbox-pattern-and-ops-dashboard.md)
-* [Saga Pattern](notes/saga-pattern.md)
-* [S3](notes/s3.md)
+> **Tip:** Start here to form a strong foundation; everything else builds on these ideas.
 
 ---
 
-## 🚀 Performance & Scalability
+## 2️⃣ Learn Databases & Data Storage
 
-* [Caching](notes/Caching.md)
-* [Cache Eviction Policies](notes/Cache-Eviction-Policies.md)
-* [Hotspot](notes/Hotspot.md)
-* [Latency](notes/latency.md)
-* [Latency vs Throughput](notes/latency-vs-throughput.md)
-* [Backpressure](notes/Backpressure.md)
-* [High Scale System Design](notes/high-scale-system-design.md)
+Once fundamentals are clear, dive into **how data is stored and accessed**:
+
+* [SQL vs NoSQL](notes/sql-vs-nosql.md) – Choosing the right database
+* [Document DB vs Columnar DB](notes/document-vs-columnar-db.md) – Data models
+* [Cassandra](notes/Cassandra.md) – High-scale distributed database
+* [Sharding](notes/Sharding.md) – Horizontal data partitioning
+* [Primary Replica Setup](notes/primary-replica-setup.md) – High availability in DBs
+* [Data Lakes](notes/Data-Lakes.md) – Centralized storage for analytics
+* [HDFS](notes/HDFS.md) – Distributed file system
+* [S3](notes/s3.md) – Cloud object storage
+* [Outbox Pattern and Ops Dashboard](notes/Outbox-pattern-and-ops-dashboard.md) – Event-driven reliability
+* [Saga Pattern](notes/saga-pattern.md) – Distributed transaction management
+
+> **Flow:** Understand **data storage first**, then patterns to **coordinate distributed operations**.
 
 ---
 
-## 🛡️ High Availability & Fault Tolerance
+## 3️⃣ Performance & Scalability
+
+Learn **how to make systems fast and scalable**:
+
+* [Caching](notes/Caching.md) – Reduce latency
+* [Cache Eviction Policies](notes/Cache-Eviction-Policies.md) – Manage memory efficiently
+* [Hotspot](notes/Hotspot.md) – Handling traffic spikes
+* [Latency](notes/latency.md) – Response time measurement
+* [Latency vs Throughput](notes/latency-vs-throughput.md) – Trade-offs
+* [Backpressure](notes/Backpressure.md) – Avoid overloading services
+* [High Scale System Design](notes/high-scale-system-design.md) – Putting it all together
+
+> **Tip:** These topics naturally follow database design; once you know data flows, think about speed and scaling.
+
+---
+
+## 4️⃣ High Availability & Fault Tolerance
+
+Ensure **systems stay alive under failures**:
 
 * [Failover Switching](notes/Failover-Switching.md)
 * [Fault Tolerence](notes/fault-tolerence.md)
 * [Auto Restart](notes/auto-restart.md)
-* [RTO RPO](notes/RTO-RPO.md)
+* [RTO RPO](notes/RTO-RPO.md) – Recovery objectives
 * [Multi-region Deployment](notes/multi-region-deployment.md)
 * [Resiliency](notes/Resiliency.md)
-* [SLA](notes/SLA.md)
-* [Leader Election](notes/leader-election.md)
+* [SLA](notes/SLA.md) – Service guarantees
+* [Leader Election](notes/leader-election.md) – Coordinating nodes in a cluster
+
+> **Flow:** Once systems scale, ensure **they remain available** even under failures.
 
 ---
 
-## 🌐 Networking & Infrastructure
+## 5️⃣ Networking & Infrastructure
 
-* [CDN](notes/CDN.md)
-* [Load Balancer](notes/Load-Balancer.md)
+Learn how **data moves and reaches users**:
+
+* [CDN](notes/CDN.md) – Deliver content closer to users
+* [Load Balancer](notes/Load-Balancer.md) – Distribute requests
 * [Load Balancer vs Reverse Proxy](notes/Load%20Balancer%20vs%20reverse%20proxy.md)
-* [API Gateway](notes/api-gateway.md)
+* [API Gateway](notes/api-gateway.md) – Manage microservices
 * [Apigee](notes/apigiee.md)
 * [Nginx](notes/nginx.md)
-* [Geo DNS](notes/Geo-DNS.md)
+* [Geo DNS](notes/Geo-DNS.md) – Route traffic globally
 * [HTTP vs HTTPS](notes/http-https.md)
 * [Load Balancer vs Reverse Proxy vs API Gateway](notes/load-balancer-VS-reverse-proxy-VS-api-gateway.md)
 
+> **Tip:** Networking topics naturally come after scaling and availability, because you need to route traffic efficiently.
+
 ---
 
-## 🛠️ Tools & Operations
+## 6️⃣ Tools & Operations
+
+Learn **how to monitor, deploy, and maintain systems**:
 
 * [Spring Boot Health Check](notes/Spring-Boot-Health-Check.md)
 * [Kubernetes Pods Restart](notes/Kubernetes-Pods-Restart.md)
@@ -81,9 +103,13 @@ Click any topic below to open the note 👇
 * [REST Call](notes/rest-call.md)
 * [Prometheus & Grafana](notes/prometheus-grafana.md)
 
+> **Flow:** These are practical tools to implement the designs you’ve learned.
+
 ---
 
-## 🏢 Architecture Patterns
+## 7️⃣ Architecture Patterns
+
+Study **common system structures and messaging patterns**:
 
 * [Two-tier Architecture](notes/Two-tier-architecture.md)
 * [Project Architecture](notes/project-architecture.md)
@@ -93,9 +119,13 @@ Click any topic below to open the note 👇
 * [Webhooks](notes/webhooks.md)
 * [WebSockets](notes/websockets.md)
 
+> **Flow:** After understanding systems, learn patterns to **structure services efficiently**.
+
 ---
 
-## 🔎 Search & Indexing
+## 8️⃣ Search & Indexing
+
+Handle **large-scale queries and fast search**:
 
 * [Elastic Search](notes/elastic-search.md)
 * [Apache Lucene](notes/apache-lucene.md)
@@ -103,19 +133,21 @@ Click any topic below to open the note 👇
 
 ---
 
-## 📡 Data Processing
+## 9️⃣ Data Processing
+
+Process **batch or streaming data**:
 
 * [Batch vs Streaming](notes/batch-vs-streaming.md)
 
 ---
 
-## 🤖 AI & ML Basics
+## 🔟 AI & ML Basics
 
 * [Basics of AI](notes/basics-of-AI.md)
 
 ---
 
-## 📋 Miscellaneous
+## 📝 Miscellaneous
 
 * [Syllabus](notes/Syllabus.md)
 * [System Design Problems Key Solutions](notes/System-design-problems-key-solution.md)
