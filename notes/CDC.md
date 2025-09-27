@@ -69,3 +69,72 @@ Update cache automatically
 * It **captures DB changes** and **synchronizes cache automatically**, avoiding stale data and expensive polling.
 
 ---
+
+# **📡 Change Data Capture (CDC) in Database**
+
+**Definition:**
+
+> **CDC is a technique used to detect and capture changes in a database**—like **inserts, updates, and deletes**—and make those changes available to **other systems in real-time or near real-time**.
+
+It’s widely used for **replicating data, syncing caches, event streaming, and analytics pipelines**.
+
+---
+
+## **1️⃣ How CDC Works**
+
+1. **Data changes in the source database** (insert/update/delete).
+2. CDC **detects these changes** (via logs, triggers, or database hooks).
+3. Changes are **published to a stream or message system** (e.g., Kafka).
+4. **Target systems** (analytics, cache, other DBs, microservices) **consume these changes**.
+
+**Flow (Text Diagram):**
+
+```
+Source DB → CDC → Message Queue / Stream → Target System (Cache, DB, Analytics)
+```
+
+---
+
+## **2️⃣ Implementation Methods**
+
+| Method                        | How It Works                                                  |
+| ----------------------------- | ------------------------------------------------------------- |
+| Database Logs (Log-Based CDC) | Reads **transaction logs** (e.g., MySQL binlog, Postgres WAL) |
+| Triggers (Trigger-Based CDC)  | Executes **triggers on table changes**                        |
+| Timestamp/Version Column      | Checks rows with **updated timestamps or version numbers**    |
+
+---
+
+## **3️⃣ Benefits**
+
+* **Real-time data replication** → target systems are always updated.
+* **Decouples systems** → source DB doesn’t need to know about consumers.
+* **Supports event-driven architecture** → trigger downstream actions automatically.
+* **Efficient** → only changed data is transmitted, not the entire dataset.
+
+---
+
+## **4️⃣ Use Cases**
+
+* **Cache synchronization**: Keep Redis or Memcached updated.
+* **Analytics pipelines**: Stream changes to data warehouses (e.g., Snowflake, BigQuery).
+* **Microservices**: Share state changes between services.
+* **Data replication**: Between different databases or cloud regions.
+
+---
+
+## **5️⃣ Analogy**
+
+> Imagine a **journalist taking notes at a live event**:
+>
+> * Instead of reporting the **entire story repeatedly**, they **note only what changes or happens next**.
+> * Subscribers (readers, news channels) **receive only the updates**, not the full content every time.
+
+---
+
+💡 **Key takeaway:**
+
+* **CDC = capture and stream database changes in real-time**
+* Enables **data sync, event-driven processing, and analytics** efficiently.
+
+---
