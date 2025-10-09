@@ -138,3 +138,129 @@ Source DB → CDC → Message Queue / Stream → Target System (Cache, DB, Analy
 * Enables **data sync, event-driven processing, and analytics** efficiently.
 
 ---
+
+## **1️⃣ What is CDC (Change Data Capture)?**
+
+**Change Data Capture (CDC)** is a technique that **tracks changes in a database** — like inserts, updates, or deletes — and makes them **available to other systems** in real time.
+
+### 🔹 Purpose:
+
+* Keep **databases, data warehouses, or microservices in sync**
+* Enable **real-time analytics**
+* Avoid **polling the database** repeatedly (which is inefficient)
+
+### 🔹 How It Works:
+
+1. CDC monitors the **database’s transaction log** (like MySQL binlog, PostgreSQL WAL).
+2. Captures **every change** (insert, update, delete).
+3. Converts it into a **stream of events** that other systems can consume.
+
+---
+
+### 🔹 Example:
+
+Suppose you have a **MySQL table `orders`**:
+
+| order_id | customer | status  |
+| -------- | -------- | ------- |
+| 1        | Alice    | pending |
+
+If a new order is inserted:
+
+```sql
+INSERT INTO orders VALUES (2, 'Bob', 'pending');
+```
+
+A CDC system will **capture this change** and send an event like:
+
+```json
+{
+  "operation": "insert",
+  "table": "orders",
+  "data": {
+    "order_id": 2,
+    "customer": "Bob",
+    "status": "pending"
+  }
+}
+```
+
+---
+
+## **2️⃣ What is Debezium?**
+
+**Debezium** is an **open-source CDC platform** that:
+
+* Connects to **databases**
+* Monitors their **transaction logs**
+* Streams the **captured changes as events** (usually into **Kafka**)
+
+---
+
+### 🔹 Key Features of Debezium:
+
+* Supports **multiple databases**: MySQL, PostgreSQL, SQL Server, MongoDB, Oracle, etc.
+* Captures **real-time changes** (insert, update, delete)
+* Sends **structured events** to **Kafka topics** or other messaging systems
+* **Non-intrusive**: reads **logs** instead of querying tables repeatedly
+* Supports **schema evolution** (tracks table structure changes)
+
+---
+
+### 🔹 How Debezium Fits in Architecture:
+
+```
+[Database] → [Debezium Connector] → [Kafka Topic] → [Microservices / Data Warehouse / Analytics]
+```
+
+* **Database**: e.g., MySQL
+* **Debezium Connector**: reads binlog/WAL
+* **Kafka Topic**: streams each change as an event
+* **Consumers**: other services, dashboards, or warehouses consume events in real time
+
+---
+
+### 🔹 Example Use Case
+
+**Scenario**: You have a MySQL database and want your **search index (Elasticsearch)** to update in real time when data changes.
+
+**Without CDC**:
+
+* Poll the database every few minutes → inefficient and slow
+
+**With Debezium CDC**:
+
+* Debezium detects the change instantly → sends the event to Kafka → Elasticsearch updates immediately
+
+---
+
+### 🔹 Event Example from Debezium:
+
+```json
+{
+  "before": {"order_id": 1, "status": "pending"},
+  "after": {"order_id": 1, "status": "shipped"},
+  "source": {"db": "shop", "table": "orders"},
+  "op": "u",   // u = update, c = create, d = delete
+  "ts_ms": 1696930000000
+}
+```
+
+---
+
+### 🔹 Benefits of Using Debezium / CDC:
+
+✅ Real-time data replication & analytics
+✅ Low impact on the source database (reads logs, not tables)
+✅ Enables **event-driven architectures**
+✅ Scales well for multiple consumers
+✅ Keeps microservices **event-driven and synchronized**
+
+---
+
+In short:
+
+* **CDC** = the concept of capturing changes from a database.
+* **Debezium** = a tool that implements CDC and streams changes to Kafka or other systems.
+
+---
