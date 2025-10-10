@@ -78,6 +78,6 @@ HDFS follows a **Master-Slave architecture**, and consists of three main compone
 
 ---
 
-## 📊 Summary (Interview-Friendly Answer)
+## 📊 Summary
 
 > “HDFS is a distributed file system that stores data across a cluster in a fault-tolerant and scalable way. It uses a **master-slave architecture** with a **NameNode** for metadata and **DataNodes** for actual storage. Files are split into blocks and replicated across nodes to ensure availability and durability. HDFS is optimized for **high throughput, large-scale data processing**, and forms the storage backbone of the Hadoop ecosystem.”
