@@ -120,10 +120,6 @@ But in real-world distributed systems or cloud apps, **they can be quite differe
 
 ---
 
-Excellent — this is another very common confusion! Let’s break it down **super clearly** 👇
-
----
-
 ### 🚀 **Latency vs Bandwidth — Clear Definitions**
 
 | Term          | Meaning                                                      | Unit                                          | Key Point                                      |
