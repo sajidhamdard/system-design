@@ -144,6 +144,6 @@ CloudFront handles:
 
 ---
 
-## **Quick interview answer (you can say)**
+## **Quick interview answer**
 
 > ✨ *“CDNs automatically route users to nearest servers via DNS + Anycast — I just configure caching rules and connect my origin server. The distribution happens seamlessly.”*
