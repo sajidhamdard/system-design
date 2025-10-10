@@ -81,7 +81,7 @@ You book a ticket, get success message → server crashes
 
 ---
 
-> Interviewer-friendly answer 👇
+> In short 👇
 > **“ACID means — All or nothing, Valid state, No interference, Data stays safe. Eg: Bank transfer, balance rule, seat booking, ticket saved.”**
 
 ---
