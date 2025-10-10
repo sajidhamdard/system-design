@@ -68,6 +68,6 @@ A **resilient system**:
 
 ---
 
-## 🧠 Interview-Ready Answer (TL;DR)
+## 🧠 Interview-Ready Answer
 
 > "Resiliency is the system's ability to recover from failures and continue working, ideally without impacting users. In large-scale distributed systems, failures are expected. So we build resiliency using techniques like retries, circuit breakers, timeouts, failovers, and graceful degradation. A resilient system prevents small failures from becoming large outages, improving availability and reliability."
