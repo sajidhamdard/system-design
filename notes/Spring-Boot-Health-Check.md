@@ -226,7 +226,7 @@ public class CustomDbHealthIndicator implements HealthIndicator {
 
 ---
 
-# 🥇 **Simple interview answer (your project)**
+# 🥇 **Simple interview answer **
 
 > *“We configured non-blocking DB health checks by applying a timeout of 1s on DB validation queries. If DB is unreachable, our health endpoint returns quickly with a degraded status rather than blocking. This prevents Kubernetes from marking pods unhealthy unnecessarily during transient DB slowdowns.”*
 
