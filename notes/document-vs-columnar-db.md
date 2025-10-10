@@ -1,7 +1,3 @@
-Perfect question 👍 Let’s break this down in **simple terms**.
-
----
-
 ## **1. Document DB**
 
 * **Definition**: A **NoSQL database** that stores data as **documents** (usually JSON or BSON format).
