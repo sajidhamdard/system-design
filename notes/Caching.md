@@ -193,7 +193,7 @@ cache.set(userId, profile);
 
 ---
 
-## **In short (interview ready)**
+## **In short**
 
 > **Cache-aside** = fetch + cache on miss (default)
 > **Write-through** = write DB + cache together (freshness)
