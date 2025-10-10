@@ -94,4 +94,3 @@ Think of DASH like a **restaurant buffet**:
 * Client adapts based on how much food they can handle (network condition)
 
 ---
-Do you want me to do that?
