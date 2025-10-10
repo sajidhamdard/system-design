@@ -72,7 +72,7 @@ Now you have to choose:
 
 ---
 
-## **In short (you say this in interview)**
+## **In short**
 
 > **SQL → CA** (single node, strict data)
 > **Mongo → CP** (strong data, OK to block on partition)
