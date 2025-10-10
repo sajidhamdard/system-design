@@ -1,7 +1,3 @@
-Alright — let’s break down **CQRS** (Command Query Responsibility Segregation) so it’s clear and practical.
-
----
-
 ## **1. What is CQRS?**
 
 CQRS is an architectural pattern that **separates read operations (queries)** from **write operations (commands)** into different models or services.
