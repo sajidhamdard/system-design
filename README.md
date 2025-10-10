@@ -186,7 +186,7 @@
 * [Manifest File in Video Chunks Processing](notes/manifest-video-processing.md)
 * [Chunker Service](notes/chunker-service.md)
 * [Apache Spark](notes/apache-spark.md)
-* [HLS / DASH](notes/HLS.md), [DASH.md](notes/DASH.md)
+* [HLS / DASH](notes/HLS.md), [DASH](notes/DASH.md)
 
 ---
 
