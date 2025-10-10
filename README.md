@@ -4,7 +4,7 @@
 
 ---
 
-## 1️⃣ Start with Fundamentals & Design Principles
+## Start with Fundamentals & Design Principles
 
 * [ACID](notes/ACID.md) – Database transaction guarantees
 * [CAP](notes/CAP.md) – Trade-offs in distributed systems
@@ -20,7 +20,7 @@
 
 ---
 
-## 2️⃣ Databases & Data Storage
+## Databases & Data Storage
 
 * [SQL vs NoSQL](notes/sql-vs-nosql.md) – Choosing the right database
 * [Document DB vs Columnar DB](notes/document-vs-columnar-db.md) – Data models
@@ -45,7 +45,7 @@
 
 ---
 
-## 3️⃣ Performance, Scalability & Caching
+## Performance, Scalability & Caching
 
 * [Caching](notes/Caching.md) – Reduce latency
 * [Cache Eviction Policies](notes/Cache-Eviction-Policies.md) – Memory management
@@ -60,7 +60,7 @@
 
 ---
 
-## 4️⃣ High Availability & Fault Tolerance
+## High Availability & Fault Tolerance
 
 * [Failover Switching](notes/Failover-Switching.md)
 * [Fault Tolerence](notes/fault-tolerence.md)
@@ -75,7 +75,7 @@
 
 ---
 
-## 5️⃣ Networking & Infrastructure
+## Networking & Infrastructure
 
 * [CDN](notes/CDN.md) – Deliver content closer to users
 * [Load Balancer](notes/Load-Balancer.md) – Distribute requests
@@ -92,7 +92,7 @@
 
 ---
 
-## 6️⃣ Messaging, Streaming & Async
+## Messaging, Streaming & Async
 
 * [Push vs Pull Architecture](notes/push-vs-pull-architecture.md)
 * [Asynchronous Decoupling](notes/asynchronous-decoupling.md)
@@ -107,7 +107,7 @@
 
 ---
 
-## 7️⃣ Security & Authentication
+## Security & Authentication
 
 * [Encryption](notes/encryption.md)
 * [Cryptography](notes/cryptography.md)
@@ -122,7 +122,7 @@
 
 ---
 
-## 8️⃣ Tools, DevOps & Operations
+## Tools, DevOps & Operations
 
 * [Spring Boot Health Check](notes/Spring-Boot-Health-Check.md)
 * [Kubernetes Pods Restart](notes/Kubernetes-Pods-Restart.md)
@@ -135,7 +135,7 @@
 
 ---
 
-## 9️⃣ Architecture Patterns & System Design
+## Architecture Patterns & System Design
 
 * [Two-tier Architecture](notes/Two-tier-architecture.md)
 * [Project Architecture](notes/project-architecture.md)
@@ -152,7 +152,7 @@
 
 ---
 
-## 🔟 System Reliability & Concurrency Patterns
+## System Reliability & Concurrency Patterns
 
 * [Retry Mechanism](notes/retry-mechanism.md)
 * [Distributed Locking / Redis Lock / Redlock](notes/distributed-locks.md)
@@ -165,7 +165,7 @@
 
 ---
 
-## 1️⃣1️⃣ Search, Indexing & Analytics
+## Search, Indexing & Analytics
 
 * [Elastic Search](notes/elastic-search.md)
 * [Apache Lucene](notes/apache-lucene.md)
@@ -177,7 +177,7 @@
 
 ---
 
-## 1️⃣2️⃣ Data Processing, Streaming & Video
+## Data Processing, Streaming & Video
 
 * [Batch vs Streaming](notes/batch-vs-streaming.md)
 * [Adaptive Streaming](notes/adaptive-streaming.md)
@@ -190,14 +190,14 @@
 
 ---
 
-## 1️⃣3️⃣ Messaging, Queue & Event Processing
+## Messaging, Queue & Event Processing
 
 * [Exactly Once vs At-Least Once](notes/exactly-once-vs-at-least-once.md)
 * [Micro-batching](notes/micro-batching.md)
 
 ---
 
-## 1️⃣4️⃣ Miscellaneous & References
+## Miscellaneous & References
 
 * [Internet](notes/internet.md)
 * [UUID](notes/uuid.md)
