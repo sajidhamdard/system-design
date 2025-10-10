@@ -1,4 +1,4 @@
-Sure! Let’s break down **Operational Transformation (OT)** and **CRDTs**, which are key techniques for **real-time collaborative systems**.
+**Operational Transformation (OT)** and **CRDTs**, which are key techniques for **real-time collaborative systems**.
 
 ---
 
@@ -103,7 +103,3 @@ Both OT and CRDTs are methods to **handle concurrent edits** in **distributed co
 5. **Use CRDTs** for decentralized apps, offline-first apps, or distributed databases.
 
 ---
-
-I can **draw a diagram showing OT vs CRDT workflow in collaborative editing**, which makes the differences very intuitive.
-
-Do you want me to do that?
