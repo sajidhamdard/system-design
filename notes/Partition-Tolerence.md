@@ -61,7 +61,7 @@ So, **real-world distributed systems MUST tolerate partitions**
 
 ---
 
-## **In short (interview ready)**
+## **In short**
 
 > **Partition tolerance** means:
 > System keeps running even when network splits happen between nodes → handles failure gracefully.
