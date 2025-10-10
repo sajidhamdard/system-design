@@ -49,7 +49,7 @@
 
 * [Caching](notes/Caching.md) – Reduce latency
 * [Cache Eviction Policies](notes/Cache-Eviction-Policies.md) – Memory management
-* [Hotspot / Hot Keys](notes/Hotspot.md), [hot-reads-and-writes.md](notes/hot-reads-and-writes.md) – Handling traffic spikes
+* [Hotspot / Hot Keys](notes/Hotspot.md), [hot-reads-and-writes](notes/hot-reads-and-writes.md) – Handling traffic spikes
 * [Latency](notes/latency.md) – Response time measurement
 * [Latency vs Throughput](notes/latency-vs-throughput.md) – Trade-offs
 * [CPU & Memory Sizing](notes/cpu-calculation.md) – Estimating resources
@@ -79,7 +79,7 @@
 
 * [CDN](notes/CDN.md) – Deliver content closer to users
 * [Load Balancer](notes/Load-Balancer.md) – Distribute requests
-* [Load Balancer vs Reverse Proxy](notes/Load%20Balancer%20vs-reverse-proxy.md)
+* [Load Balancer vs Reverse Proxy](notes/Load-Balancer-vs-reverse-proxy.md)
 * [API Gateway](notes/api-gateway.md) – Manage microservices
 * [Apigee](notes/apigiee.md)
 * [Nginx](notes/nginx.md)
