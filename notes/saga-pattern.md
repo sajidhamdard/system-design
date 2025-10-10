@@ -78,19 +78,6 @@ Here’s an exact sentence you can memorize and say:
 
 ---
 
-## ✅ **Your project?**
-
-Since you are using **Kafka** and **services publish/consume events**,
-Your approach = **Saga pattern (Choreography)**
-
----
-
-## **In interview**, confidently say:
-
-> "We implement the **Saga pattern (choreography-based)** using **Kafka**. Each service emits and listens to events, and performs compensating transactions on failure to rollback the workflow and ensure eventual consistency."
-
----
-
 ## 🚀 **Bonus Tip (Interview)**
 
 If interviewer asks:
