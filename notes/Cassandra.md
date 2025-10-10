@@ -158,7 +158,7 @@ So systems choose between:
 
 ---
 
-### **Interview ready one-liner**
+### **One-liner**
 
 > **Cassandra** prioritizes **Availability + Partition Tolerance** (AP)
 > **MongoDB** prioritizes **Consistency + Partition Tolerance** (CP)
