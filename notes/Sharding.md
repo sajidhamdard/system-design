@@ -121,3 +121,91 @@ If `product_id = 12345`
 | Hash-based  | Based on hash % N     | When you want **uniform** distribution                |
 
 ---
+
+
+## ⚙️ What is Sharding?
+
+**Definition:**
+
+> **Sharding** is splitting a database or a dataset into **smaller, independent pieces called shards**, so that each shard holds a subset of the data.
+
+**Goal:**
+
+* Scale **writes and reads horizontally**
+* Avoid **single shard overload (hot spots)**
+
+---
+
+## 🔄 What “Add Salt / Time-Bucket” Means
+
+These are **techniques to distribute data evenly across shards** and prevent **hot keys**:
+
+---
+
+### 1️⃣ **Salting**
+
+* **Problem:** Some keys are accessed much more frequently → hot shard
+* **Solution:** Add a **random prefix / salt** to the key before sharding
+
+**Example:**
+
+* Original key: `user:123`
+
+* Salted key: `3:user:123`, `7:user:123` (random prefix 0–9)
+
+* When sharding by key hash → salted keys spread across multiple shards → **reduces hot keys**
+
+**Use Case:**
+
+* Redis caching for frequently accessed keys
+
+---
+
+### 2️⃣ **Time-Bucketing**
+
+* **Problem:** Sequential writes can concentrate on a single shard → hot shard
+* **Solution:** Partition data **based on time intervals** (time-buckets)
+
+**Example:**
+
+* Logs table → shard by day:
+
+  * `logs_2025_10_10`
+  * `logs_2025_10_11`
+* Requests are distributed across different shards → prevents **all writes hitting the same shard**
+
+**Use Case:**
+
+* Event logs, metrics, time-series data
+
+---
+
+## ⚡ Why These Techniques Are Needed
+
+* Many NoSQL / distributed databases **hash keys to shards**
+* But if your keys are **sequential or skewed** → one shard becomes a **hotspot** → slows down system
+* Salting / time-bucketing **evenly distributes load**
+
+---
+
+## 🧩 Analogy
+
+1. **Salting:**
+
+   * Like **adding a random prefix to your mailbox address** → letters are delivered to different postboxes instead of one overloaded box
+
+2. **Time-Bucketing:**
+
+   * Like **sorting letters by day of delivery** → distributes daily mail evenly across mail slots
+
+---
+
+✅ **Key Takeaways**
+
+* Sharding = split data into multiple shards to scale
+* Hot keys = some keys get **disproportionately high traffic**
+* **Salting:** random prefix to spread hot keys
+* **Time-bucketing:** partition by time to avoid sequential-write hotspots
+* Both techniques **improve throughput and reduce contention**
+
+---
