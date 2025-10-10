@@ -109,7 +109,7 @@ public void placeOrder(Order order) {
 
 ---
 
-# 🏆 **Summary for You (Your project context)**
+# 🏆 **Summary for You**
 
 ✅ **Ops Dashboard**
 — Your Kibana + DLQ viewer → for Ops to see, retry, reconcile
