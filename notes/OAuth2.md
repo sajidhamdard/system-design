@@ -162,14 +162,6 @@ This ensures **roles (groups)** get embedded in JWT automatically after login.
 
 ---
 
-Perfect — you’re asking **exactly the right thing**.
-Let’s get straight to **clean backend code** that extracts roles from the JWT **Access Token** (since roles are inside token claims)
-
-I’ll assume you’re using **Spring Boot** (most common).
-If you’re using something else, just tell me.
-
----
-
 ## **Scenario 1 — You’re using Spring Boot + OAuth2 Resource Server**
 
 (The **best-practice modern setup**)
