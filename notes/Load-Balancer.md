@@ -639,7 +639,7 @@ So:
 
 ---
 
-## **Your current project (Apigee + Kubernetes)**
+## **(Apigee + Kubernetes)**
 
 | Old (Spring Boot with Zuul/Eureka)      | New (K8s + Apigee)                                                |
 | --------------------------------------- | ----------------------------------------------------------------- |
