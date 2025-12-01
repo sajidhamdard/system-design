@@ -76,6 +76,146 @@ Re-applies INSERT statement -> ensures order is not lost
 
 ---
 
+**WAL vs Redo/Undo logs** — the way professional DB engines implement them.
+
+**WAL (Write-Ahead Logging)** is a *strategy / principle*.
+
+**Redo & Undo logs** are *the actual log files* used by many databases to implement WAL.
+
+So:
+
+> **WAL = the rule**
+> **Redo/Undo logs = the files used to follow the rule**
+
+But depending on the database, WAL may contain only redo info or both.
+
+---
+
+# 🚀 **1. WAL (Write-Ahead Logging) — The Principle**
+
+WAL means:
+
+> **Before modifying the actual data file, write the change to a log on disk.**
+
+Purpose:
+
+* crash recovery
+* durability
+* atomic commit
+
+WAL is **append-only**, very fast, and persisted immediately.
+
+---
+
+# 🚀 **2. Redo Log — “What should be reapplied after crash”**
+
+Redo log stores **how to reapply committed changes**.
+
+Contains:
+
+* new value
+* transaction ID
+* page/row identifier
+* commit markers
+
+Used in **roll-forward** recovery:
+
+### 💡 If DB crashes:
+
+* Redo log is replayed
+* All committed transactions are applied to data files
+
+**Redo = reapply the work that was finished.**
+
+---
+
+# 🚀 **3. Undo Log — “How to reverse uncommitted changes”**
+
+Undo log stores **how to undo/rollback partial work**.
+
+Contains:
+
+* old value
+* row version before update
+* transaction markers
+
+Used in two situations:
+
+### Case 1: Transaction does ROLLBACK
+
+Undo log restores old values.
+
+### Case 2: DB crashes, but transaction was not committed
+
+Undo log is used during restart to undo incomplete operations.
+
+**Undo = cancel the work that wasn’t finished.**
+
+---
+
+# ⭐ So what’s the difference?
+
+| Feature                      | WAL                              | Redo Log               | Undo Log                  |
+| ---------------------------- | -------------------------------- | ---------------------- | ------------------------- |
+| Meaning                      | Principle: write log before data | Log of new values      | Log of old values         |
+| Purpose                      | Ensure durability                | Recover committed txns | Rollback uncommitted txns |
+| Used for                     | Crash recovery, durability       | Redo (roll forward)    | Undo (roll back)          |
+| Contains                     | Depends on DB                    | New changes            | Old changes               |
+| Required for crash recovery? | Yes                              | Yes (for committed)    | Yes (for uncommitted)     |
+
+---
+
+# ⭐ How different DB engines use WAL/Redo/Undo
+
+### **PostgreSQL**
+
+* WAL contains **only REDO info**
+* No undo logs in WAL
+* Undo is done using MVCC + old tuple versions in data pages
+
+### **MySQL InnoDB**
+
+* Uses WAL principle
+* Has two logs:
+
+  * **Redo log** → redo committed changes
+  * **Undo log** → rollback uncommitted transactions
+
+### **Oracle & SQL Server**
+
+* Transaction Log contains **both redo and undo**
+* Uses WAL internally
+* Very advanced redo/undo system
+
+### **MongoDB / Cassandra**
+
+* Mongo → journal
+* Cassandra → commit log
+  (Both follow WAL strategy)
+
+---
+
+# ⭐ Final Summary (Best Version)
+
+### ✔ WAL = The rule
+
+"Write changes to log before writing to main data file."
+
+### ✔ Redo Log = New data for crash recovery
+
+(Used to reapply committed changes after crash)
+
+### ✔ Undo Log = Old data for rollback
+
+(Used to undo failed or uncommitted transactions)
+
+### ✔ Many DBs combine these but the idea is the same:
+
+* **Undo uncommitted**
+* **Redo committed**
+
+---
+
 Whether **WAL (Write-Ahead Logging)** needs to be **enabled manually** or is **on by default** depends on the database:
 
 ---
