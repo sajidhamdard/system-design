@@ -1,0 +1,4 @@
+title: System Design Notes
+theme: minima   # Simple theme provided by GitHub Pages
+markdown: kramdown
+permalink: /:path/
