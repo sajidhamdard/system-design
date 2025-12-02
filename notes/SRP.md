@@ -178,3 +178,141 @@ But **as the project grows**, it will:
 * reduce code quality
 
 **That’s why SRP exists — not for today, but for 6 months later.**
+
+---
+
+Here are **the clearest, most practical rules of thumb** used by senior engineers and architects to decide **when to split a class** — not theory, only real-world guidance.
+
+---
+
+# 🔹 **Rule of Thumb #1: The class has more than ONE business reason to change**
+
+Ask yourself:
+
+> **If the business changes Requirement A, will this class change?**
+> **If the business changes Requirement B, will this class also change?**
+
+If the answer is **yes** for two different business reasons → **split the class**.
+
+### Example
+
+* Business changes printing format → class must change
+* Business changes generation rules → class must also change
+
+Two reasons → **split**.
+
+---
+
+# 🔹 **Rule of Thumb #2: Methods inside the class don’t belong together logically**
+
+Ask:
+
+> “Do these methods feel like they belong to the same purpose?”
+
+If the answer is **no**, split.
+
+### Example
+
+`generateReport()` and `printReport()` do not belong together logically.
+
+---
+
+# 🔹 **Rule of Thumb #3: Class name contains ‘and’ or gets too long**
+
+If your class name sounds like:
+
+* `ReportGenerationAndPrintingService`
+* `OrderAndInventoryManager`
+* `UserAndEmailService`
+
+Or you try to find a big name like:
+
+* `ReportAwesomeProcessingManagerServiceUtil`
+
+Then it's doing too much → **split**.
+
+💡 *If you cannot name it simply, the class is violating SRP.*
+
+---
+
+# 🔹 **Rule of Thumb #4: Class keeps growing every few weeks**
+
+If each new requirement adds 20–30 lines to the same class:
+
+* It will become a God class
+* Hard to maintain
+* High chances of bugs
+
+This is the best time to split before it becomes 1000 lines.
+
+---
+
+# 🔹 **Rule of Thumb #5: You cannot test the class in isolation**
+
+If unit testing the class becomes difficult because:
+
+* printing depends on generation
+* saving depends on formatting
+* emailing depends on DB
+
+Then **split**.
+
+Testability is a strong indicator of responsibility separation.
+
+---
+
+# 🔹 **Rule of Thumb #6: Some methods are used by one module, others by another**
+
+Classic sign of multiple responsibilities.
+
+Example:
+
+* OrderService.createOrder() → called by checkout
+* OrderService.cancelOrder() → used by admin
+* OrderService.sendEmail() → used by marketing
+* OrderService.updateInventory() → used by inventory module
+
+Absolute violation → split into dedicated services.
+
+---
+
+# 🔹 **Rule of Thumb #7: You often pass too many unused dependencies**
+
+If your class constructor looks like:
+
+```java
+ReportService(ReportGenerator gen, ReportPrinter printer, EmailSender emailer, DBRepo repo)
+```
+
+And some methods don’t even need those dependencies → **split**.
+
+---
+
+# 🔹 **Rule of Thumb #8: You feel scared to modify the class**
+
+This is the biggest practical sign.
+
+If developers think:
+
+> “Yaar is class ko mat touch karna… kuch na kuch tutega.”
+
+Time to split.
+
+---
+
+# 🔹 **Rule of Thumb #9: Code review comments repeatedly say: "Move this out"**
+
+If multiple developers feel something doesn’t belong there → it probably doesn’t.
+
+---
+
+# 🔹 **The Easiest Shortcut (Golden Rule)**
+
+### 👉 **If a class does more than ONE thing, split it.**
+
+### 👉 **If a class changes for more than ONE reason, split it.**
+
+If you're *thinking* whether to split → **split it**.
+Small classes are always cheaper than big classes.
+
+---
