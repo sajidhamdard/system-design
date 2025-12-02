@@ -1,4 +1,4 @@
 title: System Design Notes
-theme: minima   # Simple theme provided by GitHub Pages
+theme: jekyll-theme-cayman
 markdown: kramdown
 permalink: /:path/
