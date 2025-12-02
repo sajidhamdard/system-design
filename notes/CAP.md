@@ -24,7 +24,7 @@ Now you have to choose:
 
 ---
 
-## **Summary table (very easy)**
+## **Summary table**
 
 | **Pick 2** | **Means**                                       | **Example DB**                             |
 | ---------- | ----------------------------------------------- | ------------------------------------------ |
@@ -34,7 +34,7 @@ Now you have to choose:
 
 ---
 
-## **Real-life analogy (very easy)**
+## **Real-life analogy**
 
 > You send a **WhatsApp message**
 > → Server **network splits**
@@ -63,7 +63,7 @@ Now you have to choose:
 
 ---
 
-## **Real world analogy (easy)**
+## **Real world analogy**
 
 | **Scenario**                   | **DB**           | **Behavior**                                                    |
 | ------------------------------ | ---------------- | --------------------------------------------------------------- |
