@@ -146,7 +146,7 @@ After successful migration, you can remove the rewrite plugin from `pom.xml`.
 
 ---
 
-## 📊 Step 7 — Check DataTables (What exactly changed)
+## Step 7 — Check DataTables (What exactly changed)
 
 Open:
 
