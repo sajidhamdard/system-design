@@ -1,306 +1,380 @@
-# 🏗️ System Design & Architecture Notes Index
+# 🏗️ System Design & Architecture Notes — Complete Roadmap
 
-> A complete guide to learning system design from fundamentals → advanced distributed systems → networking → DevOps → real-time systems.
+> A structured roadmap to master System Design from fundamentals → distributed systems → networking → scalability → real-world architectures.
 
----
+This guide is designed for:
 
-# ⭐ Recommended Learning Path
-
-1. **Start with fundamentals** → ACID, CAP, NFR, Idempotency
-2. **Move to core system design** → Caching, Databases, Partitioning, HLD
-3. **Understanding distributed systems** → Consensus, Event-driven, Replication
-4. **Networking & performance** → HTTP, load balancing, latency
-5. **Scaling & HA** → Failover, multi-region, resiliency
-6. **Security** → OAuth2, JWT, TLS, OWASP
-7. **Advanced concepts** → CRDT, OT, ABR video streaming
-8. **DevOps + Kubernetes** → Pods, Ingress, Prometheus
-9. **Design problems** → Chat system, Notification system, Rate limiting
+* Software Engineers preparing for **System Design Interviews**
+* Developers building **scalable production systems**
+* Engineers transitioning to **Senior / Staff roles**
 
 ---
 
-# 📘 Fundamentals & Design Principles
+# 🧭 How to Use This Roadmap
 
-* [12-Factor App](notes/12-factor-app-priniciple.md)
+Follow the sections **in order**. Each section builds on previous concepts.
+
+```
+Fundamentals → Databases → Caching → Distributed Systems → Networking → Scaling → Security → DevOps → Architecture Patterns → Real-world Design Problems
+```
+
+Do NOT jump randomly. System design knowledge is cumulative.
+
+---
+
+# 🥇 Phase 1 — Fundamentals (START HERE)
+
+📍 Goal: Build strong foundation. Everything depends on these concepts.
+
+These teach core system behavior, constraints, and tradeoffs.
+
+### MUST READ FIRST
+
 * [ACID](notes/ACID.md)
 * [CAP](notes/CAP.md)
 * [Consistency vs Integrity](notes/consistency-vs-integrity.md)
 * [Idempotency](notes/idempotency.md)
 * [NFR](notes/NFR.md)
 * [SPOF](notes/SPOF.md)
-* [SOLID](notes/SOLID.md), [SRP](notes/SRP.md), [OCP](notes/OCP.md), [LSP](notes/LSP.md), [DIP vs LSP](notes/DIP-vs-LSP.md)
+* [Stateless vs Stateful](notes/stateless-vs-statefull.md)
+
+### Architecture & Design Principles
+
+These help design maintainable systems.
+
+* [SOLID](notes/SOLID.md)
+* [SRP](notes/SRP.md)
+* [OCP](notes/OCP.md)
+* [LSP](notes/LSP.md)
+* [DIP vs LSP](notes/DIP-vs-LSP.md)
 * [Clear Architecture Principles](notes/clear-architecture-principles.md)
-* [Non-functional No Value Trap](notes/non-functional-no-value-trap.md)
-* [Six Pillars of System Design](notes/six-pillars-of-system-design.md)
+* [12-Factor App](notes/12-factor-app-priniciple.md)
+
+### Why this section matters
+
+After completing this section, you'll understand:
+
+* Why distributed systems fail
+* Tradeoffs in consistency vs availability
+* How production-grade systems are designed
 
 ---
 
-# 🗄️ Databases & Storage
+# 🥈 Phase 2 — Databases & Storage
 
-### Concepts
+📍 Goal: Understand how data is stored, scaled, and kept consistent.
+
+This section is critical. Most interview questions revolve around this.
+
+---
+
+## Database Fundamentals (Read in order)
 
 * [SQL vs NoSQL](notes/sql-vs-nosql.md)
 * [Normalization vs Denormalization](notes/Normalization-Vs-Denormalization.md)
-* [Partition Tolerance](notes/Partition-Tolerence.md)
 * [Partition vs Sharding](notes/partition-vs-sharding.md)
 * [Sharding](notes/Sharding.md)
-* [Consistency Models](notes/data-consistency.md), [Eventual Consistency](notes/eventual-consistency.md)
-* [MVCC](notes/MVCC.md)
-* [Serializable Transactions](notes/serializable-transaction.md)
-* [Db Consistency](notes/db-consistency.md)
-* [DB Durability](notes/db-durability.md)
-* [Row-level Locking](notes/row-level-locking.md)
-* [Optimistic vs Pessimistic Locking](notes/optimistic-vs-pessimistic-locking.md)
-* [Distributed Locks](notes/distributed-locks.md), [Redis Lock](notes/redis-lock.md)
-
-### Systems
-
-* [Cassandra](notes/Cassandra.md)
-* [HDFS](notes/HDFS.md)
-* [S3](notes/s3.md)
-* [Timeseries DB](notes/timeseries-db.md)
-
-### Logs, Storage & Recovery
-
-* [Write Ahead Logs](notes/write-ahead-logs.md)
-* [Redo Logs](notes/redo-logs.md)
-* [Data Recovery](notes/data-recovery.md)
-
-### Replication & Transactions
-
-* [Primary Replica Setup](notes/primary-replica-setup.md)
-* [Replication](notes/replication.md)
-* [Two Phase Commit](notes/two-phase-commit.md)
-* [Saga Pattern](notes/saga-pattern.md)
-
-### Change Data & Migration
-
-* [CDC](notes/CDC.md)
-* [Data Migration Process](notes/data-replication-migration-process.md)
+* [Partition Tolerance](notes/Partition-Tolerence.md)
 
 ---
 
-# ⚡ Performance, Scalability & Caching
+## Transactions & Consistency
 
-### Caching
+* [Serializable Transactions](notes/serializable-transaction.md)
+* [MVCC](notes/MVCC.md)
+* [Optimistic vs Pessimistic Locking](notes/optimistic-vs-pessimistic-locking.md)
+* [Row Level Locking](notes/row-level-locking.md)
+* [Distributed Locks](notes/distributed-locks.md)
+* [Redis Lock](notes/redis-lock.md)
+
+---
+
+## Replication & Distributed Data
+
+* [Replication](notes/replication.md)
+* [Primary Replica Setup](notes/primary-replica-setup.md)
+* [Eventual Consistency](notes/eventual-consistency.md)
+* [Data Consistency](notes/data-consistency.md)
+* [Quorum](notes/quorum.md)
+
+---
+
+## Logs, Durability & Recovery
+
+* [Write Ahead Logs](notes/write-ahead-logs.md)
+* [Redo Logs](notes/redo-logs.md)
+* [DB Durability](notes/db-durability.md)
+* [Data Recovery](notes/data-recovery.md)
+
+---
+
+## Distributed Transactions
+
+* [Two Phase Commit](notes/two-phase-commit.md)
+* [Saga Pattern](notes/saga-pattern.md)
+
+---
+
+## Storage Systems
+
+* [Cassandra](notes/Cassandra.md)
+* [S3](notes/s3.md)
+* [HDFS](notes/HDFS.md)
+* [Timeseries DB](notes/timeseries-db.md)
+
+---
+
+After this section, you'll understand:
+
+* How large-scale databases work
+* How data scales to billions of records
+* How consistency is maintained
+
+---
+
+# 🥉 Phase 3 — Caching & Performance
+
+📍 Goal: Learn how systems achieve high performance.
+
+Caching is asked in almost every interview.
+
+---
+
+## Read in order
 
 * [Caching](notes/Caching.md)
-* [Eviction Policies](notes/Cache-Eviction-Policies.md)
+* [Cache Eviction Policies](notes/Cache-Eviction-Policies.md)
 * [Hot Keys](notes/hot-keys.md)
-* [Hot Reads/Writes](notes/hot-reads-and-writes.md)
+* [Hot Reads and Writes](notes/hot-reads-and-writes.md)
 
-### Performance Engineering
+---
+
+## Performance Concepts
 
 * [Latency](notes/latency.md)
-* [Tail & Request Latencies](notes/tail-and-request-latencies.md)
 * [Latency vs Throughput](notes/latency-vs-throughput.md)
-* [CPU Calculation](notes/cpu-calculation.md)
+* [Tail Latency](notes/tail-and-request-latencies.md)
 * [Low Latency Patterns](notes/low-latency-design-patterns.md)
 
-### Scaling & Load
+---
+
+## Traffic Handling
 
 * [Backpressure](notes/Backpressure.md)
-* [Real-time Backpressure](notes/real-time-backpressure.md)
 * [Sudden Traffic Spike](notes/sudden-traffic-spike.md)
 * [Buffer Burst](notes/buffer-burst.md)
 
 ---
 
-# 🛡️ High Availability & Fault Tolerance
+After this section, you'll understand:
 
-* [Failover Switching](notes/Failover-Switching.md)
-* [Fault Tolerance](notes/fault-tolerence.md)
-* [Auto Restart](notes/auto-restart.md)
-* [RTO RPO](notes/RTO-RPO.md)
-* [Resiliency](notes/Resiliency.md)
-* [Multi-region Deployment](notes/multi-region-deployment.md)
-* [Leader Election](notes/leader-election.md)
-* [Cascading Failures](notes/cascading-failures.md)
-* [Chaos Testing](notes/chaos-testing.md)
+* How systems handle millions of requests/sec
+* How to reduce latency
+* How to prevent system crashes
 
 ---
 
-# 🌐 Networking & Infrastructure
+# 🏅 Phase 4 — Distributed Systems Core
 
-### Core Networking
+📍 Goal: Understand how multi-server systems work.
+
+This is the most important section for senior roles.
+
+---
+
+## Core Distributed Concepts
+
+* [Replication](notes/replication.md)
+* [Consistent Hashing](notes/consistent-hashing.md)
+* [Leader Election](notes/leader-election.md)
+* [Distributed Locking](notes/distributed-locking.md)
+* [Fault Tolerance](notes/fault-tolerence.md)
+* [Resiliency](notes/Resiliency.md)
+
+---
+
+## Consensus Algorithms
+
+* [Raft Consensus](notes/raft-consensus.md)
+* [Paxos](notes/paxos-algorithm.md)
+
+---
+
+## Event Driven Systems
+
+* [Event Driven Architecture](notes/event-driven-architecture.md)
+* [Event Sourcing](notes/event-sourcing.md)
+* [Outbox Pattern](notes/Outbox-pattern-and-ops-dashboard.md)
+* [CQRS](notes/CQRS.md)
+
+---
+
+After this section, you'll understand:
+
+* How distributed systems coordinate
+* How failures are handled
+* How data consistency works across servers
+
+---
+
+# 🌐 Phase 5 — Networking & Communication
+
+📍 Goal: Understand how services communicate.
+
+Very commonly asked in interviews.
+
+---
+
+## Core Networking
 
 * [How HTTP Works](notes/how-http-works.md)
 * [HTTP vs HTTPS](notes/http-https.md)
 * [TCP vs UDP](notes/tcp-vs-udp.md)
-* [Head of Line Blocking](notes/head-of-line-blocking.md)
 * [TLS](notes/TLS.md)
 
-### Load Balancing
+---
+
+## Traffic Routing
 
 * [Load Balancer](notes/Load-Balancer.md)
 * [L4 vs L7](notes/L4-vs-L7.md)
-* [Load Balancer vs Reverse Proxy](notes/Load-Balancer-vs-reverse-proxy.md)
-* [LB vs RP vs API Gateway](notes/load-balancer-VS-reverse-proxy-VS-api-gateway.md)
+* [Load Balancer vs Reverse Proxy vs API Gateway](notes/load-balancer-VS-reverse-proxy-VS-api-gateway.md)
 
-### Traffic Delivery
+---
+
+## Content Delivery
 
 * [CDN](notes/CDN.md)
 * [Geo DNS](notes/Geo-DNS.md)
 
-### Server Concepts
+---
 
-* [Sticky Sessions](notes/sticky-session.md)
-* [Nginx](notes/nginx.md)
+After this section, you'll understand:
 
-### API Management
-
-* [API Gateway](notes/api-gateway.md)
-* [Apigee](notes/apigiee.md)
-* [REST Call Flow](notes/rest-call.md)
+* How internet works internally
+* How traffic reaches servers
+* How scaling works globally
 
 ---
 
-# 📩 Messaging, Streaming & Async Systems
+# 🛡️ Phase 6 — Security
 
-### Messaging
-
-* [Kafka vs RabbitMQ](notes/kafka-vs-rabbitmq.md)
-* [Kafka vs Pulsar vs PubSub](notes/kafka-vs-pulsar-vs-pubsub.md)
-* [Webhooks](notes/webhooks.md)
-
-### Streaming
-
-* [Redis Streams](notes/redis-streams.md)
-* [Consumer Lag Monitoring](notes/consumer-lag-monitoring.md)
-
-### Architectures
-
-* [Push vs Pull](notes/push-vs-pull-architecture.md)
-* [Asynchronous Decoupling](notes/asynchronous-decoupling.md)
-
-### Real-time
-
-* [WebSockets](notes/websockets.md)
-* [Server Sent Events](notes/server-sent-events.md)
-* [Short vs Long Polling](notes/short-polling-vs-long-polling.md)
-* [Long Polling vs WebSockets](notes/long-polling-vs-websockets.md)
+📍 Goal: Learn how authentication and security work.
 
 ---
 
-# 🔐 Security & Authentication
+Read in order:
 
 * [JWT](notes/JWT.md)
 * [OAuth2](notes/OAuth2.md)
+* [Opaque vs JWT Token](notes/opaque-vs-jwt-token.md)
+* [TLS](notes/TLS.md)
+* [OWASP](notes/OWASP.md)
 * [Secrets Management](notes/secrets-management.md)
-* [Short Circuit Auth](notes/short-circuit-auth.md)
-* [SAST vs DAST](notes/SAST-vs-DAST.md)
-* [Dependency Vulnerability Checks](notes/dependency-vulnerability-checks.md)
-* [Threat Modeling](notes/threat-modeling.md)
-* [Threat Detection](notes/threat-detection.md)
-* [DDOS Protection](notes/DDOS-Protection.md)
-* [Brute Force Protection](notes/brute-force-protection.md)
 
 ---
 
-# 🛠️ Tools, DevOps & Operations
+After this section, you'll understand:
 
-* [Spring Boot Health Check](notes/Spring-Boot-Health-Check.md)
-* [Kubernetes Pods Restart](notes/Kubernetes-Pods-Restart.md)
-* [ConfigMap](notes/kubernetes-configmap.md)
+* Authentication
+* Authorization
+* Secure system design
+
+---
+
+# ⚙️ Phase 7 — DevOps & Infrastructure
+
+📍 Goal: Learn how systems run in production.
+
+---
+
+Read in order:
+
+* [Creating Docker Image](notes/creating-docker-image.md)
+* [Kubernetes ConfigMap](notes/kubernetes-configmap.md)
 * [Kubernetes Ingress](notes/kubernetes-ingress.md)
 * [Persistent Volume](notes/persistent-volume.md)
-* [Creating Docker Image](notes/creating-docker-image.md)
-* [Helm](notes/helm.md)
-* [PgBouncer](notes/PgBouncer.md)
-* [Prometheus & Grafana](notes/prometheus-grafana.md)
-* [Telemetry](notes/telemetry.md)
+* [Prometheus and Grafana](notes/prometheus-grafana.md)
 
 ---
 
-# 🧱 Architecture Patterns & System Design
+After this section, you'll understand:
 
-* [Two-tier Architecture](notes/Two-tier-architecture.md)
-* [Project Architecture](notes/project-architecture.md)
-* [Single Server Design](notes/signle-server-design.md)
-* [CQRS](notes/CQRS.md)
-* [Event-driven Architecture](notes/event-driven-architecture.md)
-* [Event Sourcing](notes/event-sourcing.md), [Event Sourcing vs Outbox](notes/event-sourcing-vs-outbox.md)
-* [Mono vs Microservices](notes/mono-vs-micro.md)
-* [Serverfull vs Serverless](notes/serverfull-vs-serverless.md)
-* [Distributed Rate Limiter](notes/distributed-rate-limiter.md)
+* How systems run in production
+* Monitoring
+* Deployment
+
+---
+
+# 🧱 Phase 8 — Architecture Patterns
+
+📍 Goal: Learn real architecture patterns used in companies.
+
+---
+
+Read in order:
+
+* [Monolith vs Microservices](notes/mono-vs-micro.md)
+* [API Gateway](notes/api-gateway.md)
 * [Retry Mechanism](notes/retry-mechanism.md)
 * [Deployment Strategy](notes/deployment-strategy.md)
-* [High Scale System Design](notes/high-scale-system-design.md)
-* [Back-of-the-Envelop Estimation](notes/back-of-the-envelop.md)
-* [Phased Approach](notes/phased-approach.md)
-* [Post Materializer](notes/post-materializer.md)
-* [Measure First Approach](notes/measure-first-approach.md)
+* [Rate Limiting](notes/distributed-rate-limiter.md)
 
 ---
 
-# 🔍 Search, Indexing & Analytics
+After this section, you'll understand:
 
-* [Elastic Search](notes/elastic-search.md)
-* [Apache Lucene](notes/apache-lucene.md)
-* [Inverted Index](notes/inverted-index.md)
-* [Text Search Engines](notes/text-search-engines.md)
-* [TF-IDF](notes/TF-IDF.md)
-* [Proximity Search](notes/proximity-search.md)
-* [Index Fragmentation](notes/index-fragmentation.md)
-* [Cursor Pagination](notes/cursor-pagination.md)
+* Real-world architectures
+* How companies design scalable systems
 
 ---
 
-# 🎥 Data Processing, Streaming & Video Tech
+# 🧪 Phase 9 — Real System Design Problems (FINAL STAGE)
 
-* [Batch vs Streaming](notes/batch-vs-streaming.md)
-* [Adaptive Streaming](notes/adaptive-streaming.md)
-* [Adaptive Bitrate Streaming (ABR)](notes/adaptive-bitrate-streaming.md)
-* [DASH](notes/DASH.md) / [HLS](notes/HLS.md)
-* [Manifest File Processing](notes/manifest-video-processing.md)
-* [Chunker Service](notes/chunker-service.md)
-* [Transcoding](notes/transcoding.md)
-* [Micro-batching](notes/micro-batching.md)
-* [Apache Spark](notes/apache-spark.md)
+📍 Goal: Apply everything learned.
 
 ---
 
-# 💬 System Design Use Cases
+Read:
 
 * [Chat System](notes/chat-system.md)
 * [Notifications Design](notes/notifications-design.md)
-* [Frontend Storage](notes/frontend-storage.md)
-* [WebRTC](notes/WebRTC.md)
+* [System Design Problems](notes/system-design-problems-key-solution.md)
 
 ---
 
-# 🔢 Identifiers & Utilities
+After this section, you'll be able to design:
 
-* [UUID](notes/uuid.md)
-* [Snowflake ID](notes/snowflake-id.md)
-* [Vanity URL](notes/vanity-url.md)
-
----
-
-# 📗 Miscellaneous
-
-* [Internet](notes/internet.md)
-* [Encoding](notes/encoding.md)
-* [Download & Upload](notes/download-upload.md)
-* [DOD](notes/DOD.md)
-* [CAS – Compare and Swap](notes/compare-and-swap.md)
-* [Operational Transformation](notes/operational-transformation.md)
-* [CRDT Deep Dive](notes/crdt-deep-dive.md)
-* [Rule Engine](notes/rule-engine.md), [ACL + Rule Engine](notes/ACL-and-Rule-Engine.md)
+* WhatsApp
+* YouTube
+* Uber
+* Instagram
+* Distributed systems
 
 ---
 
-# 📑 HTTP Status & Protocol References
+# 🎯 Final Outcome
 
-* [200 vs 201 vs 202](notes/200-vs-201-vs-202.md)
-* [301 vs 302](notes/301-vs-302.md)
-* [429 vs 503](notes/429-vs-503.md)
+After completing this roadmap, you will be able to:
+
+✅ Crack System Design Interviews
+✅ Design scalable systems
+✅ Understand distributed systems deeply
+✅ Work as Senior / Staff Engineer
 
 ---
 
-# 🧭 System Design Interview Prep
+# ⭐ Recommended Study Timeline
 
-* [System Design Problems – Key Solutions](notes/system-design-problems-key-solution.md)
-* [Interview Question Bank](notes/interview-questions.md)
-* [Syllabus](notes/Syllabus.md)
+```
+Week 1–2 → Fundamentals
+Week 3–4 → Databases
+Week 5 → Caching & Performance
+Week 6 → Distributed Systems
+Week 7 → Networking
+Week 8 → Security & DevOps
+Week 9 → Architecture Patterns
+Week 10 → Real Design Problems
+```
 
 ---
