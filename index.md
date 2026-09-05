@@ -12,6 +12,8 @@ This guide is designed for:
 
 # 🧭 How to Use This Roadmap
 
+Start with the [System Design Interview Playbook](interview-playbook.md). Use it as the process for practice, and use the phase notes below as reference material for each decision.
+
 Follow the sections **in order**. Each section builds on previous concepts.
 
 ```

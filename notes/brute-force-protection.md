@@ -122,7 +122,13 @@ Even if attacker guesses password → still needs OTP.
 
 ---
 
-# Placeholder: **Without brute-force protection**, login API becomes easily breakable.
+# Important caveat: layered protection
+
+No single control is sufficient. IP-only limits can punish shared networks, while account-only limits can be abused to lock out victims. Apply limits at multiple dimensions, keep login errors intentionally vague, and record security events for investigation.
+
+For a distributed deployment, enforce the counters in shared infrastructure such as a rate limiter or gateway rather than in one application instance. Use bounded TTLs, monitor false positives, and provide a recovery path for legitimate users.
+
+**Without layered brute-force protection**, a login API becomes easy to abuse.
 
 Attackers can hack:
 
