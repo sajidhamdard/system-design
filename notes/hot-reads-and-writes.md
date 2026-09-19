@@ -1,7 +1,7 @@
 ## 🔥 **What Are Hot Reads?**
 
 **Hot reads** refer to **data items (or keys)** that are **read (accessed) very frequently** compared to others.
-In other words — they are **“hot”** because they are **popular** and **generate a lot of read traffic**.
+In other words - they are **“hot”** because they are **popular** and **generate a lot of read traffic**.
 
 ---
 
@@ -13,7 +13,7 @@ Imagine you’re building **Twitter**:
 * That tweet’s data (`tweet_id=12345`) is requested repeatedly.
 * This specific key becomes a **hot read**.
 
-Meanwhile, tweets from less active users are rarely fetched — these are **cold reads**.
+Meanwhile, tweets from less active users are rarely fetched - these are **cold reads**.
 
 ---
 
@@ -52,7 +52,7 @@ To reduce load caused by hot keys, systems use several techniques:
 
 ### ⚡ **Analogy**
 
-Think of a hot read like a **popular Wikipedia page** after a big news event — millions of users open it simultaneously.
+Think of a hot read like a **popular Wikipedia page** after a big news event - millions of users open it simultaneously.
 To handle that, Wikipedia serves it via **multiple caching layers and replicas** so that no single database gets overloaded.
 
 ---

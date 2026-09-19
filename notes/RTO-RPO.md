@@ -1,6 +1,6 @@
-* **Recovery Time (Actual Recovery Time)** — The real amount of time it takes to restore a system or service after a failure or disruption has occurred. This is what happens in practice.
+* **Recovery Time (Actual Recovery Time)** - The real amount of time it takes to restore a system or service after a failure or disruption has occurred. This is what happens in practice.
 
-* **Recovery Time Objective (RTO)** — The **maximum acceptable** amount of time that a system or service **can be down** after a failure before it causes unacceptable business consequences. This is a target or limit set during business continuity planning.
+* **Recovery Time Objective (RTO)** - The **maximum acceptable** amount of time that a system or service **can be down** after a failure before it causes unacceptable business consequences. This is a target or limit set during business continuity planning.
 
 ---
 

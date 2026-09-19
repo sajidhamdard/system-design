@@ -2,7 +2,7 @@
 
 ## Overview
 Backpressure is a flow-control mechanism that prevents fast producers from overwhelming slower consumers in **real-time streaming** or **WebRTC** systems.  
-It ensures system stability, predictable latency, and efficient resource utilization — especially in high-throughput, low-latency environments.
+It ensures system stability, predictable latency, and efficient resource utilization - especially in high-throughput, low-latency environments.
 
 ---
 

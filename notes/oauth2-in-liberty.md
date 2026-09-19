@@ -34,7 +34,7 @@ It will:
 5. Create a **Liberty authenticated Subject**
 6. Inject roles into your app
 
-You never see this code — Liberty does it.
+You never see this code - Liberty does it.
 
 ---
 
@@ -102,7 +102,7 @@ request.isUserInRole("admin")
 
 That’s how your app knows the user.
 
-You never parsed JWT — Liberty did.
+You never parsed JWT - Liberty did.
 
 ---
 

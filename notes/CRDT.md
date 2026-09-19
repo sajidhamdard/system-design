@@ -4,7 +4,7 @@
 
 * They can be **replicated across multiple nodes**.
 * Updates can happen **independently and concurrently**.
-* When changes are merged, they **always converge to the same result** — without needing a central server or transformation rules.
+* When changes are merged, they **always converge to the same result** - without needing a central server or transformation rules.
 
 👉 In short: With CRDTs, **conflicts can’t happen by design**.
 

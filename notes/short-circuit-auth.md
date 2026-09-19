@@ -2,7 +2,7 @@
 
 **Short-circuit authentication** means **authenticating a request without making a database call**.
 
-You validate the user **purely using the data inside the token (like a JWT)** — hence the term *“short-circuit”* (you skip the database lookup).
+You validate the user **purely using the data inside the token (like a JWT)** - hence the term *“short-circuit”* (you skip the database lookup).
 
 ---
 
@@ -60,7 +60,7 @@ When a request comes in:
 
 1. Server verifies the signature using the secret/public key
 2. If valid, it trusts the claims (user_id, role, etc.)
-3. Authenticated ✅ — without a DB call
+3. Authenticated ✅ - without a DB call
 
 ---
 
@@ -90,7 +90,7 @@ String userId = claims.getSubject();
 String role = (String) claims.get("role");
 ```
 
-✅ This authenticates the user purely by verifying the JWT — **no DB hit**.
+✅ This authenticates the user purely by verifying the JWT - **no DB hit**.
 
 ---
 
@@ -98,7 +98,7 @@ String role = (String) claims.get("role");
 
 | Scenario                           | Recommendation               |
 | ---------------------------------- | ---------------------------- |
-| **High-traffic microservices**     | ✅ Great — avoids DB overhead |
+| **High-traffic microservices**     | ✅ Great - avoids DB overhead |
 | **Stateless APIs (REST, GraphQL)** | ✅ Perfect fit                |
 | **Long-lived sessions**            | ⚠️ Might need refresh tokens |
 | **Need for immediate revocation**  | ❌ DB or cache check required |
@@ -134,7 +134,7 @@ String role = (String) claims.get("role");
 Think of JWT short-circuit auth like an **entry ticket** 🎟️:
 
 * The ticket already has your name, seat, and expiry date.
-* The gatekeeper just checks the **signature (authenticity)** — no need to call the booking office (DB).
+* The gatekeeper just checks the **signature (authenticity)** - no need to call the booking office (DB).
 
 ---
 

@@ -1,4 +1,4 @@
-**Spring Boot health check config (production-grade)** — including:
+**Spring Boot health check config (production-grade)** - including:
 
 ✅ A robust **`/actuator/health`** endpoint
 ✅ Configuration to expose **only what's needed** (secure + clean)
@@ -28,7 +28,7 @@ management.endpoints.web.exposure.include=health
 # Make health endpoint respond UP even during startup (optional but good for readiness)
 management.endpoint.health.probes.enabled=true
 
-# Optional — if you want detailed health (db, disk, etc.)
+# Optional - if you want detailed health (db, disk, etc.)
 management.endpoint.health.show-details=always
 ```
 
@@ -37,9 +37,9 @@ management.endpoint.health.show-details=always
 
 ---
 
-### 3️⃣ **Optional — Custom Health Indicator (for DB or external checks)**
+### 3️⃣ **Optional - Custom Health Indicator (for DB or external checks)**
 
-If your interviewer asks **"How do you make sure DB is healthy too?"** — here’s how:
+If your interviewer asks **"How do you make sure DB is healthy too?"** - here’s how:
 
 ```java
 @Component
@@ -146,7 +146,7 @@ Your pod may be marked unhealthy **just because DB is slow**, even if your app c
 
 ---
 
-# ✅ **Best practice — DB health check should be NON-BLOCKING and "degraded", not DOWN**
+# ✅ **Best practice - DB health check should be NON-BLOCKING and "degraded", not DOWN**
 
 > Even if DB is unreachable, health endpoint **should not block** and **should return 'UP with degraded info'** instead of failing everything.
 
@@ -154,7 +154,7 @@ Your pod may be marked unhealthy **just because DB is slow**, even if your app c
 
 # 🛠️ **Solution in Spring Boot (Reactive or Timeout)**
 
-## Option 1️⃣ — **Set a Timeout on DB Health Check** *(Recommended, Simple)*
+## Option 1️⃣ - **Set a Timeout on DB Health Check** *(Recommended, Simple)*
 
 In **`application.yml`**
 
@@ -183,7 +183,7 @@ spring:
 
 ---
 
-## Option 2️⃣ — **Customize DB Health Indicator to be "degraded"**
+## Option 2️⃣ - **Customize DB Health Indicator to be "degraded"**
 
 You can write a **custom HealthIndicator** that reports:
 

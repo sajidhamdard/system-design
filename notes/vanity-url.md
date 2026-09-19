@@ -1,4 +1,4 @@
-A **Vanity URL** is a **custom, human-friendly web address** that’s designed to be **easy to read, remember, and share** — often used for branding, marketing, or user experience.
+A **Vanity URL** is a **custom, human-friendly web address** that’s designed to be **easy to read, remember, and share** - often used for branding, marketing, or user experience.
 
 ---
 

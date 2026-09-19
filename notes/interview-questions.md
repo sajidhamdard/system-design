@@ -13,7 +13,7 @@
 
 ### 2️⃣ **Databases**
 
-* SQL vs NoSQL — when to choose which?
+* SQL vs NoSQL - when to choose which?
 * What is Indexing? How does it improve performance? What are its downsides?
 * How does sharding work? What are the pros and cons of sharding a database?
 * What is replication? What are the different types of replication?
@@ -96,7 +96,7 @@
 * What are the advantages and challenges of microservices over monolithic architecture?
 * What is service discovery? How does it work in a microservice ecosystem?
 * What is an API Gateway? What are its benefits and risks?
-* How do you handle inter-service communication — REST vs gRPC vs messaging?
+* How do you handle inter-service communication - REST vs gRPC vs messaging?
 * What is a single point of failure? How do you avoid it in microservices?
 * How do you prevent cascading failures in a microservice architecture?
 * What is the role of Docker in microservices?

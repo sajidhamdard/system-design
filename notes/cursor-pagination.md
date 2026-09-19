@@ -89,7 +89,7 @@ This is why offset/page-based pagination is **not reliable for real-time data**.
 
 ---
 
-✅ So yes —
+✅ So yes -
 
 * **Feeds/chats** (WhatsApp, Instagram, Twitter) → **cursor-based pagination**.
 * **Static data (reports, admin dashboards)** → **pageNumber + pageSize** is usually fine.

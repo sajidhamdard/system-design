@@ -1,6 +1,6 @@
-## **🏆 Must-Know Topics (High Probability in Interviews)**
+# 🏆 Must-Know Topics (High Probability in Interviews)
 
-### **1️⃣ Fundamentals & Design Principles**
+## 1️⃣ Fundamentals & Design Principles
 
 * ACID
 * CAP
@@ -12,7 +12,7 @@
 * Single Point of Failure (SPOF)
 * Data Consistency & Isolation
 
-### **2️⃣ Databases & Data Storage**
+## 2️⃣ Databases & Data Storage
 
 * SQL vs NoSQL
 * Primary-Replica / Leader-Follower Setup
@@ -25,7 +25,7 @@
 * Write-Ahead Logs / Redo Logs
 * Index Fragmentation
 
-### **3️⃣ Performance & Scalability**
+## 3️⃣ Performance & Scalability
 
 * Caching & Cache Eviction Policies
 * Hot keys / Hot Reads
@@ -35,7 +35,7 @@
 * Micro-batching
 * Sudden Traffic Spike
 
-### **4️⃣ High Availability & Fault Tolerance**
+## 4️⃣ High Availability & Fault Tolerance
 
 * Failover Switching
 * Multi-region Deployment
@@ -45,7 +45,7 @@
 * Leader Election
 * SLA / SLO
 
-### **5️⃣ Networking & Infrastructure**
+## 5️⃣ Networking & Infrastructure
 
 * Load Balancer (L4/L7)
 * Reverse Proxy vs API Gateway
@@ -54,7 +54,7 @@
 * HTTP vs HTTPS / SSL Termination
 * Sticky Sessions
 
-### **6️⃣ Messaging & Event-Driven**
+## 6️⃣ Messaging & Event-Driven
 
 * Push vs Pull Architecture
 * Fanout / Webhooks / WebSockets
@@ -63,7 +63,7 @@
 * Distributed Locks / Redis Lock / Redlock
 * Quorum
 
-### **7️⃣ Security & Authentication**
+## 7️⃣ Security & Authentication
 
 * JWT
 * OAuth2
@@ -72,14 +72,14 @@
 * Secrets Management (Vault, K8s secrets)
 * OWASP Top 10
 
-### **8️⃣ Tools & Observability**
+## 8️⃣ Tools & Observability
 
 * Spring Boot Health Check
 * Prometheus & Grafana
 * Telemetry / Logs / Metrics
 * Docker & Kubernetes Basics
 
-### **9️⃣ Architecture Patterns**
+## 9️⃣ Architecture Patterns
 
 * Mono vs Microservices
 * Serverless vs Serverfull
@@ -87,7 +87,7 @@
 * Event-driven Architecture
 * Deployment Strategies (Blue/Green, Canary)
 
-### **🔟 Streaming & Video (for media-heavy systems)**
+## 🔟 Streaming & Video (for media-heavy systems)
 
 * Adaptive Bitrate Streaming (ABR)
 * HLS / DASH
@@ -96,7 +96,7 @@
 
 ---
 
-## **💡 Nice-to-Know / Advanced Topics**
+## 💡 Nice-to-Know / Advanced Topics
 
 These are often asked in **senior / specialized roles** or for **deep-dive follow-ups**:
 
@@ -115,7 +115,7 @@ These are often asked in **senior / specialized roles** or for **deep-dive follo
 
 ---
 
-### ✅ **How to Use This**
+## ✅ How to Use This
 
 1. **Master Must-Know topics first** – these are 80–90% of what interviewers expect.
 2. **Keep Nice-to-Know topics as backups** – read them for follow-ups or senior-level questions.

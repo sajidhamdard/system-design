@@ -79,7 +79,7 @@ Both can talk anytime.
 
 ---
 
-# ⭐ Long Polling vs WebSockets — Summary Table
+# ⭐ Long Polling vs WebSockets - Summary Table
 
 | Feature       | Long Polling           | WebSockets                |
 | ------------- | ---------------------- | ------------------------- |

@@ -1,6 +1,6 @@
 **Latency** simply means **the time delay** between an action and the response to that action.
 
-In computing and networking, it refers to **the time it takes for data to travel from one point to another** — like from your computer to a server and back.
+In computing and networking, it refers to **the time it takes for data to travel from one point to another** - like from your computer to a server and back.
 It's usually measured in **milliseconds (ms)**.
 
 ---
@@ -44,11 +44,11 @@ If you run a query:
 
 ### **Low latency = Good**
 
-(Fast response time — e.g., 20ms)
+(Fast response time - e.g., 20ms)
 
 ### **High latency = Bad**
 
-(Slow response time — e.g., 300ms or more → noticeable lag)
+(Slow response time - e.g., 300ms or more → noticeable lag)
 
 ---
 
@@ -115,12 +115,12 @@ The **time chef spent cooking** = **Query Execution Time**
 
 ---
 
-If you're running queries **on the same machine (local DB)**, network delay is negligible — so **latency ≈ execution time**.
+If you're running queries **on the same machine (local DB)**, network delay is negligible - so **latency ≈ execution time**.
 But in real-world distributed systems or cloud apps, **they can be quite different**.
 
 ---
 
-### 🚀 **Latency vs Bandwidth — Clear Definitions**
+### 🚀 **Latency vs Bandwidth - Clear Definitions**
 
 | Term          | Meaning                                                      | Unit                                          | Key Point                                      |
 | ------------- | ------------------------------------------------------------ | --------------------------------------------- | ---------------------------------------------- |
@@ -129,7 +129,7 @@ But in real-world distributed systems or cloud apps, **they can be quite differe
 
 ---
 
-### **Simple analogy — Road example 🛣️**
+### **Simple analogy - Road example 🛣️**
 
 * **Latency** = **Travel time** of a single car from city A to B
   *(How long it takes one car to reach)*

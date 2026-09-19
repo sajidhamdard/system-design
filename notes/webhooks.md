@@ -3,9 +3,9 @@
 A **webhook** is a way for one service to **notify another service automatically** when an event happens.
 
 * It’s like a **phone call** from one app to another, telling it:
-  *“Hey! Something just happened—here’s the data!”*
+  *“Hey! Something just happened-here’s the data!”*
 
-Unlike APIs where you **ask** for data (pull), webhooks are **push-based**—the sender **pushes** the data to you when an event occurs.
+Unlike APIs where you **ask** for data (pull), webhooks are **push-based**-the sender **pushes** the data to you when an event occurs.
 
 ---
 

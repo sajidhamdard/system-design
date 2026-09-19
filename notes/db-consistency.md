@@ -249,7 +249,7 @@ Thus, each transaction gets a **consistent snapshot**, without blocking.
 
 # ⭐ **But doesn’t storing multiple versions slow down the DB?**
 
-No — because:
+No - because:
 
 * MVCC uses **append-only writes** (very fast)
 * Old versions are removed later by **VACUUM / purge / garbage collector**
@@ -392,7 +392,7 @@ Everything is handled by the DB engine.
 
 Let's break it down:
 
-### Step 1 — T2 updates
+### Step 1 - T2 updates
 
 DB marks row #1 as:
 
@@ -400,7 +400,7 @@ DB marks row #1 as:
 locked_by_transaction = T2
 ```
 
-### Step 2 — T3 tries to update
+### Step 2 - T3 tries to update
 
 DB checks:
 
@@ -415,7 +415,7 @@ So DB marks T3 as:
 waiting_for = T2
 ```
 
-### Step 3 — T2 commits
+### Step 3 - T2 commits
 
 DB clears lock:
 
@@ -532,7 +532,7 @@ SCN (System Change Number)
 Undo segment pointer
 ```
 
-**You never see these columns — database maintains them automatically.**
+**You never see these columns - database maintains them automatically.**
 
 ---
 
@@ -624,7 +624,7 @@ Examples:
 
 # ⭐ **Do you need to add extra columns like version, timestamp?**
 
-❌ NO — this is a *different* thing (Optimistic Locking for ORMs like Hibernate).
+❌ NO - this is a *different* thing (Optimistic Locking for ORMs like Hibernate).
 
 But MVCC does not require you to add such columns.
 Row versions are stored in internal pages/logs, not in your table schema.
@@ -737,7 +737,7 @@ If your system needs to prevent overselling (e-commerce), you should say:
 > Choice: SERIALIZABLE or explicit row locking.
 > Why: Prevents two users from ordering the same last item.
 
-This is what interviewers want — not implementation details.
+This is what interviewers want - not implementation details.
 
 ---
 
@@ -826,7 +826,7 @@ Cassandra:
 So they will ask you:
 
 > “Can we use Cassandra for financial transactions?”
-> → NO — because Cassandra does not give isolation.
+> → NO - because Cassandra does not give isolation.
 
 ---
 

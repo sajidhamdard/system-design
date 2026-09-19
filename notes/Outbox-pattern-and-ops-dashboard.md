@@ -1,4 +1,4 @@
-# 🖥️ 1️⃣ **Ops Dashboard (Operations Dashboard)** — *Basics for Interview*
+# 🖥️ 1️⃣ **Ops Dashboard (Operations Dashboard)** - *Basics for Interview*
 
 > A central place where **Operations / Support / Admin** teams can monitor, view, search, and troubleshoot **system issues** quickly without needing developer help.
 
@@ -34,7 +34,7 @@
 
 ---
 
-# 📦 2️⃣ **Outbox Pattern** — *Detailed & Practical*
+# 📦 2️⃣ **Outbox Pattern** - *Detailed & Practical*
 
 ## 🧐 **Problem first (why do we need it?)**
 
@@ -112,6 +112,6 @@ public void placeOrder(Order order) {
 # 🏆 **Summary for You**
 
 ✅ **Ops Dashboard**
-— Your Kibana + DLQ viewer → for Ops to see, retry, reconcile
+- Your Kibana + DLQ viewer → for Ops to see, retry, reconcile
 ✅ **Outbox Pattern**
-— Helps when service emits events to Kafka after DB updates → to keep data consistent
+- Helps when service emits events to Kafka after DB updates → to keep data consistent

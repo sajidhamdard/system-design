@@ -1,4 +1,4 @@
-An **inverted index** is a **data structure used to make search fast**—especially in search engines (Google, ElasticSearch, Solr), document retrieval systems, and full-text search.
+An **inverted index** is a **data structure used to make search fast**-especially in search engines (Google, ElasticSearch, Solr), document retrieval systems, and full-text search.
 
 ---
 

@@ -71,7 +71,7 @@ Even though generation logic never changed.
 
 ---
 
-## **2. Violates “Separation of Change” — when business rules expand**
+## **2. Violates “Separation of Change” - when business rules expand**
 
 Initially:
 
@@ -177,11 +177,11 @@ But **as the project grows**, it will:
 * tightly couple unrelated logic
 * reduce code quality
 
-**That’s why SRP exists — not for today, but for 6 months later.**
+**That’s why SRP exists - not for today, but for 6 months later.**
 
 ---
 
-Here are **the clearest, most practical rules of thumb** used by senior engineers and architects to decide **when to split a class** — not theory, only real-world guidance.
+Here are **the clearest, most practical rules of thumb** used by senior engineers and architects to decide **when to split a class** - not theory, only real-world guidance.
 
 ---
 

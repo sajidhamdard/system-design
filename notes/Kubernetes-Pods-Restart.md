@@ -1,4 +1,4 @@
-## **If a Pod (service instance) goes down — what does Kubernetes do?**
+## **If a Pod (service instance) goes down - what does Kubernetes do?**
 
 1. **Kubernetes notices the failure**
    → kubelet (on node) + Controller manager + ReplicaSet continuously monitor Pod health
@@ -26,16 +26,16 @@
 | Action                | What happens?                                 |
 | --------------------- | --------------------------------------------- |
 | Pod crashes           | Kubernetes deletes it                         |
-| New Pod?              | Yes — freshly created (NOT restart same Pod)  |
+| New Pod?              | Yes - freshly created (NOT restart same Pod)  |
 | Same IP?              | Usually NO → new Pod gets a new IP            |
 | Traffic affected?     | Minimal → Service routes only to healthy Pods |
-| Manual action needed? | NO — Kubernetes auto-recovers                 |
+| Manual action needed? | NO - Kubernetes auto-recovers                 |
 
 ---
 
 ## **Clean interview answer**
 
-> *“If a Pod crashes in Kubernetes, it does not restart the old process. Kubernetes ReplicaSet immediately creates a brand-new Pod instance to replace it, ensuring the desired replica count is maintained. The new Pod may have a new IP, but the Kubernetes Service automatically updates its Endpoints list to route traffic only to healthy Pods — providing self-healing and high availability.”*
+> *“If a Pod crashes in Kubernetes, it does not restart the old process. Kubernetes ReplicaSet immediately creates a brand-new Pod instance to replace it, ensuring the desired replica count is maintained. The new Pod may have a new IP, but the Kubernetes Service automatically updates its Endpoints list to route traffic only to healthy Pods - providing self-healing and high availability.”*
 
 ---
 
@@ -49,7 +49,7 @@ and **when to stop sending traffic** to Pods that are not ready
 
 ## **Bottom line**
 
-> **Kubernetes creates a fresh Pod — NOT restart same Pod process**
+> **Kubernetes creates a fresh Pod - NOT restart same Pod process**
 
 ---
 
@@ -137,13 +137,13 @@ readinessProbe:
 
 ---
 
-## **Bonus — How are probes implemented?**
+## **Bonus - How are probes implemented?**
 
 You can configure probes in 3 ways:
 
-* **HTTP GET** — hit an endpoint (common for web apps)
-* **TCP Socket** — check if a port is open
-* **Exec command** — run a command inside container
+* **HTTP GET** - hit an endpoint (common for web apps)
+* **TCP Socket** - check if a port is open
+* **Exec command** - run a command inside container
 
 ---
 

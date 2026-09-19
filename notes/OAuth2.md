@@ -23,7 +23,7 @@ But **typically**:
 
 ## **Is it standard?**
 
-Yes — OAuth2 defines **standard flows** called **Grant Types** (these decide the process)
+Yes - OAuth2 defines **standard flows** called **Grant Types** (these decide the process)
 
 | **Grant Type**                           | **When it’s used**                | **What happens**                                                          |
 | ---------------------------------------- | --------------------------------- | ------------------------------------------------------------------------- |
@@ -44,13 +44,13 @@ That's why **Okta shows a login page first**, then returns tokens.
 
 ## **Interview ready summary** (say this confidently)
 
-“OAuth2 is an authorization protocol that defines how clients get tokens to access APIs on behalf of users. It provides standardized flows (grant types) to suit different scenarios — like interactive user login (Authorization Code flow) or server-to-server access (Client Credentials flow). The details of user authentication (like showing login page) are handled by the Authorization Server implementation, such as Okta.”
+“OAuth2 is an authorization protocol that defines how clients get tokens to access APIs on behalf of users. It provides standardized flows (grant types) to suit different scenarios - like interactive user login (Authorization Code flow) or server-to-server access (Client Credentials flow). The details of user authentication (like showing login page) are handled by the Authorization Server implementation, such as Okta.”
 
 ---
 
 ## **Extra crisp interview line**
 
-> “OAuth2 doesn’t do authentication itself — it delegates that responsibility to the Authorization Server. Its job is to standardize how **access tokens** are requested and used.”
+> “OAuth2 doesn’t do authentication itself - it delegates that responsibility to the Authorization Server. Its job is to standardize how **access tokens** are requested and used.”
 
 ---
 
@@ -162,7 +162,7 @@ This ensures **roles (groups)** get embedded in JWT automatically after login.
 
 ---
 
-## **Scenario 1 — You’re using Spring Boot + OAuth2 Resource Server**
+## **Scenario 1 - You’re using Spring Boot + OAuth2 Resource Server**
 
 (The **best-practice modern setup**)
 
@@ -225,7 +225,7 @@ public class SecurityConfig {
 
 ### 3. How to use roles in **controller**
 
-You don’t need to manually parse the token —
+You don’t need to manually parse the token -
 Spring automatically maps **groups → roles**
 
 Example:
@@ -258,7 +258,7 @@ public Map<String, Object> currentUser(@AuthenticationPrincipal Jwt jwt) {
 
 ---
 
-## **Scenario 2 — You don’t use Spring Security (manual parsing)**
+## **Scenario 2 - You don’t use Spring Security (manual parsing)**
 
 If you want to **manually decode token**:
 
@@ -294,7 +294,7 @@ In tech, a **protocol** is like a **set of rules** or a **contract** about **how
 
 So when we say:
 
-> "**OAuth 2.0 is a protocol**" — it means:
+> "**OAuth 2.0 is a protocol**" - it means:
 > It defines **how authorization should happen** between the **client**, **authorization server**, and **resource server**.
 
 But OAuth **doesn’t implement any code**. It just **describes what should happen**.
@@ -330,7 +330,7 @@ In this flow:
 
 * OAuth2 defines the **steps** (redirect, consent, token, etc.).
 * The actual **login UI**, **token creation**, **profile sharing**, etc. are **done by Google** (or the provider).
-* **OAuth2 itself doesn't do any of that—it just says *how* it should be done.**
+* **OAuth2 itself doesn't do any of that-it just says *how* it should be done.**
 
 ---
 

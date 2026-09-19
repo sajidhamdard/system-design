@@ -10,14 +10,14 @@ Here are the **12 principles**:
 
 ---
 
-### 1. **Codebase** — *One codebase, tracked in version control, many deploys*
+### 1. **Codebase** - *One codebase, tracked in version control, many deploys*
 
 * Keep a single repository per app.
 * Multiple environments (dev, staging, prod) are just **deploys** of the same codebase.
 
 ---
 
-### 2. **Dependencies** — *Explicitly declare and isolate dependencies*
+### 2. **Dependencies** - *Explicitly declare and isolate dependencies*
 
 * Don’t rely on system-wide packages.
 * Use dependency managers like `Maven` (Java), `npm` (Node.js), `pip` (Python).
@@ -25,7 +25,7 @@ Here are the **12 principles**:
 
 ---
 
-### 3. **Config** — *Store config in the environment*
+### 3. **Config** - *Store config in the environment*
 
 * Separate config from code.
 * Use **environment variables** for credentials, URLs, feature toggles.
@@ -33,14 +33,14 @@ Here are the **12 principles**:
 
 ---
 
-### 4. **Backing Services** — *Treat backing services as attached resources*
+### 4. **Backing Services** - *Treat backing services as attached resources*
 
 * Databases, queues, caches, or APIs are **services**, not hardcoded.
 * Access them via URLs or environment config so they can be swapped easily.
 
 ---
 
-### 5. **Build, Release, Run** — *Strictly separate build and run stages*
+### 5. **Build, Release, Run** - *Strictly separate build and run stages*
 
 * **Build**: compile, package assets, create executable.
 * **Release**: combine build + config into a release.
@@ -49,7 +49,7 @@ Here are the **12 principles**:
 
 ---
 
-### 6. **Processes** — *Execute the app as one or more stateless processes*
+### 6. **Processes** - *Execute the app as one or more stateless processes*
 
 * Don’t store data in memory or local disk that you need later.
 * Use external storage (DB, cache, etc.) for persistence.
@@ -57,28 +57,28 @@ Here are the **12 principles**:
 
 ---
 
-### 7. **Port Binding** — *Export services via port binding*
+### 7. **Port Binding** - *Export services via port binding*
 
 * Self-contained apps should expose an HTTP port directly.
 * No need for an external web server like Apache or Nginx inside the same app process.
 
 ---
 
-### 8. **Concurrency** — *Scale out via the process model*
+### 8. **Concurrency** - *Scale out via the process model*
 
 * Run multiple instances for scaling, rather than adding threads inside one big instance.
 * Use a process manager or orchestration (Kubernetes, Docker).
 
 ---
 
-### 9. **Disposability** — *Maximize robustness with fast startup and graceful shutdown*
+### 9. **Disposability** - *Maximize robustness with fast startup and graceful shutdown*
 
 * Apps should start quickly and shut down cleanly.
 * Helps in scaling, deployment, and recovery.
 
 ---
 
-### 10. **Dev/Prod Parity** — *Keep development, staging, and production as similar as possible*
+### 10. **Dev/Prod Parity** - *Keep development, staging, and production as similar as possible*
 
 * Reduce the gap in:
 
@@ -88,14 +88,14 @@ Here are the **12 principles**:
 
 ---
 
-### 11. **Logs** — *Treat logs as event streams*
+### 11. **Logs** - *Treat logs as event streams*
 
 * Don’t manage log files inside the app.
 * Write logs to stdout/stderr, let the environment aggregate/store them.
 
 ---
 
-### 12. **Admin Processes** — *Run admin/management tasks as one-off processes*
+### 12. **Admin Processes** - *Run admin/management tasks as one-off processes*
 
 * Database migrations, cron jobs, or scripts should run in the same environment/config as the app but as separate one-off processes.
 

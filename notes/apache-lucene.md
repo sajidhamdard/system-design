@@ -2,7 +2,7 @@
 
 * **Apache Lucene** is a **Java-based, open-source search library**.
 * It provides **full-text search** capabilities (like searching inside documents, PDFs, logs, or databases).
-* It is **not a search engine** itself — it’s the **core engine** (like the heart) that powers search engines.
+* It is **not a search engine** itself - it’s the **core engine** (like the heart) that powers search engines.
 
 👉 Think of **Lucene** as the "engine", and tools like **Elasticsearch** or **Apache Solr** as the "car" built on top of it.
 

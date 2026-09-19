@@ -30,7 +30,7 @@ If substituting breaks expectations, LSP is violated.
 It asks:
 
 > *“Should the high-level business logic depend on low-level implementations?”*
-> **Answer: No — both should depend on abstractions.**
+> **Answer: No - both should depend on abstractions.**
 
 Example:
 `UserService` → depends on `Database` interface
@@ -60,7 +60,7 @@ list = new LinkedList<>();
 
 This works because `ArrayList` and `LinkedList` behave correctly as a `List`.
 
-📌 **This is about substitutability** — not dependency direction.
+📌 **This is about substitutability** - not dependency direction.
 
 ---
 
@@ -84,11 +84,11 @@ Because:
 * `ArrayList`, `LinkedList` are **low-level details**
 * You made `UserService` depend on the **abstraction** (`List`), not on the concrete class.
 
-📌 **This is about reducing coupling** — not about behavior.
+📌 **This is about reducing coupling** - not about behavior.
 
 ---
 
-# 🔥 **DIP ≠ LSP — Here’s the crisp difference**
+# 🔥 **DIP ≠ LSP - Here’s the crisp difference**
 
 ### **LSP answers:**
 

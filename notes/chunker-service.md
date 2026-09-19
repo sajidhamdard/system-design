@@ -1,6 +1,6 @@
 ## 🧩 **What is a Chunker Service?**
 
-A **Chunker Service** is a software component (or microservice) that takes a **large payload** — such as a file, stream, or dataset — and **breaks it into smaller chunks** so that:
+A **Chunker Service** is a software component (or microservice) that takes a **large payload** - such as a file, stream, or dataset - and **breaks it into smaller chunks** so that:
 
 * Each chunk can be **processed or transmitted independently**, and
 * The system can **handle large data efficiently and reliably**.
@@ -17,9 +17,9 @@ After chunking, these smaller pieces are typically:
 Chunking is needed when:
 
 1. **Data size exceeds limits** (e.g., file upload limits or API size limits)
-2. **Network reliability** is an issue — smaller chunks are easier to retry if one fails
-3. **Parallelism** is desired — chunks can be processed concurrently
-4. **Streaming** is needed — chunks can be sent or processed as they arrive
+2. **Network reliability** is an issue - smaller chunks are easier to retry if one fails
+3. **Parallelism** is desired - chunks can be processed concurrently
+4. **Streaming** is needed - chunks can be sent or processed as they arrive
 
 ---
 
@@ -82,6 +82,6 @@ Since HTTP has payload limits (e.g., 10MB), the **Chunker Service** divides it i
 | **Chunker Service**    | A service that splits large data into smaller pieces for easier transfer or processing |
 | **Purpose**            | Handle large payloads efficiently, improve fault tolerance, enable parallel processing |
 | **Common Use Cases**   | File uploads, distributed processing, data streaming, backups                          |
-| **Opposite Component** | “Assembler” or “Merger” — reassembles chunks into the full original data               |
+| **Opposite Component** | “Assembler” or “Merger” - reassembles chunks into the full original data               |
 
 ---

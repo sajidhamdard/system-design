@@ -43,7 +43,7 @@
 | **Invalidate/update cache when source changes** | Keep data fresh                                                 |
 | **Consider consistency needs**                  | For critical apps, don’t serve outdated data                    |
 | **Use cache-aside pattern**                     | Fetch from DB when cache miss, then update cache                |
-| **Limit cache size**                            | Avoid memory explosion (use LRU — Least Recently Used eviction) |
+| **Limit cache size**                            | Avoid memory explosion (use LRU - Least Recently Used eviction) |
 
 ---
 

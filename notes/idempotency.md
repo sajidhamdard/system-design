@@ -113,7 +113,7 @@ This way, retries are safe.
 
 ## 2. **Database UPSERT (ON CONFLICT DO NOTHING / UPDATE)**
 
-* You’re right again — many teams just use `INSERT` and trust application logic.
+* You’re right again - many teams just use `INSERT` and trust application logic.
 * But in **distributed systems**, retries happen (e.g., Kafka consumer reprocessing an event).
 * If you blindly `INSERT`, you’ll get duplicates.
 

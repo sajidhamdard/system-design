@@ -1,4 +1,4 @@
-# **Your Project Architecture — Clean End-to-End Flow**
+# **Your Project Architecture - Clean End-to-End Flow**
 
 ## **1. Frontend (Angular + Web Components)**
 
@@ -104,7 +104,7 @@ Databases / Other services
 
 # **Why you get errors like "Only X characters allowed" / "Max 10 MB data allowed"**
 
-These types of errors are **API Gateway policy enforcement errors** — not directly from your backend service.
+These types of errors are **API Gateway policy enforcement errors** - not directly from your backend service.
 
 Apigee **sits in front** of all your backend APIs and it applies **policies** like:
 
@@ -161,7 +161,7 @@ Or directly with a **built-in policy**:
 
 ---
 
-# **Bonus — Why these limits exist (good to mention in interview)**
+# **Bonus - Why these limits exist (good to mention in interview)**
 
 * Prevent **DoS attacks** (user sends 1GB file → server crashes)
 * Ensure **fair usage** and **predictable performance**
@@ -172,9 +172,9 @@ Or directly with a **built-in policy**:
 
 # **How to confirm it’s Apigee error (in real project)**
 
-* **Check Apigee response code** — usually it returns 4xx with **policy error message**
-* **Backend service logs** — If backend was not hit at all → it’s Apigee
-* **Apigee policies config** — Your Apigee team can confirm configured limits
+* **Check Apigee response code** - usually it returns 4xx with **policy error message**
+* **Backend service logs** - If backend was not hit at all → it’s Apigee
+* **Apigee policies config** - Your Apigee team can confirm configured limits
 
 ---
 
@@ -206,7 +206,7 @@ That folder contains:
 * **API specifications** (OpenAPI / Swagger files)
 * **Policies or metadata** saying which APIs are published, versioned, allowed
 
-When you **deploy a new backend service** (say "Students API") —
+When you **deploy a new backend service** (say "Students API") -
 If that API’s **spec** is not present or not registered correctly in the **Axway repo**,
 Axway **blocks requests** to it and returns **403 Forbidden**
 (*“This API is not allowed / not published / not authorized”*)
@@ -258,7 +258,7 @@ And **Axway** is used as a **central API management / governance platform** to:
 
 # **So to answer you clearly**
 
-**Yes — the 403 Forbidden you mentioned (for new APIs)**
+**Yes - the 403 Forbidden you mentioned (for new APIs)**
 → It is because **Axway is blocking that API** due to **missing or unregistered spec**
 → You need to **add the API spec** in **GitOps Axway folder** to allow traffic
 
@@ -324,7 +324,7 @@ Each **sub-app** is:
 * Built **independently** (just like backend services)
 * Deployed separately (maybe to some cloud storage, CDN, or server)
 
-These sub-apps are **Web Components** — meaning:
+These sub-apps are **Web Components** - meaning:
 
 * They are compiled into **custom HTML elements** (like `<student-app></student-app>`, `<teacher-app></teacher-app>`, etc.)
 * They are **framework-agnostic** (once built, you can use them in any app, not just Angular)
@@ -401,14 +401,14 @@ In the **main Angular app**:
 # **1. What is Docker?**
 
 **Docker** is a tool that **packages** your application (code + dependencies + environment) into a **Docker Image**.
-That image can run **anywhere** (on your laptop, server, cloud) — exactly the same way.
+That image can run **anywhere** (on your laptop, server, cloud) - exactly the same way.
 
 ### **Why do we use Docker?**
 
 Because:
 
 * No more "It works on my machine" problem
-* The same Docker image can run in **dev**, **QA**, **stage**, **prod** — no surprises
+* The same Docker image can run in **dev**, **QA**, **stage**, **prod** - no surprises
 * Easy to deploy, scale, and manage applications
 
 ---
@@ -467,7 +467,7 @@ Because:
 
 ---
 
-# **Your Project Flow — Docker + Artifactory**
+# **Your Project Flow - Docker + Artifactory**
 
 1. **Developer** writes code (Spring Boot)
 2. **Jenkins** builds the code → creates Docker image
@@ -530,7 +530,7 @@ Because:
 
 ---
 
-## 2️⃣ **Your project — Full Microservices Architecture (Explained Clearly)**
+## 2️⃣ **Your project - Full Microservices Architecture (Explained Clearly)**
 
 Here's how **YOUR project** fits cleanly into a **modern microservices architecture**:
 
@@ -595,7 +595,7 @@ Here's how **YOUR project** fits cleanly into a **modern microservices architect
 
 * **Data Ownership**
   → Some services have **separate DB** (ideal microservices pattern)
-  → Some share a **common DB** (practical compromise — real-world pattern)
+  → Some share a **common DB** (practical compromise - real-world pattern)
 
 ---
 
@@ -843,7 +843,7 @@ We test both old and new API versions thoroughly before deployment.
 
 ---
 
-Excellent — here’s both:
+Excellent - here’s both:
 ① **5 super advanced microservices interview questions (with model answers based on your project)**
 ② **System Design questions (with hints to answer confidently)**
 
@@ -985,13 +985,13 @@ These may be asked to see if you can apply microservices concepts to design.
 * Alternatively, do **Blue-Green deployment** (2 sets of pods, switch traffic)
 * Ensure backward compatibility of APIs
 * Use **health checks** to ensure new pods are healthy before switching
-* Gradually **increase traffic** to new version (Canary Deployment — optional)
+* Gradually **increase traffic** to new version (Canary Deployment - optional)
 
 ---
 
 # ✅ **How to Prepare These**
 
-→ For each design Q, mention **components**, **communication**, **security**, **scalability**, **resilience**, **monitoring**, **deployment** (these 7 pillars — interviewers love that)
+→ For each design Q, mention **components**, **communication**, **security**, **scalability**, **resilience**, **monitoring**, **deployment** (these 7 pillars - interviewers love that)
 
 ---
 
@@ -1048,7 +1048,7 @@ These may be asked to see if you can apply microservices concepts to design.
 ✅ Kafka DLQ
 ✅ Kubernetes ReplicaSets & Self-healing
 ✅ Event-driven architecture
-✅ Circuit breaker / Retry (Resilience4j — future ready)
+✅ Circuit breaker / Retry (Resilience4j - future ready)
 ✅ GitOps Deployment flow (Build → Docker Artifactory → GitOps repo → K8s)
 ✅ Hybrid DB strategy (Oracle + MongoDB)
 
@@ -1081,7 +1081,7 @@ These may be asked to see if you can apply microservices concepts to design.
 | Pattern                                             | Where / How (Your Project Example)                                                                             |
 | --------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
 | **API Gateway**                                     | Apigee (handles auth, routing, rate limiting)                                                                  |
-| **Circuit Breaker**                                 | (Optional / Future) — Resilience4j for fault tolerance in REST/Kafka                                           |
+| **Circuit Breaker**                                 | (Optional / Future) - Resilience4j for fault tolerance in REST/Kafka                                           |
 | **Saga (Orchestration/Choreography)**               | For distributed transactions (payments + accounts), Kafka-based async updates ensure eventual consistency      |
 | **Event Sourcing**                                  | Kafka (events persist history of state change, e.g., payment processed)                                        |
 | **CQRS (Command Query Responsibility Segregation)** | Read-heavy APIs fetch data from cached or denormalized sources (MongoDB) while writes propagate via Kafka      |
@@ -1100,7 +1100,7 @@ These may be asked to see if you can apply microservices concepts to design.
 * "For inter-service reliability, we apply **retry mechanisms** and are considering **circuit breaker pattern** with Resilience4j."
 * "Our deployments are **immutable**, driven by **GitOps**, ensuring consistency across environments."
 * "We designed services for **independent deployability, fault isolation, and scalability** using Kubernetes bulkheads and replicas."
-* "We use a **hybrid persistence strategy** — relational (Oracle) and NoSQL (MongoDB), following **Database-per-service** pattern where appropriate."
+* "We use a **hybrid persistence strategy** - relational (Oracle) and NoSQL (MongoDB), following **Database-per-service** pattern where appropriate."
 
 ---
 
@@ -1124,7 +1124,7 @@ These may be asked to see if you can apply microservices concepts to design.
 
 ---
 
-# 🎯 **Advanced Microservices — Interview Q\&A (Tailored to Your Project)**
+# 🎯 **Advanced Microservices - Interview Q\&A (Tailored to Your Project)**
 
 ---
 

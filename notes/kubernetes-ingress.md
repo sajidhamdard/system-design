@@ -4,7 +4,7 @@
 
 > **Ingress** is a Kubernetes resource that manages **external access to services** in a cluster, typically HTTP/HTTPS. It acts as a **smart entry point** or **reverse proxy** for routing traffic to different services based on **hostnames, paths, or rules**.
 
-* Ingress **does not provide the actual traffic handling** — it requires an **Ingress Controller** like **NGINX, Traefik, or HAProxy**.
+* Ingress **does not provide the actual traffic handling** - it requires an **Ingress Controller** like **NGINX, Traefik, or HAProxy**.
 
 ---
 

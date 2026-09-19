@@ -5,9 +5,9 @@ Here’s a simple breakdown:
 * **Main purpose**: Spread the load evenly across servers (also called a *server pool* or *server farm*).
 * **Why we use it**:
 
-  * To improve **scalability** — handle more users by adding servers.
-  * To improve **availability** — if one server goes down, others keep serving requests.
-  * To improve **performance** — reduce response time by sending requests to less busy servers.
+  * To improve **scalability** - handle more users by adding servers.
+  * To improve **availability** - if one server goes down, others keep serving requests.
+  * To improve **performance** - reduce response time by sending requests to less busy servers.
 
 ### Example scenario
 
@@ -25,22 +25,22 @@ You have a website with heavy traffic:
 
 ### Algorithms used by load balancers (to decide where to send traffic)
 
-* **Round Robin** — Send requests to servers one by one in a cycle.
-* **Least Connections** — Send to the server with the fewest active connections.
-* **IP Hash** — Client’s IP determines which server gets the request (useful for session stickiness).
-* **Weighted Round Robin / Weighted Least Connections** — Prefer more powerful servers.
+* **Round Robin** - Send requests to servers one by one in a cycle.
+* **Least Connections** - Send to the server with the fewest active connections.
+* **IP Hash** - Client’s IP determines which server gets the request (useful for session stickiness).
+* **Weighted Round Robin / Weighted Least Connections** - Prefer more powerful servers.
 
 ### Example load balancers:
 
-* **Hardware** — F5 BIG-IP, Citrix ADC.
-* **Software** — NGINX, HAProxy.
-* **Cloud** — AWS Elastic Load Balancer (ELB), Azure Load Balancer.
+* **Hardware** - F5 BIG-IP, Citrix ADC.
+* **Software** - NGINX, HAProxy.
+* **Cloud** - AWS Elastic Load Balancer (ELB), Azure Load Balancer.
 
 ---
 
 ### First: **Does Apigee use a load balancer?**
 
-**Yes** — but it depends on **which Apigee deployment model** you’re using:
+**Yes** - but it depends on **which Apigee deployment model** you’re using:
 
 | Apigee Deployment Model                                   | Load Balancer Details                                                                                                                                                                                                        |
 | --------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -49,9 +49,9 @@ You have a website with heavy traffic:
 
 ---
 
-### Now — **Does Apigee have a built-in load balancer?**
+### Now - **Does Apigee have a built-in load balancer?**
 
-**Not exactly a full-featured load balancer** like NGINX or F5 — but:
+**Not exactly a full-featured load balancer** like NGINX or F5 - but:
 
 * Apigee (especially in **Hybrid** / Kubernetes-based deployments) uses **Kubernetes Services** which provide **basic load balancing** across Apigee runtime pods.
 * It **distributes requests internally** across multiple Message Processors or Routers.
@@ -71,7 +71,7 @@ You have a website with heavy traffic:
 ### Quick summary:
 
 > Apigee does **not provide a full standalone load balancer product** like NGINX/F5.
-> It **internally distributes load** between components but for **exposing APIs to clients**, an **external load balancer** is used — either **managed by Google** (SaaS) or **managed by you** (Hybrid).
+> It **internally distributes load** between components but for **exposing APIs to clients**, an **external load balancer** is used - either **managed by Google** (SaaS) or **managed by you** (Hybrid).
 
 ---
 
@@ -79,27 +79,27 @@ You have a website with heavy traffic:
 
 An **API Gateway and a Load Balancer** are **two different things**, but:
 
-> Some tools (like **NGINX**) can act as **both** — depending on how you configure them.
+> Some tools (like **NGINX**) can act as **both** - depending on how you configure them.
 
 Let’s clear this up.
 
 ---
 
-### **API Gateway vs Load Balancer — Concept**
+### **API Gateway vs Load Balancer - Concept**
 
 |                       | API Gateway                                                                     | Load Balancer                                                         |
 | --------------------- | ------------------------------------------------------------------------------- | --------------------------------------------------------------------- |
 | **Main job**          | Manage **APIs** (route to services, apply policies like auth, rate limit, etc.) | Distribute **traffic** across multiple backend servers to spread load |
 | **Layer**             | Application Layer (Layer 7)                                                     | Can be Layer 4 (TCP) or Layer 7 (HTTP)                                |
 | **Examples**          | Apigee, Kong, AWS API Gateway, NGINX (configured as gateway)                    | NGINX (configured as LB), HAProxy, AWS ELB, Google Cloud LB           |
-| **Knows about APIs?** | Yes — works with **API paths**, methods, etc.                                   | No — just balances traffic, unaware of API methods or policies        |
+| **Knows about APIs?** | Yes - works with **API paths**, methods, etc.                                   | No - just balances traffic, unaware of API methods or policies        |
 
 ---
 
 ### **Does an API Gateway internally use a load balancer?**
 
 Not exactly.
-But — **under the hood**, an API Gateway **does distribute requests** to backend services —
+But - **under the hood**, an API Gateway **does distribute requests** to backend services -
 this behavior is **similar to a load balancer**, but with **API-awareness**.
 
 You can think of it like:
@@ -117,7 +117,7 @@ You can think of it like:
 
 So:
 
-> **NGINX can do both — it depends on how you configure it.**
+> **NGINX can do both - it depends on how you configure it.**
 
 ---
 
@@ -144,7 +144,7 @@ Sometimes, companies even **combine** them:
 
 ### **Interview-friendly answer to your question**
 
-> **“An API Gateway doesn’t technically *use* a load balancer internally, but it does distribute traffic across backend services in a similar way — with extra API management features like security and rate limiting. Tools like NGINX can act as both, depending on how they’re configured.”**
+> **“An API Gateway doesn’t technically *use* a load balancer internally, but it does distribute traffic across backend services in a similar way - with extra API management features like security and rate limiting. Tools like NGINX can act as both, depending on how they’re configured.”**
 
 ---
 
@@ -162,7 +162,7 @@ So then…
 
 ---
 
-### **Here’s why** — imagine this situation:
+### **Here’s why** - imagine this situation:
 
 You’re running a big application
 → Thousands of users are calling APIs at the same time
@@ -198,7 +198,7 @@ Backend services   Backend services
 
 ### **Interview-friendly explanation you can say**
 
-> *“An external load balancer sits in front of multiple API Gateway instances to distribute client traffic evenly across them, ensuring high availability and scalability. The API Gateway then handles API-level routing and policies to backend services. The LB’s role is to keep the API Gateways healthy and balanced — not to route to microservices directly.”*
+> *“An external load balancer sits in front of multiple API Gateway instances to distribute client traffic evenly across them, ensuring high availability and scalability. The API Gateway then handles API-level routing and policies to backend services. The LB’s role is to keep the API Gateways healthy and balanced - not to route to microservices directly.”*
 
 ---
 
@@ -246,7 +246,7 @@ Step by step:
      **API Gateway** can:
 
      * Either **call the service registry** (like Kubernetes service, or Consul, or an internal LB)
-     * Or directly call an **internal load balancer** (optional — depends on infra)
+     * Or directly call an **internal load balancer** (optional - depends on infra)
 
 5. **Backend service processes the request** and returns the response
 
@@ -298,7 +298,7 @@ Client
 
 ### **Bottom line:**
 
-> You don't **always need** an explicit "internal LB" between API Gateway and services — because things like **Kubernetes Service** or **Service Mesh** can already balance traffic across backend replicas.
+> You don't **always need** an explicit "internal LB" between API Gateway and services - because things like **Kubernetes Service** or **Service Mesh** can already balance traffic across backend replicas.
 
 ---
 
@@ -313,7 +313,7 @@ Client
    |
 [ Kubernetes Service (Service discovery + Internal load balancing) ]
    |
-[ Backend Microservices (Service A, B, C — each has multiple pods) ]
+[ Backend Microservices (Service A, B, C - each has multiple pods) ]
 ```
 
 ### **Step-by-step flow**
@@ -348,7 +348,7 @@ Client
    |
 [ Internal Load Balancer (NGINX configured as internal LB OR AWS ALB) ]
    |
-[ Backend Services (deployed on VMs — multiple replicas per service) ]
+[ Backend Services (deployed on VMs - multiple replicas per service) ]
 ```
 
 ### **Step-by-step flow**
@@ -386,11 +386,11 @@ Client
 
 ## **Short answer**
 
-> Kubernetes **Service** uses **kube-proxy** and **iptables** (or IPVS) to distribute traffic to Pods in a **randomized round-robin fashion** — roughly equal distribution.
+> Kubernetes **Service** uses **kube-proxy** and **iptables** (or IPVS) to distribute traffic to Pods in a **randomized round-robin fashion** - roughly equal distribution.
 
 ---
 
-## **Step-by-step process — super clean**
+## **Step-by-step process - super clean**
 
 Let’s say:
 
@@ -415,7 +415,7 @@ Service A (Kubernetes Service)
 
    * For each new connection/request, kube-proxy randomly selects a backend Pod from the list
    * Over time, this results in **roughly equal distribution** of requests across Pods
-   * **It is NOT strict round robin** — randomness makes it more resilient
+   * **It is NOT strict round robin** - randomness makes it more resilient
 
 5. The selected Pod processes the request and sends back the response
 
@@ -433,7 +433,7 @@ Service A (Kubernetes Service)
 
 ## **Bonus** (Advanced understanding)
 
-* If you expose **NodePort** or **LoadBalancer Service** —
+* If you expose **NodePort** or **LoadBalancer Service** -
   Traffic first hits **node**, then kube-proxy forwards to Pods (same logic)
 
 * **Session Affinity** (optional)
@@ -453,18 +453,18 @@ spec:
 
 ## **Clean interview answer**
 
-> *“Kubernetes Service distributes requests to backend Pods using kube-proxy, which programs iptables (or IPVS) rules. The default strategy is randomized round robin — requests are randomly but roughly evenly spread across healthy Pods. Kubernetes automatically excludes unhealthy Pods and updates the rules dynamically. For higher performance, IPVS mode can be used. Session affinity is optional.”*
+> *“Kubernetes Service distributes requests to backend Pods using kube-proxy, which programs iptables (or IPVS) rules. The default strategy is randomized round robin - requests are randomly but roughly evenly spread across healthy Pods. Kubernetes automatically excludes unhealthy Pods and updates the rules dynamically. For higher performance, IPVS mode can be used. Session affinity is optional.”*
 
 ---
 
 ## **Bottom line**
 
-> Yes — **K8s Service distributes load roughly equally (randomized round robin)** to healthy Pods **automatically**.
-> You **don’t have to configure an explicit load balancer** — it’s built into kube-proxy.
+> Yes - **K8s Service distributes load roughly equally (randomized round robin)** to healthy Pods **automatically**.
+> You **don’t have to configure an explicit load balancer** - it’s built into kube-proxy.
 
 ---
 
-## **NGINX load balancing — Do we have to configure it?**
+## **NGINX load balancing - Do we have to configure it?**
 
 **Yes**, in NGINX you have to **explicitly configure** how requests should be distributed to backend servers.
 
@@ -482,9 +482,9 @@ Let’s say:
 
 ```
 You have 3 backend servers:
-Backend 1 — 10.0.0.1
-Backend 2 — 10.0.0.2
-Backend 3 — 10.0.0.3
+Backend 1 - 10.0.0.1
+Backend 2 - 10.0.0.2
+Backend 3 - 10.0.0.3
 ```
 
 ### **Your NGINX config (nginx.conf)**
@@ -509,11 +509,11 @@ http {
 
 This says:
 
-> "NGINX, here are 3 servers — distribute requests among them"
+> "NGINX, here are 3 servers - distribute requests among them"
 
 ---
 
-## \*\*By default — NGINX uses **round robin**
+## \*\*By default - NGINX uses **round robin**
 
 * Each request goes to the next server in line:
 
@@ -538,7 +538,7 @@ NGINX supports multiple strategies:
 | **IP Hash (sticky)**        | `ip_hash;`                  | When session stickiness is needed            |
 | **Weight-based**            | `server 10.0.0.1 weight=3;` | When servers have different capacity         |
 
-### **Example — Least connections**
+### **Example - Least connections**
 
 ```nginx
 upstream backend_servers {
@@ -564,18 +564,18 @@ upstream backend_servers {
 
 ## **Clean interview answer**
 
-> *“In NGINX, we have to explicitly configure backend servers and choose the load balancing strategy in the config file. By default, NGINX uses round robin but supports least connections, IP hash (sticky sessions), and weighted balancing. Unlike Kubernetes, NGINX does not auto-discover services or auto-exclude dead servers — we configure health checks and servers manually.”*
+> *“In NGINX, we have to explicitly configure backend servers and choose the load balancing strategy in the config file. By default, NGINX uses round robin but supports least connections, IP hash (sticky sessions), and weighted balancing. Unlike Kubernetes, NGINX does not auto-discover services or auto-exclude dead servers - we configure health checks and servers manually.”*
 
 ---
 
 ## **Bottom line**
 
-> **Yes — in NGINX you MUST configure backend servers and load balancing strategy yourself**
+> **Yes - in NGINX you MUST configure backend servers and load balancing strategy yourself**
 > Kubernetes does it automatically for you via kube-proxy and Service.
 
 ---
 
-## **First — What is Service Discovery?** *(Why do we even need it?)*
+## **First - What is Service Discovery?** *(Why do we even need it?)*
 
 When you build **microservices**, the number of services and their instances (replicas) can dynamically change:
 
@@ -587,7 +587,7 @@ This means:
 
 > **We can’t hardcode IP addresses of services** because they are **dynamic**.
 
-So we need a **Service Discovery system** —
+So we need a **Service Discovery system** -
 A **central registry** where all services **register themselves** and other services can **discover them dynamically**.
 
 ---
@@ -611,12 +611,12 @@ Client
    |
 [ Zuul API Gateway ]
    |
-( Zuul asks Eureka — "Where is Service A?" )
+( Zuul asks Eureka - "Where is Service A?" )
    |
 [ Eureka Registry ]
-   ↳ Service A — 10.0.0.1
-   ↳ Service A — 10.0.0.2
-   ↳ Service B — 10.0.0.3
+   ↳ Service A - 10.0.0.1
+   ↳ Service A - 10.0.0.2
+   ↳ Service B - 10.0.0.3
 ```
 
 ---

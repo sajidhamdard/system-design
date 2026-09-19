@@ -8,7 +8,7 @@ Simple words:
 
 ---
 
-### **Small Example 1 — Relational DB (MySQL)**
+### **Small Example 1 - Relational DB (MySQL)**
 
 You have a table:
 
@@ -26,7 +26,7 @@ UPDATE posts SET likes_count = likes_count + 1 WHERE post_id = 123;
 
 ---
 
-### **Small Example 2 — Cassandra**
+### **Small Example 2 - Cassandra**
 
 You have a **time-series** table:
 
@@ -39,7 +39,7 @@ If this sensor writes 1000 readings/sec → **that partition is hotspot** → th
 
 ---
 
-### **Small Example 3 — Cache (Redis)**
+### **Small Example 3 - Cache (Redis)**
 
 You have a cache key:
 `"trending_posts"`

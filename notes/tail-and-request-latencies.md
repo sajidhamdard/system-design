@@ -2,7 +2,7 @@
 
 **Definition:**
 
-> **Tail latency** refers to the **high end (the “tail”) of the latency distribution** in a system—i.e., the **slowest responses experienced by a small fraction of requests**.
+> **Tail latency** refers to the **high end (the “tail”) of the latency distribution** in a system-i.e., the **slowest responses experienced by a small fraction of requests**.
 >
 > While average latency shows typical performance, **tail latency focuses on worst-case behavior**, which often impacts user experience the most.
 

@@ -2,7 +2,7 @@
 
 > **Apache Cassandra** is a **distributed NoSQL database** designed to handle **large amounts of data** across **many servers** with **high availability** and **no single point of failure**.
 
-In short —
+In short -
 It is a **highly scalable**, **fault-tolerant**, **distributed database** that is good at **handling huge writes and reads**, especially when the system cannot afford downtime.
 
 ---
@@ -68,7 +68,7 @@ In Cassandra, each **row** is identified by a **primary key**, and data is **dis
 
 → Because **Cassandra and MongoDB solve slightly different problems** and have **different trade-offs**.
 
-Here’s a clean comparison —
+Here’s a clean comparison -
 
 | **Feature**               | **Cassandra**                                                                          | **MongoDB**                                                       |
 | ------------------------- | -------------------------------------------------------------------------------------- | ----------------------------------------------------------------- |
@@ -76,7 +76,7 @@ Here’s a clean comparison —
 | **Data model**            | Wide-column store (table with flexible columns per row)                                | Document store (JSON-like documents)                              |
 | **Query model**           | Simple key-value + range queries (optimized for known queries)                         | Rich queries (filters, aggregation, secondary indexes)            |
 | **Joins?**                | No joins                                                                               | No joins, but supports embedded documents (denormalized data)     |
-| **Consistency**           | Tunable (AP model in CAP theorem — highly available, eventually consistent by default) | Tunable (default is strong consistency for single document)       |
+| **Consistency**           | Tunable (AP model in CAP theorem - highly available, eventually consistent by default) | Tunable (default is strong consistency for single document)       |
 | **Ease of use**           | Complex data model (you need to design carefully up front)                             | Easy to get started (store documents as-is, flexible schema)      |
 | **Scaling**               | Designed from day 1 for distributed, massive scaling                                   | Sharding available but not as seamless as Cassandra               |
 | **Community / Ecosystem** | Smaller developer ecosystem, more infra-focused                                        | Huge developer ecosystem, rich tooling (charts, queries, etc.)    |
@@ -94,14 +94,14 @@ Here’s a clean comparison —
 
 | **Cassandra**                                                                              | **MongoDB**                                                                  |
 | ------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------- |
-| Like a **race car** — built for **speed and scale**, but harder to drive and less flexible | Like an **SUV** — easier to drive, more flexible, works for general purposes |
+| Like a **race car** - built for **speed and scale**, but harder to drive and less flexible | Like an **SUV** - easier to drive, more flexible, works for general purposes |
 
 ---
 
 ### Final Thought (Interview answer tip)
 
 > **There is no one-size-fits-all database.**
-> Cassandra and MongoDB have **different strengths**, so we choose based on **use case** — not hype.
+> Cassandra and MongoDB have **different strengths**, so we choose based on **use case** - not hype.
 
 ---
 

@@ -1,7 +1,7 @@
 # Low-Latency Design Patterns
 
 ## Overview
-Low-latency systems are designed to minimize response time — crucial for applications like financial trading, real-time gaming, streaming, and high-performance APIs. Achieving low latency requires optimizing across the entire stack: hardware, networking, software, and architecture.
+Low-latency systems are designed to minimize response time - crucial for applications like financial trading, real-time gaming, streaming, and high-performance APIs. Achieving low latency requires optimizing across the entire stack: hardware, networking, software, and architecture.
 
 ---
 

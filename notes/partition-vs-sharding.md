@@ -71,7 +71,7 @@ Here, data is split **across different physical servers**.
 
 ---
 
-Partitioning is *not* about correctness — it’s about **performance, manageability, scalability**.
+Partitioning is *not* about correctness - it’s about **performance, manageability, scalability**.
 
 ---
 

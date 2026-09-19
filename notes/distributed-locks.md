@@ -89,7 +89,7 @@ This ensures no one else can delete your lock.
 
 ---
 
-Let’s compare **Redis Redlock** with **Zookeeper locks (via Curator recipes)** — both are widely used in distributed systems for **coordination and locking**.
+Let’s compare **Redis Redlock** with **Zookeeper locks (via Curator recipes)** - both are widely used in distributed systems for **coordination and locking**.
 
 ---
 
@@ -138,7 +138,7 @@ Let’s compare **Redis Redlock** with **Zookeeper locks (via Curator recipes)**
 * **Zookeeper**:
 
   * If client crashes → ephemeral znode is deleted automatically (lock released).
-  * No premature expiry — lock is explicitly released or lost only if client session dies.
+  * No premature expiry - lock is explicitly released or lost only if client session dies.
 
 ---
 

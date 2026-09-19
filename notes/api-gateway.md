@@ -1,5 +1,5 @@
 An **API Gateway** is a **server** (or service) that acts as a **single entry point** for all client requests to your backend services (like microservices, databases, legacy systems, etc.).
-Think of it as a **traffic manager** or **doorman** for APIs—it handles incoming API calls, routes them to the correct backend services, applies policies, and sends the response back to the client.
+Think of it as a **traffic manager** or **doorman** for APIs-it handles incoming API calls, routes them to the correct backend services, applies policies, and sends the response back to the client.
 
 ---
 
@@ -78,7 +78,7 @@ Client → API Gateway → Microservice 1
 
 ### 📌 **In short**
 
-**API Gateway = Centralized manager and router for APIs**, handling security, routing, throttling, analytics, and more — simplifying client-to-microservice interactions.
+**API Gateway = Centralized manager and router for APIs**, handling security, routing, throttling, analytics, and more - simplifying client-to-microservice interactions.
 
 ---
 
@@ -109,7 +109,7 @@ Clients → API Gateway → Microservices
 ```
 
 Now clients interact **only with API Gateway**.
-The gateway handles the "messy details" — clean, secure, and scalable!
+The gateway handles the "messy details" - clean, secure, and scalable!
 
 ---
 
@@ -181,7 +181,7 @@ Client → API Gateway
 | **Simplified client communication** | Clients don’t need to know 10+ microservice URLs              |
 | **Centralized security**            | Easier to enforce auth, rate limits at one place              |
 | **Flexible backend evolution**      | Backend services can change without breaking clients          |
-| **Faster delivery**                 | Common API tasks handled by gateway — less work for dev teams |
+| **Faster delivery**                 | Common API tasks handled by gateway - less work for dev teams |
 | **Improved monitoring**             | Company can analyze API usage patterns easily                 |
 
 ---
@@ -214,13 +214,13 @@ Client → API Gateway
 
 ## ✅ **Summary**
 
-An **API Gateway** makes microservices architectures **scalable**, **secure**, and **maintainable** —
+An **API Gateway** makes microservices architectures **scalable**, **secure**, and **maintainable** -
 By **centralizing routing, security, and API management**, companies reduce complexity for clients and backend teams.
 
 ---
 
 
-Perfect — let’s see how **API Gateway + Kubernetes** works together!
+Perfect - let’s see how **API Gateway + Kubernetes** works together!
 This is **very relevant** because modern companies deploy their microservices in **Kubernetes clusters**.
 I’ll explain step-by-step, show architecture, and share real-world examples.
 Let’s go 🚀
@@ -307,7 +307,7 @@ Client
 
 | Benefit                       | Why it matters                                          |
 | ----------------------------- | ------------------------------------------------------- |
-| **Single public entry point** | Only API Gateway is exposed — rest of services private  |
+| **Single public entry point** | Only API Gateway is exposed - rest of services private  |
 | **Centralized security**      | No need to add auth/rate limit on each service          |
 | **Service discovery**         | Automatically routes to K8s services (ClusterIP)        |
 | **Scalability**               | Gateway scales horizontally with Kubernetes deployments |
@@ -318,11 +318,11 @@ Client
 
 ## ⚠️ **Things to keep in mind**
 
-1. **Resource usage** — API Gateway Pod should scale with traffic
-2. **TLS termination** — Let Gateway handle HTTPS
-3. **RBAC & Secrets** — Secure API Gateway configs
-4. **Observability** — Enable logging + monitoring on Gateway
-5. **Multi-cluster?** — Use **global API Gateway** (Istio or Kong + Kuma)
+1. **Resource usage** - API Gateway Pod should scale with traffic
+2. **TLS termination** - Let Gateway handle HTTPS
+3. **RBAC & Secrets** - Secure API Gateway configs
+4. **Observability** - Enable logging + monitoring on Gateway
+5. **Multi-cluster?** - Use **global API Gateway** (Istio or Kong + Kuma)
 
 ---
 
@@ -356,7 +356,7 @@ This is how **modern companies** (Netflix, Airbnb, Stripe, etc.) build robust pl
 
 ---
 
-### ⚙️ **Step 1 — Install Nginx**
+### ⚙️ **Step 1 - Install Nginx**
 
 ```bash
 sudo apt update
@@ -365,7 +365,7 @@ sudo apt install nginx
 
 ---
 
-### ⚙️ **Step 2 — Configure Nginx as reverse proxy**
+### ⚙️ **Step 2 - Configure Nginx as reverse proxy**
 
 Open Nginx config:
 
@@ -391,7 +391,7 @@ server {
 
 ---
 
-### ⚙️ **Step 3 — Enable config & restart Nginx**
+### ⚙️ **Step 3 - Enable config & restart Nginx**
 
 ```bash
 sudo ln -s /etc/nginx/sites-available/api-gateway /etc/nginx/sites-enabled/
@@ -401,14 +401,14 @@ sudo systemctl restart nginx
 
 ---
 
-### ⚙️ **Step 4 — Test**
+### ⚙️ **Step 4 - Test**
 
 ```bash
 curl http://localhost/users/    # Routes to UserService
 curl http://localhost/products/ # Routes to ProductService
 ```
 
-🎉 **Done — Nginx is now your basic API Gateway!**
+🎉 **Done - Nginx is now your basic API Gateway!**
 
 ---
 
@@ -431,9 +431,9 @@ curl http://localhost/products/ # Routes to ProductService
 
 ---
 
-## 🚀 **Kong Gateway — Outside Kubernetes (quick demo)**
+## 🚀 **Kong Gateway - Outside Kubernetes (quick demo)**
 
-### ⚙️ **Step 1 — Install Kong (Docker)**
+### ⚙️ **Step 1 - Install Kong (Docker)**
 
 ```bash
 docker network create kong-net
@@ -466,7 +466,7 @@ docker run -d --name kong \
 
 ---
 
-### ⚙️ **Step 2 — Configure Routes & Services**
+### ⚙️ **Step 2 - Configure Routes & Services**
 
 ✅ Expose UserService (on `localhost:5001`)
 
@@ -492,7 +492,7 @@ curl -i -X POST http://localhost:8001/services/products-service/routes \
 
 ---
 
-### ⚙️ \*\*Step 3 — Test
+### ⚙️ \*\*Step 3 - Test
 
 ```bash
 curl http://localhost:8000/users    # Routed to UserService
@@ -551,7 +551,7 @@ curl http://localhost:8000/products # Routed to ProductService
 
 ---
 
-### ⚙️ **Step 1 — Install Nginx**
+### ⚙️ **Step 1 - Install Nginx**
 
 ```bash
 sudo apt update
@@ -560,7 +560,7 @@ sudo apt install nginx
 
 ---
 
-### ⚙️ **Step 2 — Configure Nginx as reverse proxy**
+### ⚙️ **Step 2 - Configure Nginx as reverse proxy**
 
 Open Nginx config:
 
@@ -586,7 +586,7 @@ server {
 
 ---
 
-### ⚙️ **Step 3 — Enable config & restart Nginx**
+### ⚙️ **Step 3 - Enable config & restart Nginx**
 
 ```bash
 sudo ln -s /etc/nginx/sites-available/api-gateway /etc/nginx/sites-enabled/
@@ -596,14 +596,14 @@ sudo systemctl restart nginx
 
 ---
 
-### ⚙️ **Step 4 — Test**
+### ⚙️ **Step 4 - Test**
 
 ```bash
 curl http://localhost/users/    # Routes to UserService
 curl http://localhost/products/ # Routes to ProductService
 ```
 
-🎉 **Done — Nginx is now your basic API Gateway!**
+🎉 **Done - Nginx is now your basic API Gateway!**
 
 ---
 
@@ -626,9 +626,9 @@ curl http://localhost/products/ # Routes to ProductService
 
 ---
 
-## 🚀 **Kong Gateway — Outside Kubernetes (quick demo)**
+## 🚀 **Kong Gateway - Outside Kubernetes (quick demo)**
 
-### ⚙️ **Step 1 — Install Kong (Docker)**
+### ⚙️ **Step 1 - Install Kong (Docker)**
 
 ```bash
 docker network create kong-net
@@ -661,7 +661,7 @@ docker run -d --name kong \
 
 ---
 
-### ⚙️ **Step 2 — Configure Routes & Services**
+### ⚙️ **Step 2 - Configure Routes & Services**
 
 ✅ Expose UserService (on `localhost:5001`)
 
@@ -687,7 +687,7 @@ curl -i -X POST http://localhost:8001/services/products-service/routes \
 
 ---
 
-### ⚙️ \*\*Step 3 — Test
+### ⚙️ \*\*Step 3 - Test
 
 ```bash
 curl http://localhost:8000/users    # Routed to UserService
@@ -724,7 +724,7 @@ curl http://localhost:8000/products # Routed to ProductService
 
 ---
 
-# 🚀 **API Gateway vs Ingress Controller — Clear Difference**
+# 🚀 **API Gateway vs Ingress Controller - Clear Difference**
 
 |                            | **API Gateway**                                                                     | **Ingress Controller**                                                     |
 | -------------------------- | ----------------------------------------------------------------------------------- | -------------------------------------------------------------------------- |

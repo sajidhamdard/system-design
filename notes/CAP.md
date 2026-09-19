@@ -49,8 +49,8 @@ Now you have to choose:
 
 ## **In short (interview ready)**
 
-> **CAP theorem** says: In distributed DB, you can guarantee **only 2 of — Consistency, Availability, Partition tolerance**.
-> → **AP = Cassandra**, **CP = Mongo (strict)**, **CA = MySQL (single node — but real-world distributed systems must tolerate partitions)**
+> **CAP theorem** says: In distributed DB, you can guarantee **only 2 of - Consistency, Availability, Partition tolerance**.
+> → **AP = Cassandra**, **CP = Mongo (strict)**, **CA = MySQL (single node - but real-world distributed systems must tolerate partitions)**
 
 ---
 
@@ -68,7 +68,7 @@ Now you have to choose:
 | **Scenario**                   | **DB**           | **Behavior**                                                    |
 | ------------------------------ | ---------------- | --------------------------------------------------------------- |
 | **Bank transfer (₹100 A → B)** | SQL / Mongo (CP) | Block writes if network split (better to be correct)            |
-| **Instagram post like**        | Cassandra (AP)   | Allow likes on all nodes (sync later — eventual consistency OK) |
+| **Instagram post like**        | Cassandra (AP)   | Allow likes on all nodes (sync later - eventual consistency OK) |
 
 ---
 

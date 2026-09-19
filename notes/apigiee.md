@@ -1,17 +1,17 @@
 ### **What is Apigee?**
 
-Apigee is an **API management platform**. It helps companies expose their backend services (APIs) to external developers, partners, or internal teams — in a secure, scalable, and manageable way.
+Apigee is an **API management platform**. It helps companies expose their backend services (APIs) to external developers, partners, or internal teams - in a secure, scalable, and manageable way.
 
 ---
 
 ### **Does Apigee act like a reverse proxy?**
 
-**Yes — at its core, Apigee is a reverse proxy.**
+**Yes - at its core, Apigee is a reverse proxy.**
 Here’s why:
 
 * **Client calls Apigee (not the backend directly).**
 * **Apigee forwards (proxies) the request to your backend services**, gets the response, and returns it to the client.
-* **Backend services are hidden** from external clients — just like a reverse proxy does.
+* **Backend services are hidden** from external clients - just like a reverse proxy does.
 
 ---
 
@@ -22,12 +22,12 @@ Here’s why:
 | Forwards requests to backend          | Forwards requests to backend                         |
 | SSL termination (optional)            | SSL termination                                      |
 | Hides backend servers                 | Hides backend servers                                |
-| —                                     | **Rate limiting (throttling)**                       |
-| —                                     | **API key validation / OAuth / JWT validation**      |
-| —                                     | **Analytics (API usage, latency, errors)**           |
-| —                                     | **Caching / Response transformation / Mediation**    |
-| —                                     | **Developer portal (API documentation, onboarding)** |
-| —                                     | **Monetization / Billing APIs (optional)**           |
+| -                                     | **Rate limiting (throttling)**                       |
+| -                                     | **API key validation / OAuth / JWT validation**      |
+| -                                     | **Analytics (API usage, latency, errors)**           |
+| -                                     | **Caching / Response transformation / Mediation**    |
+| -                                     | **Developer portal (API documentation, onboarding)** |
+| -                                     | **Monetization / Billing APIs (optional)**           |
 
 ---
 
@@ -54,13 +54,13 @@ Imagine a client (mobile app, website, etc.) trying to access your API through A
 
 | **Step** | **Action**                                          | **What happens**                                                                                                                                             |
 | -------- | --------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| 1        | **Client sends API request**                        | The client sends a request (e.g., `GET https://api.company.com/orders`) — this hits **Apigee**, not the backend directly.                                    |
+| 1        | **Client sends API request**                        | The client sends a request (e.g., `GET https://api.company.com/orders`) - this hits **Apigee**, not the backend directly.                                    |
 | 2        | **Apigee Proxy receives the request**               | Apigee has an **API Proxy** configured, which listens at a base path (e.g., `/orders`) and is mapped to your backend.                                        |
 | 3        | **Policies (Pre-routing)**                          | Apigee applies **pre-routing policies**, such as: authentication (OAuth/JWT/API key validation), IP whitelisting, rate limiting, logging, etc.               |
 | 4        | **Apigee forwards the request to backend (Target)** | Once validated, Apigee **forwards the request to the backend service**, using the **Target Endpoint URL** configured in Apigee Proxy.                        |
-| 5        | **Backend service processes request**               | Your backend does its job — processes the request and returns a response to Apigee.                                                                          |
+| 5        | **Backend service processes request**               | Your backend does its job - processes the request and returns a response to Apigee.                                                                          |
 | 6        | **Policies (Post-routing)**                         | Apigee applies **response policies**, like response transformation (XML → JSON), masking sensitive fields, caching, logging response metrics, etc.           |
-| 7        | **Apigee returns the response to client**           | Finally, Apigee sends the processed response back to the client. **The client never directly interacts with your backend** — Apigee mediates the whole time. |
+| 7        | **Apigee returns the response to client**           | Finally, Apigee sends the processed response back to the client. **The client never directly interacts with your backend** - Apigee mediates the whole time. |
 
 ---
 
@@ -88,7 +88,7 @@ Response  ←  Policies  ←  Response
 
 ### **In short:**
 
-Apigee forwards requests **like a smart reverse proxy** — adding security, analytics, transformations, and control before sending anything to your backend.
+Apigee forwards requests **like a smart reverse proxy** - adding security, analytics, transformations, and control before sending anything to your backend.
 
 ---
 
@@ -120,7 +120,7 @@ Apigee forwards requests **like a smart reverse proxy** — adding security, ana
 ### **Companies use Apigee when they need:**
 
 ✅ Securely expose APIs to external developers or partners
-✅ Centralized API management — rate limiting, analytics, auth, monetization
+✅ Centralized API management - rate limiting, analytics, auth, monetization
 ✅ Compliance, governance, and enterprise API lifecycle management
 ✅ Need to track API usage, billing, quota enforcement
 ✅ Mature API strategy across many teams/products
@@ -166,9 +166,9 @@ Let’s be super clear and realistic here:
 
 | **Apigee (Enterprise API Gateway)**                                                                                                      | **Nginx (Reverse Proxy)**                                                                   |
 | ---------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| **License cost is high** — Apigee is priced based on number of API calls, environments, features (Advanced security, monetization, etc.) | **Open source = Free** (Nginx OSS); **Nginx Plus** (commercial version) is relatively cheap |
-| **Ongoing costs** — If you need SLA, support, and enterprise features → \$\$\$                                                           | **Minimal costs** — You can even run Nginx on small VMs with almost zero infra cost         |
-| **Tied to Google Cloud (for Apigee X)** or to Apigee SaaS infra (for Apigee Edge) — cloud costs + licensing                              | **Runs anywhere** — On-premise, cloud, containers, bare metal (total control)               |
+| **License cost is high** - Apigee is priced based on number of API calls, environments, features (Advanced security, monetization, etc.) | **Open source = Free** (Nginx OSS); **Nginx Plus** (commercial version) is relatively cheap |
+| **Ongoing costs** - If you need SLA, support, and enterprise features → \$\$\$                                                           | **Minimal costs** - You can even run Nginx on small VMs with almost zero infra cost         |
+| **Tied to Google Cloud (for Apigee X)** or to Apigee SaaS infra (for Apigee Edge) - cloud costs + licensing                              | **Runs anywhere** - On-premise, cloud, containers, bare metal (total control)               |
 
 ---
 
@@ -184,7 +184,7 @@ Let’s be super clear and realistic here:
 
 ## **BUT (Important)**
 
-**Cost is not the *only* thing** — it's just the **biggest blocker** for using Apigee unnecessarily.
+**Cost is not the *only* thing** - it's just the **biggest blocker** for using Apigee unnecessarily.
 
 Even **big companies** don’t blindly use Apigee everywhere because:
 
@@ -197,7 +197,7 @@ Even **big companies** don’t blindly use Apigee everywhere because:
 
 ## **In short**
 
-✅ **Yes — Nginx is free + fast + simple → Big reason it’s so popular.**
-✅ **But don’t forget — sometimes companies "choose Nginx" not just because of cost but because Apigee’s extra features aren’t even needed** for their simple use case.
+✅ **Yes - Nginx is free + fast + simple → Big reason it’s so popular.**
+✅ **But don’t forget - sometimes companies "choose Nginx" not just because of cost but because Apigee’s extra features aren’t even needed** for their simple use case.
 
 ---

@@ -105,6 +105,6 @@
 
 ---
 
-If you want, I can also give a **Java example** showing **how to encode/decode Geohash and do nearby searches** — it’s very practical for system design and location-based apps.
+If you want, I can also give a **Java example** showing **how to encode/decode Geohash and do nearby searches** - it’s very practical for system design and location-based apps.
 
 Do you want me to do that?

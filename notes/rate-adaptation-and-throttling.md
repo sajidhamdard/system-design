@@ -2,7 +2,7 @@
 
 ## Overview
 Rate adaptation and throttling are essential techniques for maintaining system stability and consistent user experience in **real-time**, **networked**, or **high-traffic** environments.  
-They dynamically control the flow of data — increasing throughput when possible, and reducing it when network or system constraints demand it.
+They dynamically control the flow of data - increasing throughput when possible, and reducing it when network or system constraints demand it.
 
 ---
 

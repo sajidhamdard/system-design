@@ -99,7 +99,7 @@ class MyService {
 
 
 
-Absolutely — let's go through this code step by step so you fully understand how service-to-service REST API communication is handled here, including the security aspects.
+Absolutely - let's go through this code step by step so you fully understand how service-to-service REST API communication is handled here, including the security aspects.
 
 ---
 
@@ -260,7 +260,7 @@ String result = response.readEntity(String.class);
 
 ---
 
-Great! Let's now convert the JAX-RS version into a **Spring Boot version** that does the same thing: securely call another service using a Bearer token obtained via **OAuth2 Client Credentials Flow** — but this time, using **Spring’s WebClient** (not JAX-RS).
+Great! Let's now convert the JAX-RS version into a **Spring Boot version** that does the same thing: securely call another service using a Bearer token obtained via **OAuth2 Client Credentials Flow** - but this time, using **Spring’s WebClient** (not JAX-RS).
 
 ---
 

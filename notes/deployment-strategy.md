@@ -78,7 +78,7 @@ Both aim to **reduce risk during releases**.
 
 ## 🧩 **Analogy**
 
-* **Blue/Green:** Swap entire bridges — drive all cars on new bridge after testing 🚧
+* **Blue/Green:** Swap entire bridges - drive all cars on new bridge after testing 🚧
 * **Canary:** Send **few cars first** on new bridge, watch carefully before everyone uses it 🐤
 
 ---

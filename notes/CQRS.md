@@ -13,7 +13,7 @@ The key idea:
 In a typical CRUD system:
 
 * The same model handles **read** and **write** operations.
-* This means **one data structure** must satisfy both needs — often forcing compromises.
+* This means **one data structure** must satisfy both needs - often forcing compromises.
 
 With CQRS:
 
@@ -95,7 +95,7 @@ With CQRS:
 ---
 
 **In short:**
-CQRS says — **keep your write models clean for updates, and your read models optimized for queries**. They don’t have to be the same structure, the same DB, or even the same service.
+CQRS says - **keep your write models clean for updates, and your read models optimized for queries**. They don’t have to be the same structure, the same DB, or even the same service.
 
 ---
 
@@ -103,7 +103,7 @@ Now let’s connect **CQRS** with **Event Sourcing**, because they often complem
 
 ---
 
-## **1. Event Sourcing — Quick Recap**
+## **1. Event Sourcing - Quick Recap**
 
 * Instead of storing just the **current state** in the DB, we store **all events that happened**.
 * **State = result of replaying events**.
@@ -189,7 +189,7 @@ With **CQRS + Event Sourcing**:
 
 ---
 
-## **6. Real-World Example — Banking**
+## **6. Real-World Example - Banking**
 
 * **Write Side**:
 

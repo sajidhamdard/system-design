@@ -1,6 +1,6 @@
 ## ✅ What is **Resiliency** in System Design?
 
-**Resiliency** is a system's **ability to recover quickly from failures** and continue to operate—possibly in a degraded mode—without causing cascading issues or complete downtime.
+**Resiliency** is a system's **ability to recover quickly from failures** and continue to operate-possibly in a degraded mode-without causing cascading issues or complete downtime.
 
 ---
 

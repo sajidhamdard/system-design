@@ -8,7 +8,7 @@ A **cascading failure** occurs when:
 
 **Analogy:**
 
-* Think of dominoes — if one falls, it pushes the next, and the entire line collapses.
+* Think of dominoes - if one falls, it pushes the next, and the entire line collapses.
 
 **Example in Microservices:**
 

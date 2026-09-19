@@ -63,10 +63,10 @@ OR
 | HS256                                               | ES256                                                                        |
 | --------------------------------------------------- | ---------------------------------------------------------------------------- |
 | **HMAC with SHA-256**                               | **ECDSA (Elliptic Curve Digital Signature Algorithm) with SHA-256**          |
-| **Symmetric** — same secret key for sign and verify | **Asymmetric** — private key (sign), public key (verify)                     |
+| **Symmetric** - same secret key for sign and verify | **Asymmetric** - private key (sign), public key (verify)                     |
 | Easier to implement if same party signs & verifies  | Better for distributed systems (public key can be widely shared)             |
 | Faster (because HMAC is fast)                       | Slower but more secure for certain applications                              |
-| Shorter key is enough (e.g., 256-bit secret)        | Uses **elliptic curve cryptography** — shorter keys but very strong security |
+| Shorter key is enough (e.g., 256-bit secret)        | Uses **elliptic curve cryptography** - shorter keys but very strong security |
 | Common in small internal apps                       | Common in **OpenID Connect**, **OAuth2**, modern APIs                        |
 
 ---
@@ -113,7 +113,7 @@ The `alg` field tells which algorithm was used to sign the token.
 
 ---
 
-Perfect — let's get to the core of this, because understanding **HS256 vs ES256** **and symmetric vs asymmetric** is important (not just for interviews, but for real-world usage too).
+Perfect - let's get to the core of this, because understanding **HS256 vs ES256** **and symmetric vs asymmetric** is important (not just for interviews, but for real-world usage too).
 
 ---
 
@@ -138,10 +138,10 @@ Perfect — let's get to the core of this, because understanding **HS256 vs ES25
 | HS256                                               | ES256                                                                        |
 | --------------------------------------------------- | ---------------------------------------------------------------------------- |
 | **HMAC with SHA-256**                               | **ECDSA (Elliptic Curve Digital Signature Algorithm) with SHA-256**          |
-| **Symmetric** — same secret key for sign and verify | **Asymmetric** — private key (sign), public key (verify)                     |
+| **Symmetric** - same secret key for sign and verify | **Asymmetric** - private key (sign), public key (verify)                     |
 | Easier to implement if same party signs & verifies  | Better for distributed systems (public key can be widely shared)             |
 | Faster (because HMAC is fast)                       | Slower but more secure for certain applications                              |
-| Shorter key is enough (e.g., 256-bit secret)        | Uses **elliptic curve cryptography** — shorter keys but very strong security |
+| Shorter key is enough (e.g., 256-bit secret)        | Uses **elliptic curve cryptography** - shorter keys but very strong security |
 | Common in small internal apps                       | Common in **OpenID Connect**, **OAuth2**, modern APIs                        |
 
 ---
@@ -210,7 +210,7 @@ You (the server) issue a JWT like:
 }
 ```
 
-If you don't **sign** it, anyone can just edit `"role": "admin"` to `"role": "user"` — dangerous!
+If you don't **sign** it, anyone can just edit `"role": "admin"` to `"role": "user"` - dangerous!
 
 So you **sign** the token:
 
@@ -269,7 +269,7 @@ If **not** → token is tampered → reject it!
 
 ---
 
-Excellent question — you’re drilling into the **exact terminology**, which interviewers *love* when candidates are clear about.
+Excellent question - you’re drilling into the **exact terminology**, which interviewers *love* when candidates are clear about.
 
 Here’s the clean answer:
 
@@ -337,12 +337,12 @@ There are **other JWS algorithms** too:
 
 ## Final takeaway (memorize)
 
-> **HS256 and RS256 are signing algorithms used in JWT — they define how the token’s signature is created and verified.**
+> **HS256 and RS256 are signing algorithms used in JWT - they define how the token’s signature is created and verified.**
 > HS = HMAC (symmetric), RS = RSA (asymmetric)
 
 ---
 
-## **First** — What is **RS512**?
+## **First** - What is **RS512**?
 
 * **RS512** = **RSA signature + SHA-512**
   (It’s exactly like RS256 but uses **SHA-512** instead of SHA-256)
@@ -377,13 +377,13 @@ There are **other JWS algorithms** too:
 | ------------------------------------------------------------ | -------------------------------------------------------------- |
 | Short-lived tokens (access tokens, < 1 hour expiry)          | RS256 is enough                                                |
 | You want **faster performance** (mobile apps, high QPS APIs) | RS256 is faster and smaller                                    |
-| Key size is only RSA-2048 (smaller RSA key)                  | RS256 hash strength matches RSA-2048 key fine — RS512 overkill |
+| Key size is only RSA-2048 (smaller RSA key)                  | RS256 hash strength matches RSA-2048 key fine - RS512 overkill |
 
 ---
 
 ## **Practical industry usage (truth)**
 
-Most systems (even Google, Auth0, Okta) default to **RS256** — because:
+Most systems (even Google, Auth0, Okta) default to **RS256** - because:
 
 * It's secure enough
 * Fast
@@ -395,7 +395,7 @@ They **don’t bother with RS512** unless strict security/compliance says so.
 
 ## **Interview 1-liner (memorize)**
 
-> **RS512** is used when higher security is needed (stronger hash), like in financial, healthcare, or long-lived tokens — but in most cases **RS256** is preferred for speed and size.
+> **RS512** is used when higher security is needed (stronger hash), like in financial, healthcare, or long-lived tokens - but in most cases **RS256** is preferred for speed and size.
 
 ---
 

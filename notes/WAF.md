@@ -6,7 +6,7 @@ It’s a **security layer** that protects web applications from common web-based
 
 ### 🔍 **In Simple Terms**
 
-A **WAF** sits between your web application and the internet — it monitors, filters, and blocks malicious HTTP traffic **before it reaches your server**.
+A **WAF** sits between your web application and the internet - it monitors, filters, and blocks malicious HTTP traffic **before it reaches your server**.
 
 ```
 [User] → [WAF] → [Web Application Server]

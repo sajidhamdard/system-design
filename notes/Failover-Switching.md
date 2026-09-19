@@ -1,7 +1,7 @@
 ### Failover Strategies: How do we switch?
 
 There are generally **3 common types**:
-(cold standby, warm standby, hot standby) — and the switch-over process differs between them.
+(cold standby, warm standby, hot standby) - and the switch-over process differs between them.
 
 | Strategy         | State of Backup System                                            | Failover Process                                                   | Manual or Automatic                      |
 | ---------------- | ----------------------------------------------------------------- | ------------------------------------------------------------------ | ---------------------------------------- |

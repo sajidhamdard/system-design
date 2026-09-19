@@ -124,7 +124,7 @@ A **hot key** is a **key in a storage system (like cache or database)** that is 
 
 💡 **Analogy:**
 
-* Hot keys are like “viral TikTok videos” — everyone wants to see them at the same time.
+* Hot keys are like “viral TikTok videos” - everyone wants to see them at the same time.
 * Your system must **scale horizontally** and **serve content from cache** to prevent crashes.
 
 ---

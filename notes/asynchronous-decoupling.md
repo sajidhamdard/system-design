@@ -2,7 +2,7 @@
 
 **Definition:**
 
-> Asynchronous decoupling means that two systems or services **communicate without waiting for each other** — using an **intermediate message broker or queue** — so they can work **independently** and **at their own pace**.
+> Asynchronous decoupling means that two systems or services **communicate without waiting for each other** - using an **intermediate message broker or queue** - so they can work **independently** and **at their own pace**.
 
 ---
 
@@ -40,7 +40,7 @@ Service A  --->  [ Message Queue / Kafka / RabbitMQ ]  --->  Service B
 
 This means:
 
-> A and B are **decoupled in time** — they don’t need to run or respond simultaneously.
+> A and B are **decoupled in time** - they don’t need to run or respond simultaneously.
 
 ---
 
@@ -167,6 +167,6 @@ Each consumer acts independently.
 **In short:**
 
 > 🧩 **Asynchronous decoupling** = communicating via messages/events
-> instead of direct synchronous calls — improving scalability, fault-tolerance, and system independence.
+> instead of direct synchronous calls - improving scalability, fault-tolerance, and system independence.
 
 ---

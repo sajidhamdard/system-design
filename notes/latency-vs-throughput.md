@@ -24,7 +24,7 @@
 
 ---
 
-## **3. Latency vs Throughput — Analogy**
+## **3. Latency vs Throughput - Analogy**
 
 Imagine a **highway** 🛣️:
 

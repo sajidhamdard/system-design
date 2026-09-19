@@ -9,7 +9,7 @@ They describe **how data or updates move** between systems (producers and consum
 ➡️ The **server (producer)** sends data or notifications **to the client (consumer)** **as soon as** something happens.
 
 **Analogy:**
-Like receiving a WhatsApp message — you don’t keep checking; it just arrives automatically.
+Like receiving a WhatsApp message - you don’t keep checking; it just arrives automatically.
 
 **Flow:**
 
@@ -37,7 +37,7 @@ Producer (Server) → pushes data → Consumer (Client)
 ➡️ The **client (consumer)** periodically **requests data** from the **server (producer)** to check for updates.
 
 **Analogy:**
-Like checking your mailbox every hour — you pull to see if there’s new mail.
+Like checking your mailbox every hour - you pull to see if there’s new mail.
 
 **Flow:**
 

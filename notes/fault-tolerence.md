@@ -12,7 +12,7 @@ In other words:
 
 ## **Why is Fault Tolerance important?**
 
-Because **hardware fails, networks fail, software crashes, power cuts happen** — but your users expect the app/website to work anyway.
+Because **hardware fails, networks fail, software crashes, power cuts happen** - but your users expect the app/website to work anyway.
 
 Examples:
 
@@ -37,13 +37,13 @@ Let’s break it **per component** clearly:
 
 ## **Core Tools / Concepts that improve Fault Tolerance**
 
-* **Load Balancer** — Distributes traffic to healthy servers
-* **Auto-scaling** — Automatically adds servers if load increases
-* **Database replication** — Copies of database (read replicas, failover replicas)
-* **Health checks** — Regularly ping services to see if they are alive
-* **Failover mechanism** — Automatic switch to backup when primary fails
-* **Stateless servers** — Any server can handle any request (no session stickiness)
-* **Multi-region deployment** — Your app runs in multiple geographic locations
+* **Load Balancer** - Distributes traffic to healthy servers
+* **Auto-scaling** - Automatically adds servers if load increases
+* **Database replication** - Copies of database (read replicas, failover replicas)
+* **Health checks** - Regularly ping services to see if they are alive
+* **Failover mechanism** - Automatic switch to backup when primary fails
+* **Stateless servers** - Any server can handle any request (no session stickiness)
+* **Multi-region deployment** - Your app runs in multiple geographic locations
 
 ---
 

@@ -1,4 +1,4 @@
-# 🏗️ System Design & Architecture Notes — Complete Roadmap
+# 🏗️ System Design & Architecture Notes - Complete Roadmap
 
 > A structured roadmap to master System Design from fundamentals → distributed systems → networking → scalability → real-world architectures.
 
@@ -10,9 +10,14 @@ This guide is designed for:
 * Developers building **scalable production systems**
 * Engineers transitioning to **Senior / Staff roles**
 
+## 📚 Companion Guides
+
+- [System Design Interview Playbook](interview-playbook.md) for the repeatable interview workflow
+- [Must-Know Topics](must-know-topics.md) for a compact revision checklist
+
 ---
 
-# 🧭 How to Use This Roadmap
+## 🧭 How to Use This Roadmap
 
 Start with the [System Design Interview Playbook](interview-playbook.md). Use it as the process for practice, and use the phase notes below as reference material for each decision.
 
@@ -26,7 +31,7 @@ Do NOT jump randomly. System design knowledge is cumulative.
 
 ---
 
-# 🥇 Phase 1 — Fundamentals (START HERE)
+## 🥇 Phase 1 - Fundamentals (START HERE)
 
 📍 Goal: Build strong foundation. Everything depends on these concepts.
 
@@ -64,7 +69,7 @@ After completing this section, you'll understand:
 
 ---
 
-# 🥈 Phase 2 — Databases & Storage
+## 🥈 Phase 2 - Databases & Storage
 
 📍 Goal: Understand how data is stored, scaled, and kept consistent.
 
@@ -136,7 +141,7 @@ After this section, you'll understand:
 
 ---
 
-# 🥉 Phase 3 — Caching & Performance
+## 🥉 Phase 3 - Caching & Performance
 
 📍 Goal: Learn how systems achieve high performance.
 
@@ -178,7 +183,7 @@ After this section, you'll understand:
 
 ---
 
-# 🏅 Phase 4 — Distributed Systems Core
+## 🏅 Phase 4 - Distributed Systems Core
 
 📍 Goal: Understand how multi-server systems work.
 
@@ -221,7 +226,7 @@ After this section, you'll understand:
 
 ---
 
-# 🌐 Phase 5 — Networking & Communication
+## 🌐 Phase 5 - Networking & Communication
 
 📍 Goal: Understand how services communicate.
 
@@ -261,7 +266,7 @@ After this section, you'll understand:
 
 ---
 
-# 🛡️ Phase 6 — Security
+## 🛡️ Phase 6 - Security
 
 📍 Goal: Learn how authentication and security work.
 
@@ -286,7 +291,7 @@ After this section, you'll understand:
 
 ---
 
-# ⚙️ Phase 7 — DevOps & Infrastructure
+## ⚙️ Phase 7 - DevOps & Infrastructure
 
 📍 Goal: Learn how systems run in production.
 
@@ -310,7 +315,7 @@ After this section, you'll understand:
 
 ---
 
-# 🧱 Phase 8 — Architecture Patterns
+## 🧱 Phase 8 - Architecture Patterns
 
 📍 Goal: Learn real architecture patterns used in companies.
 
@@ -333,7 +338,7 @@ After this section, you'll understand:
 
 ---
 
-# 🧪 Phase 9 — Real System Design Problems (FINAL STAGE)
+## 🧪 Phase 9 - Real System Design Problems (FINAL STAGE)
 
 📍 Goal: Apply everything learned.
 
@@ -343,7 +348,7 @@ Read:
 
 * [Chat System](notes/chat-system.md)
 * [Notifications Design](notes/notifications-design.md)
-* [System Design Problems](notes/system-design-problems-key-solution.md)
+* [System Design Problems](notes/System-design-problems-key-solution.md)
 
 ---
 
@@ -357,7 +362,7 @@ After this section, you'll be able to design:
 
 ---
 
-# 🎯 Final Outcome
+## 🎯 Final Outcome
 
 After completing this roadmap, you will be able to:
 
@@ -368,7 +373,7 @@ After completing this roadmap, you will be able to:
 
 ---
 
-# ⭐ Recommended Study Timeline
+## ⭐ Recommended Study Timeline
 
 ```
 Week 1–2 → Fundamentals

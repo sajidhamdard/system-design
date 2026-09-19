@@ -25,4 +25,4 @@
 * **Load balancer = Focuses on distributing load efficiently.**
 * **Reverse proxy = Focuses on mediating and managing requests (can also load balance as one of its features).**
 
-> **Bonus insight:** Modern reverse proxies (like Nginx, HAProxy, Envoy) *can act as load balancers* — so the line is blurrier in practice, but their core *intent* is different.
+> **Bonus insight:** Modern reverse proxies (like Nginx, HAProxy, Envoy) *can act as load balancers* - so the line is blurrier in practice, but their core *intent* is different.

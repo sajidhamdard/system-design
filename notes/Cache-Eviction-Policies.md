@@ -11,8 +11,8 @@
 
 | **Policy**                      | **Meaning**                                   | **Real-life analogy**                                     |
 | ------------------------------- | --------------------------------------------- | --------------------------------------------------------- |
-| **LRU (Least Recently Used)**   | Remove the item not accessed for longest time | Bookshelf — remove the book you haven’t touched in months |
-| **LFU (Least Frequently Used)** | Remove item with **least # of accesses**      | TV shows — delete show you watched only once              |
+| **LRU (Least Recently Used)**   | Remove the item not accessed for longest time | Bookshelf - remove the book you haven’t touched in months |
+| **LFU (Least Frequently Used)** | Remove item with **least # of accesses**      | TV shows - delete show you watched only once              |
 | **FIFO (First In First Out)**   | Remove **oldest added** item                  | First water bottle you put in fridge gets removed first   |
 | **MRU (Most Recently Used)**    | Remove most recently accessed item (rare)     | Remove the book you just read (not common)                |
 | **Random**                      | Evict random item                             | Pick any bottle and throw out (used in simple systems)    |
@@ -48,7 +48,7 @@
 
 > **Cache eviction = free up space by removing items**
 > Common policies:
-> **LRU** (most used), **LFU**, **FIFO**, **TTL** —
+> **LRU** (most used), **LFU**, **FIFO**, **TTL** -
 > Choose based on access pattern & app needs.
 
 ---
@@ -72,13 +72,13 @@ If you’re unsure, **default safe answer = LRU**
 
 ---
 
-Perfect — let’s make a **clean table** of:
+Perfect - let’s make a **clean table** of:
 🔹 **Policy → Use case → Why**
 So in real system design interviews, you know **exactly where to apply each** 👇
 
 ---
 
-## **Cache eviction policies — where to apply in real systems**
+## **Cache eviction policies - where to apply in real systems**
 
 | **Policy**                            | **Best used in...**                                                                | **Why it works well**                                                      |
 | ------------------------------------- | ---------------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
@@ -93,7 +93,7 @@ So in real system design interviews, you know **exactly where to apply each** �
 
 ## **Interview-ready crisp examples** (You can say like this)
 
-> ✨ *“For a web app with heavy reads (e.g. e-commerce product pages), I’d use **LRU cache** in Redis to serve hot products fast — as users mostly revisit recent products.”*
+> ✨ *“For a web app with heavy reads (e.g. e-commerce product pages), I’d use **LRU cache** in Redis to serve hot products fast - as users mostly revisit recent products.”*
 
 > ✨ *“For config flags or common lookup tables, **LFU** makes sense to keep frequently accessed keys longer.”*
 
@@ -121,7 +121,7 @@ If unsure → **LRU is almost always a safe answer for general purpose caches**
 
 ---
 
-## 🚀 **First — High level**
+## 🚀 **First - High level**
 
 > **Eviction policy** (LRU, LFU etc.) = **Strategy**
 >
@@ -129,7 +129,7 @@ If unsure → **LRU is almost always a safe answer for general purpose caches**
 
 ---
 
-## **LRU (Least Recently Used)** — Common algorithm
+## **LRU (Least Recently Used)** - Common algorithm
 
 ### 🎯 **Goal**: Quickly find and evict least recently accessed item
 
@@ -163,7 +163,7 @@ class LRUCache {
 
 ---
 
-## **LFU (Least Frequently Used)** — Common algorithm
+## **LFU (Least Frequently Used)** - Common algorithm
 
 ### 🎯 **Goal**: Evict least frequently accessed item
 
@@ -190,9 +190,9 @@ class LRUCache {
 
 ---
 
-## 🟥 **Redis — What algorithm does Redis use?**
+## 🟥 **Redis - What algorithm does Redis use?**
 
-Redis supports **multiple eviction policies** — here’s how **Redis implements them**:
+Redis supports **multiple eviction policies** - here’s how **Redis implements them**:
 
 | **Redis Policy**                   | **Redis Algorithm**                                 |
 | ---------------------------------- | --------------------------------------------------- |
@@ -218,7 +218,7 @@ Redis supports **multiple eviction policies** — here’s how **Redis implement
 
 ---
 
-## **Redis LFU — How does it work?**
+## **Redis LFU - How does it work?**
 
 * Each key has **8-bit counter** (max 255)
 * On access → increment counter (with probability)
@@ -238,4 +238,4 @@ Redis supports **multiple eviction policies** — here’s how **Redis implement
 
 ## **Pro tip (interview)**
 
-> ✨ *“Redis trades perfect LRU/LFU accuracy for speed and simplicity — using sampling and approximate counters.”*
+> ✨ *“Redis trades perfect LRU/LFU accuracy for speed and simplicity - using sampling and approximate counters.”*

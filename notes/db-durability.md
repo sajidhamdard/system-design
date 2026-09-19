@@ -1,7 +1,7 @@
 **Durability is almost entirely implemented using WAL (Write-Ahead Logging)** in most modern databases.
 ---
 
-# ✅ **1. DURABILITY — How DB ensures data is never lost**
+# ✅ **1. DURABILITY - How DB ensures data is never lost**
 
 Durability means:
 
@@ -12,7 +12,7 @@ So they use a persistent mechanism: **WAL logs**.
 
 ---
 
-# ⭐ 2. **Yes — WAL (Write-Ahead Log) is the main mechanism**
+# ⭐ 2. **Yes - WAL (Write-Ahead Log) is the main mechanism**
 
 Before writing the actual data to data files, the DB first writes the change to the WAL.
 
@@ -30,7 +30,7 @@ Because the WAL is written **before** changes are applied to the main data files
 
 ---
 
-# ⭐ 3. **Crash happens — how recovery works**
+# ⭐ 3. **Crash happens - how recovery works**
 
 ### Event:
 

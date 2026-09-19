@@ -4,7 +4,7 @@
 
 Rather than putting *all* the data in one big database (which can get slow and hard to scale), we **split** it into smaller, more manageable pieces. Each shard handles a portion of the workload.
 
-Think of it like cutting a big cake into slices — each person (or server) gets one slice (shard) to handle.
+Think of it like cutting a big cake into slices - each person (or server) gets one slice (shard) to handle.
 
 ---
 
@@ -18,7 +18,7 @@ Think of it like cutting a big cake into slices — each person (or server) gets
 
 ### How is sharding used in databases?
 
-Let’s take a simple example — suppose you have a `Users` table with **1 billion users**.
+Let’s take a simple example - suppose you have a `Users` table with **1 billion users**.
 
 You could **shard** the `Users` table based on `user_id`.
 Example sharding strategies:
@@ -34,10 +34,10 @@ Example sharding strategies:
 ### Where is sharding used?
 
 * Large scale applications:
-  Facebook, Twitter, YouTube — all use sharding to manage massive datasets.
+  Facebook, Twitter, YouTube - all use sharding to manage massive datasets.
 
 * Distributed databases:
-  MongoDB, Cassandra, Elasticsearch — built-in support for sharding.
+  MongoDB, Cassandra, Elasticsearch - built-in support for sharding.
 
 ---
 
@@ -68,7 +68,7 @@ Usually, there is a **shard routing layer** (shard manager or middleware) that t
 ---
 
 
-### **Example 1: SQL Database — Range-based sharding**
+### **Example 1: SQL Database - Range-based sharding**
 
 You have a **Users** table:
 `user_id | name | email`
@@ -89,7 +89,7 @@ If `user_id = 1500000` → Query Shard 2
 
 ---
 
-### **Example 2: MongoDB — Hash-based sharding**
+### **Example 2: MongoDB - Hash-based sharding**
 
 You have a **Products** collection:
 `{ product_id, name, price }`

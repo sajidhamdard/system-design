@@ -1,4 +1,4 @@
-**DDoS Protection** stands for **Distributed Denial of Service Protection** — it’s a **security measure** that prevents or mitigates **DDoS attacks**, which try to make your website or application **unavailable** by overwhelming it with massive amounts of traffic.
+**DDoS Protection** stands for **Distributed Denial of Service Protection** - it’s a **security measure** that prevents or mitigates **DDoS attacks**, which try to make your website or application **unavailable** by overwhelming it with massive amounts of traffic.
 
 ---
 
@@ -15,7 +15,7 @@ This flood of traffic:
 #### Example:
 
 Imagine your website can handle 1,000 users at once.
-A DDoS attacker sends 10 million requests per second using hacked computers worldwide — your server gets overwhelmed and stops responding.
+A DDoS attacker sends 10 million requests per second using hacked computers worldwide - your server gets overwhelmed and stops responding.
 
 ---
 
@@ -63,7 +63,7 @@ Here’s what typically happens:
 * **Google Cloud Armor**
 * **Azure DDoS Protection**
 
-These services detect, absorb, and mitigate attacks in real time — often before the traffic even reaches your infrastructure.
+These services detect, absorb, and mitigate attacks in real time - often before the traffic even reaches your infrastructure.
 
 ---
 
@@ -76,7 +76,7 @@ These services detect, absorb, and mitigate attacks in real time — often befor
 
 ---
 
-## ⚔️ WAF vs DDoS Protection — Key Differences
+## ⚔️ WAF vs DDoS Protection - Key Differences
 
 | Feature                  | **WAF (Web Application Firewall)**                                                           | **DDoS Protection**                                                         |
 | ------------------------ | -------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
@@ -115,7 +115,7 @@ Internet
 
 | Analogy                                                                                                                        | Meaning                                                            |
 | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------ |
-| **DDoS Protection** is like a **security guard controlling the crowd** outside a stadium — keeping the gate from being mobbed. | Prevents too much traffic from overwhelming your system.           |
-| **WAF** is like **checking every person’s bag at the gate** — ensuring no one carries dangerous items inside.                  | Stops harmful requests or exploits from entering your application. |
+| **DDoS Protection** is like a **security guard controlling the crowd** outside a stadium - keeping the gate from being mobbed. | Prevents too much traffic from overwhelming your system.           |
+| **WAF** is like **checking every person’s bag at the gate** - ensuring no one carries dangerous items inside.                  | Stops harmful requests or exploits from entering your application. |
 
 ---

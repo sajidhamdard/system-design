@@ -19,7 +19,7 @@ An **SLA** is a **formal agreement** between a **service provider** and a **clie
 
 #### 🔐 **Durability - “11 nines” (99.999999999%)**
 
-* This is **not availability**, but **data durability** — how safe your data is.
+* This is **not availability**, but **data durability** - how safe your data is.
 * "11 nines" means **only a 0.0000000001% chance** of data loss.
 * For example, **AWS S3** claims this level of durability for stored objects.
 

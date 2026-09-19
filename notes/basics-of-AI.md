@@ -65,7 +65,7 @@ Examples:
 
 ---
 
-## 6. As a Developer — What is expected from you?
+## 6. As a Developer - What is expected from you?
 
 Not expected to build these big models yourself (that’s for research labs).
 Instead, you:

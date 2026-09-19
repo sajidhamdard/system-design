@@ -66,7 +66,7 @@ Client → Immediately sends another long poll request
 
 ---
 
-# ⭐ Short Polling vs Long Polling — Summary Table
+# ⭐ Short Polling vs Long Polling - Summary Table
 
 | Feature           | Short Polling                       | Long Polling                  |
 | ----------------- | ----------------------------------- | ----------------------------- |

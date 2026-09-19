@@ -10,7 +10,7 @@ Instead of guessing what is slow or inefficient, you **measure first**, then act
 
 ## **1️⃣ Why it matters**
 
-* **Avoid wasting effort:** Don’t optimize blindly—what seems slow may not be the real bottleneck.
+* **Avoid wasting effort:** Don’t optimize blindly-what seems slow may not be the real bottleneck.
 * **Data-driven decisions:** Changes are based on real measurements.
 * **Track improvements:** After implementing changes, you can measure again to see the effect.
 

@@ -1,4 +1,4 @@
-**Single server design** (or **single-server architecture**) simply means that **all application components — everything — run on a single server** (one machine handles everything).
+**Single server design** (or **single-server architecture**) simply means that **all application components - everything - run on a single server** (one machine handles everything).
 
 ### ✅ **What runs on the single server?**
 
@@ -7,7 +7,7 @@
 * Web server (like Apache, Nginx)
 * File storage (if needed)
 
-Basically — **one box does it all**.
+Basically - **one box does it all**.
 
 ---
 
@@ -31,9 +31,9 @@ Your personal project runs like this:
 
 ### ❌ **Disadvantages**
 
-* **Single point of failure** — if the server crashes, everything is down
-* **Limited scalability** — can’t easily handle high traffic or large workloads
-* **Hard to upgrade** — CPU, RAM, disk on one machine can only scale so far
+* **Single point of failure** - if the server crashes, everything is down
+* **Limited scalability** - can’t easily handle high traffic or large workloads
+* **Hard to upgrade** - CPU, RAM, disk on one machine can only scale so far
 
 ---
 

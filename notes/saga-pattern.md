@@ -12,8 +12,8 @@ Each service has **its own DB** → No global DB transaction → Rollback is har
 
 ## 🛠️ **Industry solutions**
 
-✅ **Saga Pattern** (Most common) — recommended for your answer
-✅ 2PC (Two-phase commit) — theoretical, but impractical in microservices (avoid suggesting it)
+✅ **Saga Pattern** (Most common) - recommended for your answer
+✅ 2PC (Two-phase commit) - theoretical, but impractical in microservices (avoid suggesting it)
 
 ---
 
@@ -64,13 +64,13 @@ Here’s an exact sentence you can memorize and say:
 
 ---
 
-**(Order → Inventory → Payment → Rollback)** is **Saga pattern** — and there are **two styles** of implementing Saga:
+**(Order → Inventory → Payment → Rollback)** is **Saga pattern** - and there are **two styles** of implementing Saga:
 
 ---
 
 | **Saga Type**              | **Orchestration**                                            | **Choreography**                                                                                                        |
 | -------------------------- | ------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------- |
-| **Who controls the flow?** | Central controller (Orchestrator service)                    | No central controller — services react to events                                                                        |
+| **Who controls the flow?** | Central controller (Orchestrator service)                    | No central controller - services react to events                                                                        |
 | **Communication**          | Orchestrator calls services directly (via REST or messaging) | Services emit/consume events via broker (like Kafka)                                                                    |
 | **Example flow**           | Orchestrator → Inventory → Payment → Order → Compensation    | Order emits `OrderCreated` → Inventory listens → emits `InventoryReserved` → Payment listens → emits `PaymentCompleted` |
 | **Complexity**             | Simpler to understand (central brain)                        | Fully decoupled but harder to debug                                                                                     |
@@ -82,7 +82,7 @@ Here’s an exact sentence you can memorize and say:
 
 If interviewer asks:
 
-**Q** — When would you choose Orchestration vs Choreography?
+**Q** - When would you choose Orchestration vs Choreography?
 Say this:
 
 > * If flow is **simple and linear** → Choreography is good
@@ -252,7 +252,7 @@ You can create **one Orchestrator service** and call
 ---
 
 
-Perfect — now let’s make it **production grade**, like **what interviewers expect when they ask “Have you handled distributed transactions, failure, retries, timeouts etc?”**
+Perfect - now let’s make it **production grade**, like **what interviewers expect when they ask “Have you handled distributed transactions, failure, retries, timeouts etc?”**
 We will upgrade to:
 
 ✅ **Feign Client** (instead of RestTemplate)
@@ -424,7 +424,7 @@ You can say confidently:
 
 ---
 
-Let’s break this **clearly and cleanly** so that in the interview — you can **explain it in 1 min confidently**.
+Let’s break this **clearly and cleanly** so that in the interview - you can **explain it in 1 min confidently**.
 
 ---
 
@@ -465,7 +465,7 @@ These **undo actions** are called **Compensating Transactions**
 
 You can say in interview:
 
-> *“In our project, when we have services like payment, account, checkout — if one step fails (for example payment success but inventory fails), we trigger compensating transactions like refundPayment(), cancelOrder(), releaseInventory() — so system comes back to original state. This is how we maintain consistency across services using Saga Pattern.”*
+> *“In our project, when we have services like payment, account, checkout - if one step fails (for example payment success but inventory fails), we trigger compensating transactions like refundPayment(), cancelOrder(), releaseInventory() - so system comes back to original state. This is how we maintain consistency across services using Saga Pattern.”*
 
 ---
 
@@ -481,17 +481,17 @@ You can say in interview:
 
 ## 📝 **Interview one-liner (memorize)**
 
-> *“Compensating Transactions are explicit undo actions we call to bring system back to consistent state when a distributed transaction partially fails — because microservices can’t share DB transactions.”*
+> *“Compensating Transactions are explicit undo actions we call to bring system back to consistent state when a distributed transaction partially fails - because microservices can’t share DB transactions.”*
 
 ---
 
 ## ❓ **What if Compensating Transaction ALSO fails?**
 
-➡️ *Yes — compensating APIs can also fail.*
+➡️ *Yes - compensating APIs can also fail.*
 Example: refundPayment() fails because payment gateway is down.
 
 In such cases:
-We don’t panic — we **ensure 3 things**:
+We don’t panic - we **ensure 3 things**:
 
 ---
 
@@ -517,10 +517,10 @@ If retry also fails →
 We **record the failed compensation** in a **Dead Letter Queue (DLQ)** or a **Failed\_Compensation Table**
 Ops team can later **manually fix** those few rare cases.
 
-Your project uses **Kafka** —
+Your project uses **Kafka** -
 So you can say:
 
-> *“We can send failed compensation messages to a Dead Letter Kafka topic — so that ops can replay or handle manually later”*
+> *“We can send failed compensation messages to a Dead Letter Kafka topic - so that ops can replay or handle manually later”*
 
 ---
 
@@ -542,7 +542,7 @@ This means **refundPayment()** API should be **idempotent**
 
 ## 🛠️ **In Your Project (Your words)**
 
-> *“Since we have Kafka and elastic logs — we can push failed compensations to Kafka DLQ and monitor logs in Elastic. Our APIs are idempotent (e.g., refundPayment() does not refund twice even if retried). We ensure eventual consistency and operational visibility.”*
+> *“Since we have Kafka and elastic logs - we can push failed compensations to Kafka DLQ and monitor logs in Elastic. Our APIs are idempotent (e.g., refundPayment() does not refund twice even if retried). We ensure eventual consistency and operational visibility.”*
 
 ---
 
@@ -606,7 +606,7 @@ public class PaymentService {
         Payment payment = paymentRepository.findById(paymentId)
                                            .orElseThrow(() -> new IllegalArgumentException("Payment not found"));
 
-        // ✅ IDEMPOTENCY check — already refunded?
+        // ✅ IDEMPOTENCY check - already refunded?
         if (payment.isRefunded()) {
             System.out.println("Payment already refunded. Skipping...");
             return;
@@ -677,7 +677,7 @@ public class DLQListener {
 
 ## 🏆 **In Interview (Your answer)**
 
-> *“In our project, for compensations like refundPayment(), we have Kafka based listeners. We retry 3 times with exponential backoff. If all retries fail, message is pushed to Kafka Dead Letter topic (DLQ). Our DLQ listener logs to Elastic for ops visibility. Also, refundPayment() is idempotent — so even if retried, no duplicate refunds happen.”*
+> *“In our project, for compensations like refundPayment(), we have Kafka based listeners. We retry 3 times with exponential backoff. If all retries fail, message is pushed to Kafka Dead Letter topic (DLQ). Our DLQ listener logs to Elastic for ops visibility. Also, refundPayment() is idempotent - so even if retried, no duplicate refunds happen.”*
 
 ---
 
@@ -751,7 +751,7 @@ Or in worst case, merchant (we) refunds from **our wallet manually**
 
 ## ✍️ **What to say in Interview? (Sample Answer)**
 
-> *“In our project, when compensating transactions (like payment refunds) fail — we first retry. If retries exhaust, we push the event to Kafka DLQ and log to Elastic. Our DLQ listener marks such transaction as `PENDING_MANUAL_REVIEW` and alerts Ops team. They manually reconcile via payment gateway dashboard or support. This ensures eventual consistency and no money is stuck silently.”*
+> *“In our project, when compensating transactions (like payment refunds) fail - we first retry. If retries exhaust, we push the event to Kafka DLQ and log to Elastic. Our DLQ listener marks such transaction as `PENDING_MANUAL_REVIEW` and alerts Ops team. They manually reconcile via payment gateway dashboard or support. This ensures eventual consistency and no money is stuck silently.”*
 
 ---
 
@@ -769,7 +769,7 @@ Or in worst case, merchant (we) refunds from **our wallet manually**
 
 ## 🏆 **Key takeaway for you (and interview)**
 
-> *"In distributed systems, we can't guarantee 100% rollback instantly everywhere — so we mix retries, DLQ, manual intervention and eventual consistency to maintain system correctness."*
+> *"In distributed systems, we can't guarantee 100% rollback instantly everywhere - so we mix retries, DLQ, manual intervention and eventual consistency to maintain system correctness."*
 
 ---
 

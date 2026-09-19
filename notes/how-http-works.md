@@ -62,7 +62,7 @@ So your one HTTP request becomes maybe 5–20 small packets:
 
 This is where data *physically* travels.
 
-**YES — the actual bits (0/1) are electrical/light/radio signals!**
+**YES - the actual bits (0/1) are electrical/light/radio signals!**
 
 Depending on what you use:
 
@@ -132,7 +132,7 @@ Everything is the same except:
 
 # ✔️ **So is data literally flying in the air?**
 
-### **YES — if you are on Wi-Fi or mobile network.**
+### **YES - if you are on Wi-Fi or mobile network.**
 
 Data is encoded into **radio waves** like this:
 
@@ -209,7 +209,7 @@ That’s why the Internet always finds a route even if some network goes down.
 
 ---
 
-# 📦 2️⃣ TCP vs UDP — Why HTTP needs TCP
+# 📦 2️⃣ TCP vs UDP - Why HTTP needs TCP
 
 ## ⭐ TCP (Transmission Control Protocol)
 
@@ -260,7 +260,7 @@ If a packet is lost during a call, you don’t want to wait for a retransmission
 
 # 📡 3️⃣ How Wi-Fi actually sends 0s and 1s
 
-Yes — your data literally travels **through the air as radio waves**.
+Yes - your data literally travels **through the air as radio waves**.
 
 A radio wave is just an oscillating electromagnetic signal.
 
@@ -491,11 +491,11 @@ So Zoom gets **speed of UDP + enough reliability**.
 
 Imagine:
 
-### Option A — Few pixels glitch (UDP)
+### Option A - Few pixels glitch (UDP)
 
 Video continues smoothly.
 
-### Option B — Perfect video but freezes for 1 second (TCP)
+### Option B - Perfect video but freezes for 1 second (TCP)
 
 Conversation breaks, unacceptable.
 

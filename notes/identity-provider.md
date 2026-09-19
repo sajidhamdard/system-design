@@ -129,7 +129,7 @@ This is the missing piece: **trust + mapping + policy**.
 
 ---
 
-## Step 1 — What Google proves vs what Okta decides
+## Step 1 - What Google proves vs what Okta decides
 
 When user logs in with Google, Google only proves:
 
@@ -143,7 +143,7 @@ Okta’s job starts **after** Google finishes.
 
 ---
 
-## Step 2 — What Okta receives from Google
+## Step 2 - What Okta receives from Google
 
 Google sends an ID token to Okta like:
 
@@ -165,13 +165,13 @@ But Okta still hasn’t allowed access.
 
 ---
 
-## Step 3 — Okta checks: “Do I know this user?”
+## Step 3 - Okta checks: “Do I know this user?”
 
 This is called **Account Linking / JIT Provisioning**.
 
 Okta does one of these:
 
-### ✅ Case A — User already exists in Okta
+### ✅ Case A - User already exists in Okta
 
 Okta finds:
 
@@ -183,7 +183,7 @@ Okta user with email = sajid@gmail.com
 
 ---
 
-### ✅ Case B — JIT (Just In Time) provisioning enabled
+### ✅ Case B - JIT (Just In Time) provisioning enabled
 
 Okta says:
 
@@ -193,13 +193,13 @@ Okta says:
 
 ---
 
-### ❌ Case C — No match and JIT disabled
+### ❌ Case C - No match and JIT disabled
 
 👉 Login denied
 
 ---
 
-## Step 4 — Domain restriction (very important)
+## Step 4 - Domain restriction (very important)
 
 In real companies, Okta is configured like:
 

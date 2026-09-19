@@ -44,7 +44,7 @@ User (USA) → Nearest CDN Server (New York) → Cached image
 ## 🛠️ **How CDNs work (simplified)**
 
 1️⃣ User requests **image.jpg**
-2️⃣ CDN checks — “Do I have cached image?”
+2️⃣ CDN checks - “Do I have cached image?”
  ✅ **Yes** → Serve cached image
  ❌ **No** → Fetch from origin → cache → serve user
 
@@ -146,4 +146,4 @@ CloudFront handles:
 
 ## **Quick interview answer**
 
-> ✨ *“CDNs automatically route users to nearest servers via DNS + Anycast — I just configure caching rules and connect my origin server. The distribution happens seamlessly.”*
+> ✨ *“CDNs automatically route users to nearest servers via DNS + Anycast - I just configure caching rules and connect my origin server. The distribution happens seamlessly.”*

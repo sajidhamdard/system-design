@@ -1,6 +1,6 @@
 In **system design**, the term **“back-of-the-envelope”** refers to a **quick, rough estimation** or calculation done **informally**, usually **without detailed tools or exact data**, to see if an idea or approach is feasible.
 
-It’s called that way because people often literally **scribble on a napkin or small piece of paper** — you don’t need a full spreadsheet, simulator, or diagram to get the gist.
+It’s called that way because people often literally **scribble on a napkin or small piece of paper** - you don’t need a full spreadsheet, simulator, or diagram to get the gist.
 
 ---
 
@@ -43,7 +43,7 @@ Total storage = 1B * (100 + 50) bytes
 ```
 
 ✅ Conclusion: Storage requirement is manageable.
-❌ No need to calculate exact overheads or indexing yet — this is just a **rough check**.
+❌ No need to calculate exact overheads or indexing yet - this is just a **rough check**.
 
 ---
 
@@ -57,6 +57,6 @@ Total storage = 1B * (100 + 50) bytes
 
 ### 🔹 Analogy
 
-It’s like **estimating if a car can reach a destination without calculating exact fuel consumption** — you just check if the trip is roughly possible.
+It’s like **estimating if a car can reach a destination without calculating exact fuel consumption** - you just check if the trip is roughly possible.
 
 ---

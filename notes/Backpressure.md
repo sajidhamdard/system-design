@@ -18,7 +18,7 @@ Backpressure is a **flow control mechanism** between producer(s) and consumer(s)
 
 ### **2. Why It's Important for Spikes**
 
-In real systems, load is rarely constant — it comes in **bursts or spikes**:
+In real systems, load is rarely constant - it comes in **bursts or spikes**:
 
 * Black Friday traffic to an e-commerce site.
 * Millions of IoT devices sending data during an outage recovery.
@@ -73,7 +73,7 @@ Backpressure for spikes means:
 
 > **During sudden load surges, control the rate of incoming data so that your system can handle it without falling over.**
 
-It’s like a **traffic light at a highway on-ramp** — it doesn’t stop cars forever, just paces them so the highway doesn’t jam.
+It’s like a **traffic light at a highway on-ramp** - it doesn’t stop cars forever, just paces them so the highway doesn’t jam.
 
 ---
 
@@ -190,11 +190,11 @@ A producer knows to slow down because:
 
 It’s basically:
 
-> “I can only chew so fast — you’ll either wait, or I’ll tell you when I’m ready for the next bite.”
+> “I can only chew so fast - you’ll either wait, or I’ll tell you when I’m ready for the next bite.”
 
 ---
 
-In **truly large, scaled systems**, the **consumer explicitly requesting N items** (the pull model) is the more *realistic* and robust approach for handling backpressure — but with a nuance:
+In **truly large, scaled systems**, the **consumer explicitly requesting N items** (the pull model) is the more *realistic* and robust approach for handling backpressure - but with a nuance:
 
 It’s rarely a “pure” pull model; it’s usually **pull or demand-driven flow control with batching** and sometimes **hybrid push-pull**.
 
@@ -215,7 +215,7 @@ It’s rarely a “pure” pull model; it’s usually **pull or demand-driven fl
 | ------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------- |
 | **Kafka Consumers**                                          | Each consumer pulls messages from the broker in batches (`poll()`), controlling how much it gets at once. |
 | **gRPC Streaming**                                           | Client or server signals “readiness” for more messages (HTTP/2 flow control).                             |
-| **Reactive Streams (Project Reactor, Akka Streams, RxJava)** | `request(n)` API — consumer controls rate explicitly.                                                     |
+| **Reactive Streams (Project Reactor, Akka Streams, RxJava)** | `request(n)` API - consumer controls rate explicitly.                                                     |
 | **Cloud Pub/Sub**                                            | Subscriber acknowledges only processed messages; publisher won’t send more than unacked limit.            |
 | **HTTP/2 / QUIC**                                            | Flow control frames tell sender how many bytes are allowed to be sent.                                    |
 
@@ -225,7 +225,7 @@ It’s rarely a “pure” pull model; it’s usually **pull or demand-driven fl
 
 * Works for **small spikes** or **intra-service buffering**, but:
 
-  * In a scaled, distributed system, the queue may be remote — the producer can flood the network before the “full” signal propagates.
+  * In a scaled, distributed system, the queue may be remote - the producer can flood the network before the “full” signal propagates.
   * Push systems tend to either over-buffer (memory bloat) or drop messages under spikes.
   * Difficult to dynamically adapt to varied consumer speeds.
 
@@ -237,7 +237,7 @@ In big systems, you often get **pull at the consumer side, push at the network l
 
 * Consumer **polls** or **requests batches** from broker.
 * Broker **pushes** those batches to the consumer once available.
-* Producer is **effectively limited** by how much the broker’s partitions and buffers can hold — which is indirectly controlled by the consumer demand.
+* Producer is **effectively limited** by how much the broker’s partitions and buffers can hold - which is indirectly controlled by the consumer demand.
 
 **Example:**
 Kafka’s data flow under spike:
@@ -252,14 +252,14 @@ Producer can’t send unlimited data because broker buffer is bounded **and** co
 ---
 
 ✅ **Bottom line:**
-In scaled systems, **demand-driven (pull) backpressure** is the most reliable — often with batching and broker mediation — because it naturally matches load to consumer capacity and scales across distributed boundaries.
+In scaled systems, **demand-driven (pull) backpressure** is the most reliable - often with batching and broker mediation - because it naturally matches load to consumer capacity and scales across distributed boundaries.
 
 ---
 Let’s walk through **what happens when the buffer/queue is full** and how systems deal with the **producer wait time** without making everything grind to a halt.
 
 ---
 
-## **1. Yes, Producer Waits — But How Depends on the Design**
+## **1. Yes, Producer Waits - But How Depends on the Design**
 
 When the buffer is full, a producer has only a few options:
 
@@ -323,7 +323,7 @@ Real-world systems handle this by:
 
 ---
 
-## **4. Real Example — Kafka**
+## **4. Real Example - Kafka**
 
 * Producer has a **bounded memory buffer**.
 * If full:

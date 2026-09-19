@@ -38,7 +38,7 @@ In **distributed systems**,
 🌐 Internet glitches, datacenter issues, cross-region lag
 
 So, **real-world distributed systems MUST tolerate partitions**
-(**That’s why in CAP — practically every system needs P**)
+(**That’s why in CAP - practically every system needs P**)
 
 ---
 

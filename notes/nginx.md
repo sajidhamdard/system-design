@@ -21,10 +21,10 @@
 
 ## **Why Nginx is popular**
 
-✅ **Fast & lightweight** — Handles thousands of concurrent connections with low memory
+✅ **Fast & lightweight** - Handles thousands of concurrent connections with low memory
 ✅ **Open source & free**
 ✅ **Easy to configure** (small config files)
-✅ **Extremely reliable** — Runs on millions of websites (e.g., Netflix, Dropbox, WordPress)
+✅ **Extremely reliable** - Runs on millions of websites (e.g., Netflix, Dropbox, WordPress)
 
 ---
 

@@ -142,6 +142,6 @@ Decryption with same key → "Hello"
 
 * **Symmetric key:** like a locked diary with **one key**.
 * **Asymmetric key:** like a **mailbox**: anyone can drop a letter (encrypt with public key), only owner can open (private key).
-* **Hashing:** like a **fingerprint** of a document — you can check if it changed but cannot recreate the document from it.
+* **Hashing:** like a **fingerprint** of a document - you can check if it changed but cannot recreate the document from it.
 
 ---

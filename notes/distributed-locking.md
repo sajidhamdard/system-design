@@ -149,7 +149,7 @@ Redis can implement distributed locks using:
 * `EXPIRE` (set TTL) → so lock is automatically released if client crashes.
 * Redlock algorithm (by Redis creator, Salvatore Sanfilippo) → uses **multiple Redis nodes** to ensure fault tolerance.
 
-So yes — you *can* use Redis for ride-driver locking (e.g., "only one driver accepts ride").
+So yes - you *can* use Redis for ride-driver locking (e.g., "only one driver accepts ride").
 
 ---
 

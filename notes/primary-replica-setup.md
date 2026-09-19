@@ -12,7 +12,7 @@ A **Primary-Replica setup** (also known as **Master-Slave setup**) is a database
 2. **Replica (Slave) Databases:**
 
    * Replicas are copies of the **primary database**.
-   * **Read-only** — they handle **read operations** (queries like SELECT).
+   * **Read-only** - they handle **read operations** (queries like SELECT).
    * They **synchronize** with the primary, either in real-time or with a delay, to get updated data.
 
 ---

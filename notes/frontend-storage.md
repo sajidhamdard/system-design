@@ -9,7 +9,7 @@ A simple storage in the browser where data is stored **permanently** (until you 
 * Capacity: ~5–10 MB
 * Data never expires automatically
 * Only stores **string** values
-* Synchronous (blocks main thread — not ideal for big data)
+* Synchronous (blocks main thread - not ideal for big data)
 
 ### **Example:**
 

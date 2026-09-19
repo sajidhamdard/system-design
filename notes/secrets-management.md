@@ -108,7 +108,7 @@ Vault ensures:
 
 ### 🔹 What It Is
 
-In Kubernetes, **Secrets** are objects used to store small pieces of **sensitive data** — such as passwords, OAuth tokens, or SSH keys.
+In Kubernetes, **Secrets** are objects used to store small pieces of **sensitive data** - such as passwords, OAuth tokens, or SSH keys.
 
 Stored in the Kubernetes API and **base64-encoded** (not encrypted by default).
 
@@ -192,6 +192,6 @@ Vault can be integrated with Kubernetes for **dynamic secret injection**:
 
 Think of Vault as a **high-security vault in a bank** 🏦
 Only authorized users with valid ID (token) can open specific boxes (secrets).
-Kubernetes Secrets, on the other hand, are like **lockers with passcodes** — simple but less secure unless you add extra locks (encryption + RBAC).
+Kubernetes Secrets, on the other hand, are like **lockers with passcodes** - simple but less secure unless you add extra locks (encryption + RBAC).
 
 ---

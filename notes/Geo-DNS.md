@@ -15,7 +15,7 @@
 1. A user requests `example.com`.
 2. The DNS resolver (Geo-DNS enabled) checks the **source IP** of the user’s DNS request.
 3. Based on that IP’s location (e.g., India, US, Europe), it returns the **nearest server’s IP address**.
-4. User connects to that server — faster, local response.
+4. User connects to that server - faster, local response.
 
 ---
 

@@ -87,7 +87,7 @@ Think of it like a **ticketing system** 🎟️:
 * Each ticket has a **unique number** (idempotency key)
 * If someone tries to buy again with the same ticket number, the system says:
 
-> “You already bought this ticket — here’s your receipt”
+> “You already bought this ticket - here’s your receipt”
 
 ---
 

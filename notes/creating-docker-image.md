@@ -105,7 +105,7 @@ COPY --from=build /build/target/my-service.jar app.jar
 ENTRYPOINT ["java", "-jar", "app.jar"]
 ```
 
-🟢 This avoids needing to copy the `.jar` manually after building — it builds and packages in one go.
+🟢 This avoids needing to copy the `.jar` manually after building - it builds and packages in one go.
 
 ---
 
@@ -161,7 +161,7 @@ docker run -e DB_URL=jdbc:mysql://host:3306/dbname \
 
 Here’s a strong answer:
 
-> “We build the Docker image with just the microservice code and dependencies. The database is **not embedded** in the image — it's managed separately and connected via configuration, usually passed through environment variables. This makes the image portable and the architecture more scalable.”
+> “We build the Docker image with just the microservice code and dependencies. The database is **not embedded** in the image - it's managed separately and connected via configuration, usually passed through environment variables. This makes the image portable and the architecture more scalable.”
 
 ---
 
@@ -252,7 +252,7 @@ services:
 
 * `app` and `db` are separate containers.
 * They communicate using internal Docker network (`db:3306`).
-* The app image has no DB inside it — it only knows how to **connect** to one.
+* The app image has no DB inside it - it only knows how to **connect** to one.
 
 ---
 
@@ -322,11 +322,11 @@ docker-compose up
 
 ### Benefits of Docker Compose:
 
-* **Easy multi-container setup** — no need to manually run each container.
+* **Easy multi-container setup** - no need to manually run each container.
 * **Consistent environment** for development, testing, CI/CD pipelines.
 * **Service dependency management** with `depends_on`.
 * **Port mapping** and environment variable injection.
-* **Reusable configuration** — share your `docker-compose.yml` with teammates.
+* **Reusable configuration** - share your `docker-compose.yml` with teammates.
 
 ---
 
@@ -395,11 +395,11 @@ docker-compose up
 
 ### Benefits of Docker Compose:
 
-* **Easy multi-container setup** — no need to manually run each container.
+* **Easy multi-container setup** - no need to manually run each container.
 * **Consistent environment** for development, testing, CI/CD pipelines.
 * **Service dependency management** with `depends_on`.
 * **Port mapping** and environment variable injection.
-* **Reusable configuration** — share your `docker-compose.yml` with teammates.
+* **Reusable configuration** - share your `docker-compose.yml` with teammates.
 
 ---
 

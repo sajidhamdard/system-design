@@ -112,7 +112,7 @@ Used in most real-world systems (like HTTPS).
 
 ### 1. **Hashing (Not Encryption)**
 
-* One-way operation — cannot be decrypted.
+* One-way operation - cannot be decrypted.
 * Used for **password storage**, **data integrity**.
 * Example: SHA-256, bcrypt, Argon2, PBKDF2.
 
@@ -137,7 +137,7 @@ Used in most real-world systems (like HTTPS).
 
 ### 5. **End-to-End Encryption**
 
-* Data is encrypted by the sender and can **only be decrypted by the receiver** — not even the server can read it.
+* Data is encrypted by the sender and can **only be decrypted by the receiver** - not even the server can read it.
   → e.g., WhatsApp, Signal, Telegram (secret chats).
 
 ---

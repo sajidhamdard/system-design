@@ -49,7 +49,7 @@ Cold starts occur when a serverless platform initializes a new execution environ
 ## 3. Cost Optimization Strategies
 
 ### A. Optimize Function Configuration
-- Allocate memory carefully — higher memory increases cost but also CPU power (may reduce duration).
+- Allocate memory carefully - higher memory increases cost but also CPU power (may reduce duration).
 - Analyze cost-performance trade-offs with **AWS Lambda Power Tuning** or similar tools.
 
 ### B. Reduce Invocation Frequency
@@ -60,7 +60,7 @@ Cold starts occur when a serverless platform initializes a new execution environ
 ### C. Manage External Costs
 - Cache results to avoid redundant API calls.
 - Store static assets on CDN (e.g., CloudFront) instead of invoking functions for every request.
-- Use efficient data access — e.g., DynamoDB query vs. scan, Firestore indexes.
+- Use efficient data access - e.g., DynamoDB query vs. scan, Firestore indexes.
 
 ### D. Monitoring and Alerts
 - Set billing alarms (e.g., AWS Budgets).

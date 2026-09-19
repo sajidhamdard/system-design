@@ -16,7 +16,7 @@ By default, PostgreSQL:
 
 👉 This is where **PgBouncer** helps.
 
-It **keeps a pool of connections open to the database** and reuses them for incoming client requests — **saving overhead** and improving performance.
+It **keeps a pool of connections open to the database** and reuses them for incoming client requests - **saving overhead** and improving performance.
 
 ---
 
@@ -53,7 +53,7 @@ PgBouncer supports **three pooling modes**:
 
 ✅ **Faster connection handling** (no need to fork a new PostgreSQL process per connection)
 ✅ **Lower memory usage** on PostgreSQL
-✅ **Better scalability** — can handle thousands of concurrent app connections
+✅ **Better scalability** - can handle thousands of concurrent app connections
 ✅ **Failover and load balancing** (in some setups)
 ✅ **Supports connection limits and timeouts**
 ✅ **Can handle database restarts gracefully**
@@ -115,7 +115,7 @@ String password = "mypassword";
 Connection connection = DriverManager.getConnection(url, username, password);
 ```
 
-That’s it — PgBouncer will handle the pooling behind the scenes.
+That’s it - PgBouncer will handle the pooling behind the scenes.
 
 ---
 
@@ -127,7 +127,7 @@ That’s it — PgBouncer will handle the pooling behind the scenes.
   * Session variables
   * Prepared statements that persist beyond a single transaction
 * PgBouncer does not replace an ORM’s **application-level connection pool** (like HikariCP).
-  👉 It sits **below** it — at the network/database layer.
+  👉 It sits **below** it - at the network/database layer.
 
 ---
 
@@ -135,7 +135,7 @@ That’s it — PgBouncer will handle the pooling behind the scenes.
 
 Think of PostgreSQL as a restaurant kitchen 🍳
 Each “connection” is a waiter.
-If every customer brought their own waiter — chaos!
+If every customer brought their own waiter - chaos!
 PgBouncer is the **restaurant manager** who reuses a small team of waiters efficiently between customers 😄
 
 ---

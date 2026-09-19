@@ -41,7 +41,7 @@
 
 ---
 
-## **3. Batch vs Streaming — Comparison Table**
+## **3. Batch vs Streaming - Comparison Table**
 
 | Feature           | **Batch Processing**                  | **Streaming Processing**                  |
 | ----------------- | ------------------------------------- | ----------------------------------------- |

@@ -3,7 +3,7 @@
 > **A data lake is a centralized repository where you can store all your structured, semi-structured, and unstructured data at any scale in raw format.**
 
 ✅ Store **anything** (CSV, JSON, images, videos, logs, parquet etc.)
-✅ **Schema-on-read** (you define schema when you query — not when storing)
+✅ **Schema-on-read** (you define schema when you query - not when storing)
 
 ---
 
@@ -24,7 +24,7 @@ No need to define schema while storing. You query/transform later as needed.
 
 ---
 
-## **Quickly — What are AWS Glue, Athena, Redshift?**
+## **Quickly - What are AWS Glue, Athena, Redshift?**
 
 | **Service**         | **What it is**                            | **Example use**                                                              |
 | ------------------- | ----------------------------------------- | ---------------------------------------------------------------------------- |
@@ -37,9 +37,9 @@ No need to define schema while storing. You query/transform later as needed.
 ### **Think of it as a pipeline**
 
 ```
-RAW DATA (S3 — data lake)
+RAW DATA (S3 - data lake)
     ↓
-AWS Glue (ETL — clean + transform + catalog)
+AWS Glue (ETL - clean + transform + catalog)
     ↓
 → Athena (SQL query raw/cleaned data in S3)  
 → OR  
@@ -79,7 +79,7 @@ SELECT * FROM orders WHERE year = '2024' AND month = '01'
 | ------------------------ | ------------------------------------------------------------------- |
 | Date (year, month, day)  | Time-based filters (logs, orders)                                   |
 | Region, Country          | Geo-based filters                                                   |
-| Customer ID, Product ID  | Entity-based filters (less common — careful of too many partitions) |
+| Customer ID, Product ID  | Entity-based filters (less common - careful of too many partitions) |
 
 ---
 
