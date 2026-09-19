@@ -348,7 +348,7 @@ Read:
 
 * [Chat System](notes/chat-system.md)
 * [Notifications Design](notes/notifications-design.md)
-* [System Design Problems](notes/System-design-problems-key-solution.md)
+* [System Design Problems](notes/system-design-problems-key-solution.md)
 
 ---
 
