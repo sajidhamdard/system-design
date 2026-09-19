@@ -2,6 +2,8 @@
 
 > A structured roadmap to master System Design from fundamentals → distributed systems → networking → scalability → real-world architectures.
 
+📖 **[Read the interactive version](https://sajidhamdard.github.io/system-design/)** for a better reading experience.
+
 This guide is designed for:
 
 * Software Engineers preparing for **System Design Interviews**
@@ -380,3 +382,4 @@ Week 10 → Real Design Problems
 ```
 
 ---
+
