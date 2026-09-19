@@ -74,7 +74,7 @@ Update cache automatically
 
 **Definition:**
 
-> **CDC is a technique used to detect and capture changes in a database**-like **inserts, updates, and deletes**-and make those changes available to **other systems in real-time or near real-time**.
+> **CDC is a technique used to detect and capture changes in a database** - like **inserts, updates, and deletes** - and make those changes available to **other systems in real-time or near real-time**.
 
 It’s widely used for **replicating data, syncing caches, event streaming, and analytics pipelines**.
 

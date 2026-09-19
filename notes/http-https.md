@@ -32,7 +32,7 @@ HTTP (HyperText Transfer Protocol) is a **stateless, application-layer** protoco
 ### 🔹 **HTTP/1.1 (1997 - still widely used)**
 
 * **Persistent connections** (`keep-alive`) → reuse the same TCP connection for multiple requests/responses.
-* **Pipelining**: Allows sending multiple requests without waiting for responses (but **no parallelism**-must be answered in order).
+* **Pipelining**: Allows sending multiple requests without waiting for responses (but **no parallelism** - must be answered in order).
 * Introduced **chunked transfer encoding**, **cache control headers**, and **host header** (support for virtual hosting).
 * Still **head-of-line blocking** at the application layer (browser waits for response in order of requests).
 
