@@ -173,6 +173,6 @@ Show dashboards, incident reports, and degraded performance metrics.
 
 # 🎯 Summary (Simple Definition)
 
-> **The Non-Functional “No Value” Trap is when a team deprioritizes essential non-functional requirements because they don't provide immediate business value-leading to huge long-term problems, failures, and technical debt.**
+> **The Non-Functional “No Value” Trap is when a team deprioritizes essential non-functional requirements because they don't provide immediate business value, leading to huge long-term problems, failures, and technical debt.**
 
 ---

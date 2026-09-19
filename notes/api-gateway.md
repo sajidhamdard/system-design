@@ -1,5 +1,5 @@
 An **API Gateway** is a **server** (or service) that acts as a **single entry point** for all client requests to your backend services (like microservices, databases, legacy systems, etc.).
-Think of it as a **traffic manager** or **doorman** for APIs-it handles incoming API calls, routes them to the correct backend services, applies policies, and sends the response back to the client.
+Think of it as a **traffic manager** or **doorman** for APIs - it handles incoming API calls, routes them to the correct backend services, applies policies, and sends the response back to the client.
 
 ---
 

@@ -5,7 +5,7 @@
 Head-of-line blocking happens when:
 
 👉 **One slow or lost packet blocks all the packets behind it**
--even if those packets are unrelated.
+- even if those packets are unrelated.
 
 ---
 

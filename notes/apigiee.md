@@ -22,12 +22,12 @@ Here’s why:
 | Forwards requests to backend          | Forwards requests to backend                         |
 | SSL termination (optional)            | SSL termination                                      |
 | Hides backend servers                 | Hides backend servers                                |
-| -                                     | **Rate limiting (throttling)**                       |
-| -                                     | **API key validation / OAuth / JWT validation**      |
-| -                                     | **Analytics (API usage, latency, errors)**           |
-| -                                     | **Caching / Response transformation / Mediation**    |
-| -                                     | **Developer portal (API documentation, onboarding)** |
-| -                                     | **Monetization / Billing APIs (optional)**           |
+| N/A                                   | **Rate limiting (throttling)**                       |
+| N/A                                   | **API key validation / OAuth / JWT validation**      |
+| N/A                                   | **Analytics (API usage, latency, errors)**           |
+| N/A                                   | **Caching / Response transformation / Mediation**    |
+| N/A                                   | **Developer portal (API documentation, onboarding)** |
+| N/A                                   | **Monetization / Billing APIs (optional)**           |
 
 ---
 
