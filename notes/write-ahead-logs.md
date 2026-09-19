@@ -54,7 +54,7 @@ Re-applies INSERT statement -> ensures order is not lost
 
 4. **Atomicity**
 
-   * Ensures **partial transactions don’t corrupt database**-only fully logged transactions are replayed.
+   * Ensures **partial transactions don’t corrupt database** - only fully logged transactions are replayed.
 
 ---
 

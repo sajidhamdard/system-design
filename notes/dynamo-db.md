@@ -7,7 +7,7 @@ Here’s a breakdown for you:
 * **Managed by AWS**: You don’t need to manage servers, scaling, replication, or backups.
 * **Scalable**: Can handle millions of requests per second with automatic scaling.
 * **Fast**: Low latency (single-digit milliseconds) for both reads and writes.
-* **Flexible schema**: Unlike relational DBs (Postgres/MySQL), DynamoDB does not require fixed schemas-each item in a table can have different attributes.
+* **Flexible schema**: Unlike relational DBs (Postgres/MySQL), DynamoDB does not require fixed schemas - each item in a table can have different attributes.
 
 ### 🔹 Core Concepts
 

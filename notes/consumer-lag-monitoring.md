@@ -131,7 +131,7 @@ If you delete a consumer group, when it reconnects, Kafka treats it as **new** a
 
 ### 🔹 Key Points
 
-* Kafka does **not delete data immediately** after consumption-retention policies (time or size-based) decide when old messages are removed.
+* Kafka does **not delete data immediately** after consumption - retention policies (time or size-based) decide when old messages are removed.
 * As long as data exists in the topic, you can replay from any offset.
 * Once data is deleted (beyond retention), replay is no longer possible.
 

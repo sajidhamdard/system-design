@@ -153,6 +153,6 @@ Use PWA if you want:
 
 # ⭐ One-line Interview Answer
 
-> **A PWA is a web app enhanced with service workers and a manifest file so it behaves like a native mobile app-supports offline mode, push notifications, fast loading, and can be installed on the home screen.**
+> **A PWA is a web app enhanced with service workers and a manifest file so it behaves like a native mobile app - supports offline mode, push notifications, fast loading, and can be installed on the home screen.**
 
 ---
