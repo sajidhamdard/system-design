@@ -91,7 +91,7 @@ But depending on the database, WAL may contain only redo info or both.
 
 ---
 
-## 🚀 **1. WAL (Write-Ahead Logging) - The Principle**
+# 🚀 **1. WAL (Write-Ahead Logging) - The Principle**
 
 WAL means:
 
@@ -107,7 +107,7 @@ WAL is **append-only**, very fast, and persisted immediately.
 
 ---
 
-## 🚀 **2. Redo Log - “What should be reapplied after crash”**
+# 🚀 **2. Redo Log - “What should be reapplied after crash”**
 
 Redo log stores **how to reapply committed changes**.
 
@@ -129,7 +129,7 @@ Used in **roll-forward** recovery:
 
 ---
 
-## 🚀 **3. Undo Log - “How to reverse uncommitted changes”**
+# 🚀 **3. Undo Log - “How to reverse uncommitted changes”**
 
 Undo log stores **how to undo/rollback partial work**.
 
