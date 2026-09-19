@@ -330,7 +330,7 @@ In this flow:
 
 * OAuth2 defines the **steps** (redirect, consent, token, etc.).
 * The actual **login UI**, **token creation**, **profile sharing**, etc. are **done by Google** (or the provider).
-* **OAuth2 itself doesn't do any of that-it just says *how* it should be done.**
+* **OAuth2 itself doesn't do any of that - it just says *how* it should be done.**
 
 ---
 
