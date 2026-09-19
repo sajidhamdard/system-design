@@ -1,3 +1,7 @@
+# System Design Pattern Shortcuts
+
+Use these as recall prompts after understanding the underlying trade-offs. They are not substitutes for requirements analysis.
+
 * **Write + Spike:** Queue
 * **Latency + Global:** CDN
 * **Load + Growth:** Scale Out
