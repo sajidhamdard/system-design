@@ -1,4 +1,4 @@
-# 🎯 System Design Problems: Core Challenges, Key Solutions, and Trade-offs
+# 🎯 System Design Problems → Core Challenge + Key Solution + Trade-offs
 
 ---
 
