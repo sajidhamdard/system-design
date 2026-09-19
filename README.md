@@ -197,7 +197,7 @@ This is the most important section for senior roles.
 * [Consistent Hashing](notes/consistent-hashing.md)
 * [Leader Election](notes/leader-election.md)
 * [Distributed Locking](notes/distributed-locking.md)
-* [Fault Tolerance](notes/fault-tolerence.md)
+* [Fault Tolerance](notes/fault-tolerance.md)
 * [Resiliency](notes/Resiliency.md)
 
 ---
