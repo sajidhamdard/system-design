@@ -6,7 +6,7 @@ on:
     paths:
       - "system-design-next-gen/**"
       - "notes/**"
-      - "index.md"
+      - "readme.md"
       - "must-know-topics.md"
       - "interview-playbook.md"
       - ".github/workflows/static.yml"
