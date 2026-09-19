@@ -492,7 +492,7 @@ curl -i -X POST http://localhost:8001/services/products-service/routes \
 
 ---
 
-### ⚙️ \*\*Step 3 - Test
+### ⚙️ Step 3 - Test
 
 ```bash
 curl http://localhost:8000/users    # Routed to UserService
@@ -687,7 +687,7 @@ curl -i -X POST http://localhost:8001/services/products-service/routes \
 
 ---
 
-### ⚙️ \*\*Step 3 - Test
+### ⚙️ Step 3 - Test
 
 ```bash
 curl http://localhost:8000/users    # Routed to UserService

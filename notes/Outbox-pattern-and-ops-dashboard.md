@@ -111,7 +111,5 @@ public void placeOrder(Order order) {
 
 # 🏆 **Summary for You**
 
-✅ **Ops Dashboard**
-- Your Kibana + DLQ viewer → for Ops to see, retry, reconcile
-✅ **Outbox Pattern**
-- Helps when service emits events to Kafka after DB updates → to keep data consistent
+- ✅ **Ops Dashboard:** Your Kibana + DLQ viewer → for Ops to see, retry, reconcile
+- ✅ **Outbox Pattern:** Helps when service emits events to Kafka after DB updates → to keep data consistent
